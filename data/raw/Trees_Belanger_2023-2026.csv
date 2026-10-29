@@ -1,0 +1,73 @@
+Year,Block,Fosse,Treatment,Species,Code,TD_cm,TD_2_cm,CD__perp_cm,CD_para_cm,H_cm,FD_percent,notes,Bris_cl0-5spring,Defoliation_cl_0-4spring,Gelure_côte_rue_cl0-4spring,Gelure_côte_trottoir_cl0-4spring,Gelivures_cl:0-4spring,Carence_cl_0-3_spring,Infection_cl_0-3_spring,Embruns_salins _rue_cl_0-4_spring,Embruns_salins_trottoir_cl_0-4_spring,Etat_general_cl_0-4_spring,Notespring,Bris_cl0-5summer,Defoliation_cl0-4summer,Carence_cl0-4summer,Infection_cl0-4summer,etat_general_cl0-4summer,Embruns_rue_summer,Embruns_troittoire_summer,Note_summer,CLperc,NITROGEN_ASIS,P,K,MG,CA,NA
+2023,1,F01,Open,Ulmus Morton ,UA-SO,5.6,0,277,204.5,NA,55,done 2023-09-15,0,1,1,0,1,0,1,0,0,0,"taken 2023-07-10, XL-, gélivure ou dégat anthropique (plantation)",0,1,0,2,0,NA,NA,"taken, september 15th 2023, MF(TF), XL'",NA,NA,NA,NA,NA,NA,NA
+2023,1,F02,Partial,Gymnocladus dioicus,GD-SP,4,0,148,182,NA,15,done 2023-09-16,1,1,0,0,1,0,0,0,0,0,"MEG-, gélivure noirci (à surveiller)",0,1,2,0,1,NA,NA,"Mg ,MEG",NA,NA,NA,NA,NA,NA,NA
+2023,1,F03,Open,Gymnocladus dioicus,GD-SO,3.9,0,147,191,NA,55,done 2023-09-17,0,1,0,0,1,0,0,0,0,0,"Défo-, gélivure --",0,1,2,0,1,NA,NA,"Mg, MRG, vieille coupe à surveiller",NA,NA,NA,NA,NA,NA,NA
+2023,1,F04,Closed,Ulmus Morton ,UA-ST,5.9,0,228,221,NA,45,done 2023-09-18,1,1,2,1,0,0,0,0,0,1,Bris anthropique à surveiller,0,1,0,2,1,NA,NA,"MF(TF), XL'",NA,NA,NA,NA,NA,NA,NA
+2023,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.1,0,201,172,NA,15,done 2023-09-19,1,1,0,0,0,0,0,0,0,0,"peu ramifié, Défo de source anthropique",1,0,0,0,1,NA,NA,"Dommage anthropique, très peu ramifié",NA,NA,NA,NA,NA,NA,NA
+2023,1,F06,Partial,Ulmus Morton ,UA-SP,6.9,0,251,242,NA,25,done 2023-09-20,1,1,1,1,0,0,0,0,0,0,"XL-, bris anthropique",1,2,0,1,1,NA,NA,"Dommage anthropique, XL', MF(TF)",NA,NA,NA,NA,NA,NA,NA
+2023,2,F07,Closed,Gymnocladus dioicus,GD-ST,4.1,0,134,220,NA,35,done 2023-09-21,0,1,0,0,0,0,0,0,0,0,"défo--, peu ramifié",0,0,0,0,0,NA,NA,,NA,NA,NA,NA,NA,NA,NA
+2023,2,F08,Partial,Ulmus Morton ,UA-SP,4.8,0,219,221,NA,55,done 2023-09-22,0,2,2,2,0,0,0,0,0,1,"XL, gelure +",0,2,0,0,1,NA,NA,XL'+,NA,NA,NA,NA,NA,NA,NA
+2023,2,F09,Open,Ulmus Morton ,UA-SO,5.6,0,263,285,NA,55,done 2023-09-23,0,1,1,1,0,0,0,0,0,0,XL,1,2,0,2,1,NA,NA,"XL'+, MF(TF), Bris anthropique -",NA,NA,NA,NA,NA,NA,NA
+2023,2,F10,Partial,Gymnocladus dioicus,GD-SP,3.8,0,142,191,NA,25,done 2023-09-24,1,0,0,0,0,0,1,0,0,1,"MF(AN)-, bris",1,0,1,0,1,NA,NA,"Dommage anthropique, peu ramifié, Mg-",NA,NA,NA,NA,NA,NA,NA
+2023,2,F11,Open,Gymnocladus dioicus,GD-SO,3.4,0,140,134,NA,35,done 2023-09-25,0,1,0,0,0,0,0,0,0,0,Défo de source anthropique,0,0,1,0,0,NA,NA,Mg-,NA,NA,NA,NA,NA,NA,NA
+2023,2,F12,Closed,Ulmus Morton ,UA-ST,4.7,0,221,239,NA,45,done 2023-09-26,0,2,2,1,0,0,0,0,0,1,"XL, gelure +",0,2,0,0,1,NA,NA,XL'+,NA,NA,NA,NA,NA,NA,NA
+2023,3,F13,Closed,Gymnocladus dioicus,GD-ST,4.4,0,178,196,NA,25,done 2023-09-27,1,1,0,0,0,0,0,0,0,0,"Défo-, Fiente de piegon++",0,0,0,0,0,NA,NA,Dommage anthropique,NA,NA,NA,NA,NA,NA,NA
+2023,3,F14,Closed,Ulmus Morton ,UA-ST,5.2,0,225,316,NA,55,done 2023-09-28,0,1,3,3,0,0,0,0,0,2,"XL-, gelure++",0,2,0,1,1,NA,NA,"XL'+, MF(TF)-, dégarni +",NA,NA,NA,NA,NA,NA,NA
+2023,3,F15,Partial,Gymnocladus dioicus,GD-SP,4.5,0,217,214,NA,45,done 2023-09-29,0,1,0,0,0,0,0,0,0,0,Défo--,0,0,0,0,0,NA,NA,,NA,NA,NA,NA,NA,NA,NA
+2023,3,F16,Open,Ulmus Morton ,UA-SO,6.7,0,221,266,NA,35,done 2023-09-30,1,1,1,1,0,0,0,0,0,0,"Bris anthropique, XL",1,1,0,0,0,NA,NA,XL'-,NA,NA,NA,NA,NA,NA,NA
+2023,3,F17,Open,Gymnocladus dioicus,GD-SO,4.7,0,166,166,NA,35,done 2023-09-31,1,1,0,0,0,0,0,0,0,0,"Bris anthropique, défo-",0,0,1,0,0,NA,NA,Mg-,NA,NA,NA,NA,NA,NA,NA
+2023,3,F18,Partial,Ulmus Morton ,UA-SP,6,0,193,251,NA,55,done 2023-09-32,1,1,1,1,0,0,0,0,0,0,"Bris anthropique, XL",0,1,1,1,0,NA,NA,"K-, MF(TF)-",NA,NA,NA,NA,NA,NA,NA
+2024,1,F01,Open,Ulmus Morton ,UA-SO,6,0,243,256,503,65,done 2024-08,0,NA,1,1,1,NA,NA,0,0,0,mai 2024,0,1,0,0,0,NA,NA,"july 2024, KU-",0.26,2.38,NA,NA,NA,NA,NA
+2024,1,F02,Partial,Gymnocladus dioicus,GD-SP,4,0,178,128,453.9,55,done 2024-08,1,NA,0,0,0,NA,NA,0,0,0,,0,0,0,0,0,NA,NA,,0.03,2.36,NA,NA,NA,NA,NA
+2024,1,F03,Open,Gymnocladus dioicus,GD-SO,4.1,0,232,151,379.7,45,done 2024-08,0,NA,1,1,1,NA,NA,0,0,0,vieille gélivure ,0,0,1,0,0,NA,NA,Mg--,0.03,2.54,NA,NA,NA,NA,NA
+2024,1,F04,Closed,Ulmus Morton ,UA-ST,6.4,0,318,319,509.4,35,done 2024-08,1,NA,1,1,2,NA,NA,0,0,1,vieille gélivure et nouvelle,0,1,0,0,0,NA,NA,"KU-, coupe d'entretien requise",0.36,2.83,NA,NA,NA,NA,NA
+2024,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,0,189,260,419.9,55,done 2024-08,0,NA,0,2,0,NA,NA,3,3,1,"peu de ramification = haut %, impact dégât embrunt faible",0,0,1,0,0,NA,NA,Mg--,0.03,2.99,NA,NA,NA,NA,NA
+2024,1,F06,Partial,Ulmus Morton ,UA-SP,7.3,0,281,344,620,45,CD1 brach cut,2,NA,1,1,1,NA,NA,0,0,1, bris anthropique ,0,1,0,0,0,NA,NA,"KU+, taille récente, coupe d'entretien requise",0.25,2.62,NA,NA,NA,NA,NA
+2024,2,F07,Closed,Gymnocladus dioicus,GD-ST,4.5,0,292,177,406.8,35,done 2024-08,0,NA,0,0,0,NA,NA,0,0,0,,0,1,1,0,0,NA,NA,"Mg-, défo---, dommage anthropique faible",0.015,3.13,NA,NA,NA,NA,NA
+2024,2,F08,Partial,Ulmus Morton ,UA-SP,5.5,0,276.5,253,543.2,55,done 2024-08,0,NA,1,2,0,NA,NA,0,0,1,,0,1,0,0,0,NA,NA,KU,0.16,2.02,NA,NA,NA,NA,NA
+2024,2,F09,Open,Ulmus Morton ,UA-SO,7,0,301,311,658.4,45,done 2024-08,0,NA,1,1,1,NA,NA,0,0,0,"gélivure --, frotement, petit bris anthropique",0,1,0,0,0,NA,NA,"XL'+, bris anthropique, KU+",0.17,2.31,NA,NA,NA,NA,NA
+2024,2,F10,Partial,Gymnocladus dioicus,GD-SP,4,0,191,146,303.4,55,done 2024-08,0,NA,2,2,0,NA,NA,0,0,1,"peu de ramification = haut %, impact dégât embrunt faible",0,1,1,0,0,NA,NA,"Dommage anthropique, peu ramifié, Mg-",0.04,2.38,NA,NA,NA,NA,NA
+2024,2,F11,Open,Gymnocladus dioicus,GD-SO,4,0,162,182,334.1,45,done 2024-08,0,NA,0,0,1,NA,NA,0,0,1,gélivure de la tête,0,1,0,0,0,NA,NA,,0.04,3.51,NA,NA,NA,NA,NA
+2024,2,F12,Closed,Ulmus Morton ,UA-ST,6.6,0,416,355,636.8,55,done 2024-08,0,NA,1,1,1,NA,NA,0,0,0,petit bris anthropique,0,2,0,0,1,NA,NA,XL'++,0.37,2.64,NA,NA,NA,NA,NA
+2024,3,F13,Closed,Gymnocladus dioicus,GD-ST,4.3,0,240.5,158.5,381,35,done 2024-08,0,NA,0,0,0,NA,NA,0,2,2,"écorchure de vélo ou de rongeur, bris anthropique",0,0,1,0,1,NA,NA,"Dommage anthropique, Mg+",0.03,3.68,NA,NA,NA,NA,NA
+2024,3,F14,Closed,Ulmus Morton ,UA-ST,6.3,0,305,280,523.9,45,done 2024-08,0,NA,2,2,1,NA,NA,0,0,1,bris anthropique,0,2,0,0,1,NA,NA,"XL'+, KU, dommage anthropique --",0.24,2.27,NA,NA,NA,NA,NA
+2024,3,F15,Partial,Gymnocladus dioicus,GD-SP,4.7,0,225.5,223,427.9,45,done 2024-08,1,NA,0,0,0,NA,NA,0,0,0,,0,0,0,1,0,NA,NA,Dommage anthropique ---,0.03,2.64,NA,NA,NA,NA,NA
+2024,3,F16,Open,Ulmus Morton ,UA-SO,7.2,0,328.5,236.5,532.2,35,done 2024-08,0,NA,1,1,1,NA,NA,0,0,1,"gélivure --, écorchure --, petit bris anthropique",0,1,0,0,0,NA,NA,KU,0.26,1.97,NA,NA,NA,NA,NA
+2024,3,F17,Open,Gymnocladus dioicus,GD-SO,4.9,0,206,201,427.4,45,done 2024-08,0,NA,0,2,0,NA,NA,0,0,1,"peu de ramification = haut %, impact dégât embrunt faible",0,0,1,0,0,NA,NA,Mg-,0.015,2.66,NA,NA,NA,NA,NA
+2024,3,F18,Partial,Ulmus Morton ,UA-SP,7.2,0,294,204,511.1,55,Tree is at angle so may be shorter,0,NA,1,1,0,NA,NA,0,0,2,frapper et endommagé par machinerie (travaux) anthropique,1,1,0,0,1,NA,NA,"KU, branche morte a surveillée",0.26,2.28,NA,NA,NA,NA,NA
+2025,1,F01,Open,Ulmus Morton ,UA-SO,8,0,440,458,568,70,done 2025-09,1,1,1,1,0,0,0,0,0,0,"taken mai 2025, KU, bris anthropique",0,1,0,0,0,NA,NA,"taken july 2025, KU (construction à proximité)",0.44,2.68,0.26,0.65,0.47,2.79,<0.013
+2025,1,F02,Partial,Gymnocladus dioicus,GD-SP,5.1,0,182,117,457.5,80,done 2025-09,0,0,0,0,0,0,0,0,0,0,,0,0,1,0,0,NA,NA,MG--,0.01,2.49,0.45,1.2,0.16,1.27,<0.013
+2025,1,F03,Open,Gymnocladus dioicus,GD-SO,4.4,0,215,183,425.6,70,done 2025-09,0,0,1,0,0,0,0,0,0,0,Tête morte (gelée),0,0,1,0,0,NA,NA,MG--,0.01,2.45,0.42,1.27,0.18,1.38,<0.013
+2025,1,F04,Closed,Ulmus Morton ,UA-ST,8.3,0,518,521,592,60,done 2025-09,1,1,1,0,1,0,0,0,0,0,"KU, bris anthropique",1,2,0,0,1,NA,NA,"KU, bris anthropique",0.38,3.14,0.22,0.38,0.45,2.52,<0.013
+2025,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.4,0,196,266,428.9,55,done 2025-09,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,NA,NA,,0.01,2.57,0.56,1.31,0.2,1.41,<0.013
+2025,1,F06,Partial,Ulmus Morton ,UA-SP,9,0,365,471,713.5,65,done 2025-09,0,1,1,1,1,0,0,0,0,0,KU,1,1,0,0,0,NA,NA,"KU+, bris anthropique",0.36,2.46,0.35,0.81,0.44,2.52,<0.013
+2025,2,F07,Closed,Gymnocladus dioicus,GD-ST,5.4,0,302,207,425,79,done 2025-09,0,0,0,0,0,0,0,0,0,0,,1,0,0,0,0,NA,NA,,0.01,2.4,0.57,1.4,0.13,1.2,<0.013
+2025,2,F08,Partial,Ulmus Morton ,UA-SP,7.3,0,307,332,676,85,done 2025-09,2,1,1,2,0,0,1,0,0,1,"KU, MF(AN)--, bris anthropique",1,1,0,0,0,NA,NA,"KU, XL vestige",0.32,2.33,0.37,0.6,0.38,2.45,<0.013
+2025,2,F09,Open,Ulmus Morton ,UA-SO,8.8,0,407,439,671,80,done 2025-09,1,1,1,0,0,0,1,0,0,0,"KU, MF(AN)--",1,1,0,0,0,NA,NA,"KU, bris anthropique, XL vestige",0.26,2.34,0.45,0.72,0.34,2.5,<0.013
+2025,2,F10,Partial,Gymnocladus dioicus,GD-SP,4.3,0,247,234,297,90,done 2025-09,1,0,0,2,2,0,0,0,0,1,bris anthropique,1,1,0,0,0,NA,NA,"bris, ",0.01,2.62,0.37,1.39,0.19,1.37,<0.013
+2025,2,F11,Open,Gymnocladus dioicus,GD-SO,5,0,255,176,341,50,done 2025-09,0,0,0,0,2,0,0,0,0,1,,2,0,0,0,1,NA,NA,tête brisée,0.01,2.77,0.23,0.94,0.14,1.3,<0.013
+2025,2,F12,Closed,Ulmus Morton ,UA-ST,9.1,0,563,461,893.4,65,done 2025-09,0,0,2,1,0,0,1,0,0,0,"KU--, MF(AN)--",0,1,0,0,0,NA,NA,"KU, XL-",0.53,2.71,0.24,0.68,0.36,2.28,<0.013
+2025,3,F13,Closed,Gymnocladus dioicus,GD-ST,4.5,0,177,206,403,0,"403 is dead branch height, and 90 is FD of living bush, 170.5 extra height measure.",0,0,0,0,0,0,0,0,0,0,,NA,NA,NA,NA,3,NA,NA,"techniquement vivant, mais sur le point de mourir",0.01,3.49,0.43,1.8,0.15,0.57,<0.013
+2025,3,F14,Closed,Ulmus Morton ,UA-ST,8.4,0,398,385,646.3,65,done 2025-09,1,1,2,2,0,0,1,0,0,1,"KU-, MF(AN)-, bris anthropique",1,1,0,0,0,NA,NA,"KU, bris, XL-",0.52,2.48,0.3,0.49,0.49,2.79,<0.013
+2025,3,F15,Partial,Gymnocladus dioicus,GD-SP,5.3,0,237,207,419.1,35,done 2025-09,0,1,1,0,0,0,0,0,0,0,,0,0,0,0,0,NA,NA,,0.01,2.33,0.42,1.16,0.17,1.41,<0.013
+2025,3,F16,Open,Ulmus Morton ,UA-SO,8.4,0,489,387,644.2,60,done 2025-09,1,1,1,0,0,0,0,0,0,0,"KU+, bris anthropique",1,0,0,0,0,NA,NA,"KU, XL- vestige",0.38,2.49,0.32,0.42,0.36,2.57,<0.013
+2025,3,F17,Open,Gymnocladus dioicus,GD-SO,6.0,0,187,252,429.4,65,done 2025-09,0,1,1,0,0,0,0,0,0,0,,0,0,0,0,0,NA,NA,,0.01,3.11,0.48,1.16,0.21,2.23,<0.013
+2025,3,F18,Partial,Ulmus Morton ,UA-SP,8.0,0,391,338,616.6,65,done 2025-09,2,2,2,3,0,0,0,0,1,1,"KU+, vieille gélivures, bris anthropique",1,0,0,0,0,NA,NA,"KU, bris,  XL- vestige",0.39,2.66,0.46,0.66,0.38,2.58,<0.013
+2026,1,F01,Open,Ulmus Morton ,UA-SO,11.3,0,519.5,541,600.6,65,taken on 2026-09-14,0,0,1,0,0,NA,NA,0,0,NA,"Taken June 1 2026, KU, old damage to bark (photo: 11:27)",0,0,0,1,NA,0,0,August 04 XL* throughout tree (Photo: P1040306-294),NA,NA,NA,NA,NA,NA,NA
+2026,1,F02,Partial,Gymnocladus dioicus,GD-SP,4.7,0,171.5,163.5,493.1,75,taken on 2026-09-15,1,0,1,0,0,NA,NA,0,0,NA,Branch with no buds (photo: 11:40),1,0,0,0,NA,0,0, (Photo: P1040293-292),NA,NA,NA,NA,NA,NA,NA
+2026,1,F03,Open,Gymnocladus dioicus,GD-SO,5.1,0,210,169,416.4,77.5,taken on 2026-09-16,0,1,0,0,1,NA,NA,0,0,NA, (photo: 11:44),0,0,1,0,NA,0,0,some yellowing on leaves from edge to inside (Photo: P1040291-289),NA,NA,NA,NA,NA,NA,NA
+2026,1,F04,Closed,Ulmus Morton ,UA-ST,11.3,0,601,660,629.6,75,taken on 2026-09-17,1,0,0,1,0,NA,NA,0,0,NA,"KU, one branch leaf edge dried (photo: 11:48)",0,0,0,0,NA,0,0,"XL, MF(AN), old frost crack (Photo: P1040288-277)",NA,NA,NA,NA,NA,NA,NA
+2026,1,F05,Closed,Gymnocladus dioicus,GD-ST,5.6,0,197,281,425.1,85,taken on 2026-09-18,1,0,0,1,0,NA,NA,0,0,NA,old cut (photo: 11:58),1,0,0,0,NA,0,0, (Photo: P1040276-273),NA,NA,NA,NA,NA,NA,NA
+2026,1,F06,Partial,Ulmus Morton ,UA-SP,11,0,646,574,712.6,67.5,taken on 2026-09-19,0,0,0,0,2,NA,NA,0,0,NA,KU (photo: 12:19),0,0,0,1,NA,0,0,"XL*, MF(AN) (Photo: P1040274-268)",NA,NA,NA,NA,NA,NA,NA
+2026,2,F07,Closed,Gymnocladus dioicus,GD-ST,6.4,0,451,232,412.5,60,taken on 2026-09-20,1,0,1,0,1,NA,NA,0,0,NA, (photo: 12:27),0,0,0,0,NA,0,0, (Photo: P1040267-266),NA,NA,NA,NA,NA,NA,NA
+2026,2,F08,Partial,Ulmus Morton ,UA-SP,8.6,0,347,368,645,57.5,taken on 2026-09-21,1,0,0,0,0,NA,NA,0,0,NA,"KU, many tiny branches on one area of stem (photo: 12:43)",1,0,0,1,NA,0,0,XL* all leaves (Photo: P1040265-258),NA,NA,NA,NA,NA,NA,NA
+2026,2,F09,Open,Ulmus Morton ,UA-SO,11.1,0,407,582,729.3,80,taken on 2026-09-22,0,0,0,0,1,NA,NA,0,0,NA,KU (photo: 12:55),0,0,0,1,NA,0,0,MF(AN). XL* especially lower leaves (Photo: P1040257-256),NA,NA,NA,NA,NA,NA,NA
+2026,2,F10,Partial,Gymnocladus dioicus,GD-SP,5.5,0,340,327,332.9,77.5,taken on 2026-09-23,1,1,0,0,2,NA,NA,0,0,NA,frost crack and white bark on the tip of branch (typical when actively producing flowers) (photo: 13:02),0,0,0,0,NA,0,0,(photo of tree after) (Photo: P1040255-254),NA,NA,NA,NA,NA,NA,NA
+2026,2,F11,Open,Gymnocladus dioicus,GD-SO,6.3,0,309,254,412.8,55,taken on 2026-09-24,2,1,0,0,0,NA,NA,0,0,NA,broken on top (photo: 13:16),1,0,0,0,NA,0,0, (Photo: P1040253-234),NA,NA,NA,NA,NA,NA,NA
+2026,2,F12,Closed,Ulmus Morton ,UA-ST,11.5,0,475,493,702.6,62.5,taken on 2026-09-25,1,1,0,0,0,NA,NA,0,0,NA,"no KU, two big cut branches on roadside (photo: 13:19)",1,0,0,0,NA,1,1,"leaves close to the bottom near trunk have brown spots on teh outer edge, possibly salt stress (Photo: P1040233-223)",NA,NA,NA,NA,NA,NA,NA
+2026,3,F13,Closed,Gymnocladus dioicus,GD-ST,2.1,1.9,202,167,278.6,75,two stems,0,2,0,0,0,NA,NA,0,0,NA, (photo: 13:38),1,0,0,0,NA,0,0,"regrowing, small but happy (Photo: P1040222-221)",NA,NA,NA,NA,NA,NA,NA
+2026,3,F14,Closed,Ulmus Morton ,UA-ST,10.1,0,468,498,727,55,taken on 2026-09-24,0,1,0,0,1,NA,NA,0,0,NA,no KU (photo: 13:43),1,0,0,0,NA,0,0, (Photo: P1040220-214),NA,NA,NA,NA,NA,NA,NA
+2026,3,F15,Partial,Gymnocladus dioicus,GD-SP,5.1,0,222,222,407.4,20,taken on 2026-09-25,1,1,0,0,0,NA,NA,0,0,NA, (photo: 13:57),1,0,0,0,NA,0,0,Thyronectria kanker on 3 branches (Photo: P1040213-209),NA,NA,NA,NA,NA,NA,NA
+2026,3,F16,Open,Ulmus Morton ,UA-SO,9.9,0,520,530,672,45,taken on 2026-09-26,1,1,0,1,0,NA,NA,0,0,NA,KU (photo: 14:04),0,1,0,1,NA,0,0,"XL* on higher leaves, MF(AN) (Photo: P1040208-199)",NA,NA,NA,NA,NA,NA,NA
+2026,3,F17,Open,Gymnocladus dioicus,GD-SO,7,0,305,201,468,45,taken on 2026-09-27,1,1,0,0,1,NA,NA,0,0,NA,"very minor gelivues, 2 cuts new this year? (photo: 14:17)",1,0,0,0,NA,0,0, (Photo: P1040197-194),NA,NA,NA,NA,NA,NA,NA
+2026,3,F18,Partial,Ulmus Morton ,UA-SP,10.9,0,481,428,578.9,60,taken on 2026-09-28,0,0,0,0,1,NA,NA,0,0,NA, (photo: 14:27),1,0,0,1,NA,0,0,"KU, XL* (Photo: P1040193-182)",NA,NA,NA,NA,NA,NA,NA

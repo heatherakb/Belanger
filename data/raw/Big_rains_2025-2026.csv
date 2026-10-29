@@ -1,0 +1,561 @@
+espece,Traitement,Code,Fosse,Date,Heure,Hauteur_cm,Mesurepar,Notes,T,depthinground,Open
+Ulmus Morton ,Open,UA-SO,F01,2025-06-18,0.65625,25,Heather,.,T0,-75,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-06-18,0.65870098,43,Heather,.,T0,-57,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-06-18,0.661151961,44.5,Heather,.,T0,-55.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-06-18,0.663602941,33.5,Heather,.,T0,-66.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-06-18,0.666053922,0,Heather,.,T0,-100,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-06-18,0.668504902,29.5,Heather,.,T0,-70.5,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-06-18,0.670955882,6,Heather,.,T0,-94,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-06-18,0.673406863,6,Heather,.,T0,-94,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-06-18,0.675857843,15.5,Heather,.,T0,-84.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-06-18,0.678308824,4.5,Heather,.,T0,-95.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-06-18,0.680759804,20.5,Heather,.,T0,-79.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-06-18,0.683210784,3,Heather,.,T0,-97,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-06-18,0.685661765,0,Heather,.,T0,-100,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-06-18,0.688112745,0,Heather,"said 18, but seems like a typo: 06-17, value is 0 and after rain 0",T0,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-06-18,0.690563725,54,Heather,.,T0,-46,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-06-18,0.693014706,36,Heather,.,T0,-64,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-06-18,0.695465686,42.5,Heather,.,T0,-57.5,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-06-18,0.701388889,34,Heather,.,T0,-66,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-06-22,0.745138889,68.5,Marilyn,"30°C, temps venteux, Partialment couvert",T1,-31.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-06-22,0.747916667,73.5,Marilyn,.,T1,-26.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-06-22,0.750694444,87.5,Marilyn,.,T1,-12.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-06-22,0.753472222,61.5,Marilyn,.,T1,-38.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-06-22,0.75625,3.75,Marilyn,.,T1,-96.25,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-06-22,0.759027778,56,Marilyn,.,T1,-44,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-06-22,0.764583333,8,Marilyn,.,T1,-92,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-06-22,0.767361111,47,Marilyn,.,T1,-53,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-06-22,0.770138889,50,Marilyn,.,T1,-50,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-06-22,0.772916667,39,Marilyn,.,T1,-61,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-06-22,0.775694444,49.5,Marilyn,.,T1,-50.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-06-22,0.778472222,14,Marilyn,.,T1,-86,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-06-22,0.78125,40.75,Marilyn,.,T1,-59.25,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-06-22,0.784027778,0,Marilyn,.,T1,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-06-22,0.786805556,90.25,Marilyn,.,T1,-9.75,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-06-22,0.789583333,49,Marilyn,.,T1,-51,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-06-22,0.792361111,71.25,Marilyn,.,T1,-28.75,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-06-22,0.404861111,20,Marilyn,"29 °C, vent s'est calmé",T1,-80,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-06-24,0.407638889,50,Marilyn,"29°C, vent rafales 30 km/h (météomédia), nuages dispersés",T2,-50,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-06-24,0.410416667,66,Marilyn,Bcp de mauvaise herbes dans la plupart des fosses,T2,-34,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-06-24,0.413194444,71,Marilyn,.,T2,-29,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-06-24,0.415972222,51.5,Marilyn,.,T2,-48.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-06-24,0.41875,3.5,Marilyn,.,T2,-96.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-06-24,0.425694444,45,Marilyn,.,T2,-55,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-06-24,0.428472222,9.25,Marilyn,.,T2,-90.75,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-06-24,0.43125,26.25,Marilyn,.,T2,-73.75,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-06-24,0.434027778,36.75,Marilyn,.,T2,-63.25,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-06-24,0.436805556,26,Marilyn,.,T2,-74,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-06-24,0.439583333,41.5,Marilyn,.,T2,-58.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-06-24,0.445138889,4,Marilyn,.,T2,-96,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-06-24,0.447916667,34,Marilyn,.,T2,-66,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-06-24,0.450694444,0,Marilyn,.,T2,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-06-24,0.453472222,74,Marilyn,.,T2,-26,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-06-24,0.45625,42.75,Marilyn,.,T2,-57.25,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-06-24,0.460416667,63,Marilyn,.,T2,-37,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-06-24,0.572916667,53.5,Marilyn,"30°C, ciel dégagé",T2,-46.5,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-06-27,0.394444444,27,Marilyn,"20°C, vent moyen rafales 36 km/h (météomédia), nuages dispersés",T0,-73,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-06-27,0.397222222,41.5,Marilyn,Bcp de mauvaises herbes dans les fosses,T0,-58.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-06-27,0.4,47,Marilyn,.,T0,-53,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-06-27,0.402777778,34,Marilyn,.,T0,-66,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-06-27,0.405555556,3.75,Marilyn,.,T0,-96.25,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-06-27,0.408333333,25.5,Marilyn,.,T0,-74.5,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-06-27,0.41875,0.5,Marilyn,.,T0,-99.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-06-27,0.421527778,7.5,Marilyn,.,T0,-92.5,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-06-27,0.424305556,15.5,Marilyn,.,T0,-84.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-06-27,0.427083333,6.75,Marilyn,.,T0,-93.25,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-06-27,0.429861111,37,Marilyn,.,T0,-63,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-06-27,0.432638889,4,Marilyn,.,T0,-96,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-06-27,0.438194444,26,Marilyn,.,T0,-74,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-06-27,0.440972222,0,Marilyn,.,T0,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-06-27,0.44375,54.75,Marilyn,.,T0,-45.25,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-06-27,0.446527778,33,Marilyn,.,T0,-67,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-06-27,0.449305556,43.75,Marilyn,.,T0,-56.25,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-06-27,0.458333333,34.75,Marilyn,"21°C, venteux rafales 38 km/h (météomédia)",T0,-65.25,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-06-29,0.775,60.5,Heather,.,T1,-39.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-06-29,0.778205128,71,Heather,.,T1,-29,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-06-29,0.7875,75,Heather,.,T1,-25,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-06-29,0.790705128,56,Heather,.,T1,-44,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-06-29,0.802083333,5,Heather,.,T1,-95,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-06-29,0.805288462,51.5,Heather,.,T1,-48.5,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-06-29,0.809027778,12.5,Heather,.,T1,-87.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-06-29,0.812232906,35,Heather,.,T1,-65,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-06-29,0.815438034,44,Heather,.,T1,-56,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-06-29,0.818643162,52.5,Heather,.,T1,-47.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-06-29,0.821848291,54.5,Heather,.,T1,-45.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-06-29,0.825053419,8,Heather,.,T1,-92,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-06-29,0.828258547,38.5,Heather,.,T1,-61.5,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-06-29,0.829166667,0,Heather,.,T1,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-06-29,0.832371795,76.5,Heather,.,T1,-23.5,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-06-29,0.835576923,46,Heather,.,T1,-54,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-06-29,0.838782051,66,Heather,.,T1,-34,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-06-29,0.841987179,60,Heather,.,T1,-40,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-06-30,0.601851852,52.5,Kevin,.,T2,-47.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-06-30,0.599537037,68.5,Kevin,.,T2,-31.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-06-30,0.597222222,71,Kevin,.,T2,-29,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-06-30,0.594907407,52.5,Kevin,.,T2,-47.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-06-30,0.592592593,4.5,Kevin,.,T2,-95.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-06-30,0.590277778,48.5,Kevin,.,T2,-51.5,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-06-30,0.587962963,13,Kevin,.,T2,-87,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-06-30,0.585648148,27,Kevin,.,T2,-73,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-06-30,0.583333333,38.5,Kevin,.,T2,-61.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-06-30,0.581018519,43.4,Kevin,.,T2,-56.6,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-06-30,0.578703704,43,Kevin,.,T2,-57,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-06-30,0.576388889,4,Kevin,.,T2,-96,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-06-30,0.574074074,38,Kevin,.,T2,-62,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-06-30,0.571759259,1,Kevin,.,T2,-99,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-06-30,0.569444444,74.5,Kevin,.,T2,-25.5,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-06-30,0.56712963,45,Kevin,.,T2,-55,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-06-30,0.564814815,64,Kevin,.,T2,-36,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-06-30,0.5625,54.5,Kevin,.,T2,-45.5,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-07-16,0.520833333,46,Heather,.,T0,-54,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-07-16,0.523809524,62,Heather,.,T0,-38,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-07-16,0.526785714,66.5,Heather,.,T0,-33.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-07-16,0.529761905,50,Heather,.,T0,-50,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-07-16,0.532738095,4.5,Heather,.,T0,-95.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-07-16,0.535714286,44.5,Heather,.,T0,-55.5,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-07-16,0.538690476,41.5,Heather,.,T0,-58.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-07-16,0.541666667,24,Heather,.,T0,-76,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-07-16,0.544642857,33.5,Heather,.,T0,-66.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-07-16,0.547619048,36,Heather,.,T0,-64,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-07-16,0.550595238,39,Heather,.,T0,-61,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-07-16,0.553571429,4.5,Heather,.,T0,-95.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-07-16,0.556547619,37,Heather,.,T0,-63,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-07-16,0.55952381,10.5,Heather,.,T0,-89.5,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-07-16,0.5625,72,Heather,.,T0,-28,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-07-16,0.56547619,42.5,Heather,.,T0,-57.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-07-16,0.568452381,60,Heather,.,T0,-40,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-07-16,0.572916667,50,Heather,.,T0,-50,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-07-18,0.383333333,68,Marilyn,T°:  17 °C / vent modéré/ ciel dégagé,T1,-32,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-07-18,0.386538462,74,Marilyn,.,T1,-26,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-07-18,0.38974359,83.5,Marilyn,.,T1,-16.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-07-18,0.392948718,61.5,Marilyn,.,T1,-38.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-07-18,0.396153846,4.5,Marilyn,.,T1,-95.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-07-18,0.399358974,57,Marilyn,.,T1,-43,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-07-18,0.402777778,39.75,Marilyn,.,T1,-60.25,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-07-18,0.405982906,47,Marilyn,.,T1,-53,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-07-18,0.409188034,50,Marilyn,.,T1,-50,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-07-18,0.412393162,63,Marilyn,.,T1,-37,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-07-18,0.415598291,48.5,Marilyn,.,T1,-51.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-07-18,0.418803419,16.5,Marilyn,.,T1,-83.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-07-18,0.422008547,42,Marilyn,.,T1,-58,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-07-18,0.425213675,9,Marilyn,.,T1,-91,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-07-18,0.428418803,91,Marilyn,.,T1,-9,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-07-18,0.431623932,49.5,Marilyn,.,T1,-50.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-07-18,0.43482906,69.5,Marilyn,.,T1,-30.5,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-07-18,0.4375,70,Marilyn,"T°:  19 °C / vent modéré (14 km/h, rafales 20 km/h Réf: Météomédia",T1,-30,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-07-19,0.725,52,Kevin,Tº: 24º C,T2,-48,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-07-19,0.719907407,68,Kevin,.,T2,-32,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-07-19,0.717592593,73.5,Kevin,.,T2,-26.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-07-19,0.715277778,54.5,Kevin,Disease or insect damage to tree,T2,-45.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-07-19,0.712962963,4,Kevin,.,T2,-96,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-07-19,0.710648148,49,Kevin,.,T2,-51,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-07-19,0.708333333,31.5,Kevin,.,T2,-68.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-07-19,0.708333333,39,Kevin,.,T2,-61,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-07-19,0.706597222,45.5,Kevin,.,T2,-54.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-07-19,0.704861111,43,Kevin,.,T2,-57,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-07-19,0.703125,42.5,Kevin,.,T2,-57.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-07-19,0.701388889,8,Kevin,.,T2,-92,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-07-19,0.699652778,38.5,Kevin,Tree completely dead,T2,-61.5,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-07-19,0.697916667,5.5,Kevin,.,T2,-94.5,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-07-19,0.696180556,78.5,Kevin,.,T2,-21.5,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-07-19,0.694444444,45,Kevin,.,T2,-55,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-07-19,0.692708333,64,Kevin,.,T2,-36,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-07-19,0.690972222,55,Kevin,.,T2,-45,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-09-04,NA,NA,Heather,.,T0,NA,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-09-04,NA,NA,Heather,.,T0,NA,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-09-04,NA,NA,Heather,.,T0,NA,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-09-04,NA,NA,Heather,.,T0,NA,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-09-04,NA,NA,Heather,.,T0,NA,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-09-04,NA,NA,Heather,.,T0,NA,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-09-04,NA,NA,Heather,"Started raining hard, unable to finish measures",T0,NA,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-09-04,0.708333333,7.5,Heather,.,T0,-92.5,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-09-04,0.704166667,4,Heather,.,T0,-96,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-09-04,0.7,0,Heather,.,T0,-100,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-09-04,0.695833333,17.5,Heather,.,T0,-82.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-09-04,0.691666667,0,Heather,.,T0,-100,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-09-04,0.6875,18.5,Heather,.,T0,-81.5,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-09-04,0.683333333,1,Heather,.,T0,-99,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-09-04,0.679166667,55,Heather,.,T0,-45,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-09-04,0.675,27,Heather,.,T0,-73,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-09-04,0.670833333,45,Heather,.,T0,-55,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-09-04,0.666666667,26.5,Heather,.,T0,-73.5,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-09-05,0.5375,60.5,Marilyn,T°:  19 °C / nuages dispersés,T1,-39.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-09-05,0.543452381,72,Marilyn,.,T1,-28,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-09-05,0.55734127,69,Marilyn,.,T1,-31,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-09-05,0.571230159,56.25,Marilyn,.,T1,-43.75,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-09-05,0.585119048,1.25,Marilyn,.,T1,-98.75,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-09-05,0.599007937,55.5,Marilyn,.,T1,-44.5,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-09-05,0.645833333,18,Marilyn,.,T1,-82,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-09-05,0.649305556,4,Marilyn,.,T1,-96,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-09-05,0.652777778,36.5,Marilyn,.,T1,-63.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-09-05,0.65625,56,Marilyn,.,T1,-44,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-09-05,0.659722222,48.5,Marilyn,.,T1,-51.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-09-05,0.663194444,8,Marilyn,.,T1,-92,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-09-05,0.679861111,41.25,Marilyn,.,T1,-58.75,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-09-05,0.683333333,2.5,Marilyn,.,T1,-97.5,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-09-05,0.686805556,79.5,Marilyn,.,T1,-20.5,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-09-05,0.690277778,47,Marilyn,.,T1,-53,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-09-05,0.69375,77,Marilyn,.,T1,-23,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-09-05,0.719444444,58,Marilyn,.,T1,-42,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-09-07,0.583333333,44.5,Heather,.,T2,-55.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-09-07,0.580128205,61,Heather,.,T2,-39,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-09-07,0.576923077,70,Heather,.,T2,-30,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-09-07,0.573717949,51,Heather,.,T2,-49,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-09-07,0.570512821,1,Heather,.,T2,-99,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-09-07,0.567307692,51,Heather,.,T2,-49,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-09-07,0.564102564,19,Heather,.,T2,-81,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-09-07,0.560897436,4.5,Heather,.,T2,-95.5,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-09-07,0.557692308,25,Heather,.,T2,-75,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-09-07,0.554487179,29,Heather,.,T2,-71,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-09-07,0.551282051,39.5,Heather,.,T2,-60.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-09-07,0.548076923,4.5,Heather,.,T2,-95.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-09-07,0.544871795,41,Heather,.,T2,-59,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-09-07,0.541666667,1,Heather,.,T2,-99,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-09-07,0.538461538,81,Heather,.,T2,-19,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-09-07,0.53525641,43.2,Heather,.,T2,-56.8,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-09-07,0.532051282,77,Heather,.,T2,-23,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-09-07,0.520833333,54,Heather,.,T2,-46,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-10-07,0.583333333,71.5,Heather,2 - 3 cm of rain already fallen with more to come,T0,-28.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-10-07,0.586538462,76.5,Heather,.,T0,-23.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-10-07,0.58974359,89,Heather,.,T0,-11,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-10-07,0.592948718,63,Heather,.,T0,-37,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-10-07,0.596153846,1.5,Heather,.,T0,-98.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-10-07,0.599358974,60,Heather,.,T0,-40,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-10-07,0.602564103,0,Heather,.,T0,-100,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-10-07,0.605769231,40,Heather,.,T0,-60,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-10-07,0.608974359,69.5,Heather,.,T0,-30.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-10-07,0.612179487,65,Heather,.,T0,-35,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-10-07,0.615384615,51.5,Heather,.,T0,-48.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-10-07,0.618589744,20.5,Heather,.,T0,-79.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-10-07,0.621794872,43,Heather,.,T0,-57,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-10-07,0.625,0,Heather,.,T0,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-10-07,0.628205128,92,Heather,.,T0,-8,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-10-07,0.631410256,48,Heather,.,T0,-52,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-10-07,0.634615385,80,Heather,.,T0,-20,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-10-07,0.637820513,66,Heather,.,T0,-34,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-10-08,0.777083333,61.5,Marilyn,13°C / Windy,T1,-38.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-10-08,0.780288462,67.5,Marilyn,.,T1,-32.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-10-08,0.78349359,67.5,Marilyn,.,T1,-32.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-10-08,0.786698718,51.5,Marilyn,.,T1,-48.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-10-08,0.789903846,1.5,Marilyn,.,T1,-98.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-10-08,0.793108974,54,Marilyn,.,T1,-46,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-10-08,0.796314103,9,Marilyn,.,T1,-91,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-10-08,0.799519231,0,Marilyn,.,T1,-100,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-10-08,0.802724359,34.5,Marilyn,.,T1,-65.5,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-10-08,0.805929487,55,Marilyn,.,T1,-45,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-10-08,0.809134615,47,Marilyn,.,T1,-53,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-10-08,0.812339744,4,Marilyn,.,T1,-96,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-10-08,0.815544872,40.5,Marilyn,.,T1,-59.5,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-10-08,0.81875,0,Marilyn,.,T1,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-10-08,0.821955128,74.5,Marilyn,.,T1,-25.5,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-10-08,0.825160256,43.75,Marilyn,.,T1,-56.25,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-10-08,0.828365385,81,Marilyn,.,T1,-19,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-10-08,0.833333333,57.5,Marilyn,.,T1,-42.5,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-10-10,0.8125,40,Heather,.,T2,-60,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-10-10,0.810185185,54,Heather,.,T2,-46,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-10-10,0.80787037,55.5,Heather,.,T2,-44.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-10-10,0.805555556,42.5,Heather,.,T2,-57.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-10-10,0.803240741,0,Heather,.,T2,-100,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-10-10,0.800925926,45,Heather,.,T2,-55,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-10-10,0.798611111,1,Heather,.,T2,-99,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-10-10,0.796296296,0,Heather,.,T2,-100,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-10-10,0.793981481,23,Heather,.,T2,-77,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-10-10,0.791666667,25,Heather,.,T2,-75,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-10-10,0.789351852,31,Heather,.,T2,-69,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-10-10,0.787037037,4,Heather,.,T2,-96,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-10-10,0.784722222,31,Heather,.,T2,-69,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-10-10,0.782407407,0,Heather,.,T2,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-10-10,0.780092593,65,Heather,.,T2,-35,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-10-10,0.777777778,41,Heather,.,T2,-59,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-10-10,0.775462963,58.5,Heather,.,T2,-41.5,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-10-10,0.770833333,39,Heather,.,T2,-61,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-10-30,0.420833333,17.75,Marilyn,"Measurements taken in opposite direction, from F18 to F1",T0,-82.25,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-10-30,0.418055556,51,Marilyn,Light but steady rain throughout measurements,T0,-49,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-10-30,0.415277778,46,Marilyn,Rain started a bit before 9am,T0,-54,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-10-30,0.4125,38.25,Marilyn,.,T0,-61.75,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-10-30,0.409722222,0,Marilyn,.,T0,-100,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-10-30,0.406944444,38,Marilyn,.,T0,-62,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-10-30,0.404166667,0,Marilyn,.,T0,-100,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-10-30,0.401388889,0,Marilyn,.,T0,-100,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-10-30,0.398611111,12.75,Marilyn,.,T0,-87.25,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-10-30,0.395833333,2.5,Marilyn,.,T0,-97.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-10-30,0.393055556,52.5,Marilyn,.,T0,-47.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-10-30,0.390277778,4,Marilyn,.,T0,-96,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-10-30,0.3875,7.5,Marilyn,.,T0,-92.5,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-10-30,0.384722222,0,Marilyn,.,T0,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-10-30,0.381944444,75,Marilyn,.,T0,-25,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-10-30,0.379166667,45,Marilyn,.,T0,-55,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-10-30,0.376388889,42.5,Marilyn,.,T0,-57.5,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-10-30,0.373611111,30,Marilyn,.,T0,-70,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-11-01,0.577777778,65,Marilyn,6° C / wind 22-35 km/h,T1,-35,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-11-01,0.580982906,75,Marilyn,.,T1,-25,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-11-01,0.584188034,79.5,Marilyn,.,T1,-20.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-11-01,0.587393162,63,Marilyn,.,T1,-37,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-11-01,0.590598291,1.5,Marilyn,.,T1,-98.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-11-01,0.593803419,56.75,Marilyn,.,T1,-43.25,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-11-01,0.597008547,58.25,Marilyn,.,T1,-41.75,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-11-01,0.600213675,16.5,Marilyn,.,T1,-83.5,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-11-01,0.603418803,42,Marilyn,.,T1,-58,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-11-01,0.606623932,64,Marilyn,.,T1,-36,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-11-01,0.60982906,49.5,Marilyn,.,T1,-50.5,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-11-01,0.613034188,15.5,Marilyn,.,T1,-84.5,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-11-01,0.616239316,49,Marilyn,.,T1,-51,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-11-01,0.619444444,0.5,Marilyn,.,T1,-99.5,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-11-01,0.622649573,90,Marilyn,.,T1,-10,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-11-01,0.625854701,49.75,Marilyn,.,T1,-50.25,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-11-01,0.629059829,80,Marilyn,.,T1,-20,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-11-01,0.629861111,74,Marilyn,F18 very muddy near entrance of pit,T1,-26,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2025-11-03,0.453472222,48,Marilyn,10° C /overcast/ wind 19-29 km/h,T2,-52,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2025-11-03,0.455787037,67.5,Marilyn,.,T2,-32.5,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2025-11-03,0.458101852,62,Marilyn,.,T2,-38,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2025-11-03,0.460416667,52.25,Marilyn,.,T2,-47.75,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2025-11-03,0.462731481,1.5,Marilyn,.,T2,-98.5,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2025-11-03,0.465046296,49.5,Marilyn,.,T2,-50.5,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2025-11-03,0.467361111,40,Marilyn,.,T2,-60,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2025-11-03,0.469675926,0,Marilyn,.,T2,-100,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2025-11-03,0.471990741,26.75,Marilyn,.,T2,-73.25,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2025-11-03,0.474305556,39,Marilyn,.,T2,-61,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2025-11-03,0.47662037,38,Marilyn,.,T2,-62,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2025-11-03,0.478935185,4,Marilyn,.,T2,-96,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2025-11-03,0.48125,38,Marilyn,.,T2,-62,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2025-11-03,0.48587963,0,Marilyn,.,T2,-100,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2025-11-03,0.490509259,79.5,Marilyn,.,T2,-20.5,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2025-11-03,0.5,46,Marilyn,Approximately 45 min delay in taking last 2  measurements,T2,-54,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2025-11-03,0.534027778,63.25,Marilyn,because of 911 incident at pit 16,T2,-36.75,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2025-11-03,0.535416667,55.5,Marilyn,F18 very muddy near entrance of pit,T2,-44.5,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-05-12,NA,58.500,NA,NA,T0,-41.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-05-12,NA,67.000,NA,NA,T0,-33.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-05-12,NA,65.500,NA,NA,T0,-34.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-05-12,NA,54.000,NA,NA,T0,-46.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-05-12,NA,0.000,NA,NA,T0,-100.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-05-12,NA,52.500,NA,NA,T0,-47.500,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-05-12,NA,51.000,NA,NA,T0,-49.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-05-12,NA,0.000,NA,NA,T0,-100.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-05-12,NA,34.000,NA,NA,T0,-66.000,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-05-12,NA,50.500,NA,NA,T0,-49.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-05-12,NA,26.000,NA,NA,T0,-74.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-05-12,NA,0.000,NA,NA,T0,-100.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-05-12,NA,38.000,NA,NA,T0,-62.000,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-05-12,NA,9.500,NA,NA,T0,-90.500,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-05-12,NA,72.500,NA,NA,T0,-27.500,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-05-12,NA,48.500,NA,NA,T0,-51.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-05-12,NA,63.000,NA,NA,T0,-37.000,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-05-12,NA,60.000,NA,NA,T0,-40.000,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-05-14,NA,70.83651805,NA,"measured with fat stick, so height adjusted for extra volume sticks took up using formula =height- (3/pi*r^2*height) for all measured.",T1,-29.163,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-05-14,NA,73.63269639,NA,NA,T1,-26.367,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-05-14,NA,92.27388535,NA,NA,T1,-7.726,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-05-14,NA,64.31210191,NA,NA,T1,-35.688,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-05-14,NA,0,NA,NA,T1,-100.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-05-14,NA,61.51592357,NA,NA,T1,-38.484,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-05-14,NA,78.75902335,NA,NA,T1,-21.241,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-05-14,NA,25.1656051,NA,NA,T1,-74.834,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-05-14,NA,47.06900212,NA,NA,T1,-52.931,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-05-14,NA,72.70063694,NA,very wet wood,T1,-27.299,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-05-14,NA,53.12738854,NA,very wet wood,T1,-46.873,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-05-14,NA,17.24309979,NA,NA,T1,-82.757,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-05-14,NA,51.72929936,NA,NA,T1,-48.271,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-05-14,NA,47.06900212,NA,very wet wood,T1,-52.931,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-05-14,NA,99.73036093,NA,NA,T1,-0.270,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-05-14,NA,57.78768577,NA,NA,T1,-42.212,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-05-14,NA,92.27388535,NA,NA,T1,-7.726,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-05-14,NA,81.08917197,NA,NA,T1,-18.911,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-05-15,NA,69.5,NA,"measured with fat stick, so height adjusted for extra volume sticks took up using formula =height- (3/pi*r^2*height) for all measured.",T2,-30.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-05-15,NA,73,NA,NA,T2,-27.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-05-15,NA,84.5,NA,NA,T2,-15.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-05-15,NA,63,NA,NA,T2,-37.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-05-15,NA,0,NA,NA,T2,-100.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-05-15,NA,59,NA,NA,T2,-41.000,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-05-15,NA,63,NA,NA,T2,-37.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-05-15,NA,0,NA,NA,T2,-100.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-05-15,NA,44.5,NA,NA,T2,-55.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-05-15,NA,69,NA,very wet wood,T2,-31.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-05-15,NA,50,NA,very wet wood,T2,-50.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-05-15,NA,17.5,NA,NA,T2,-82.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-05-15,NA,44.5,NA,NA,T2,-55.500,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-05-15,NA,26,NA,very wet wood,T2,-74.000,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-05-15,NA,94,NA,NA,T2,-6.000,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-05-15,NA,56,NA,NA,T2,-44.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-05-15,NA,80,NA,NA,T2,-20.000,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-05-15,NA,75.5,NA,NA,T2,-24.500,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-05-29,NA,42.2,NA,NA,T0,-57.800,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-05-29,NA,60,NA,NA,T0,-40.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-05-29,NA,0,NA,NA,T0,-100.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-05-29,NA,58.5,NA,NA,T0,-41.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-05-29,NA,43.5,NA,NA,T0,-56.500,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-05-29,NA,4,NA,NA,T0,-96.000,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-05-29,NA,41,NA,NA,T0,-59.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-05-29,NA,41.5,NA,NA,T0,-58.500,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-05-29,NA,0,NA,NA,T0,-100.000,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-05-29,NA,27,NA,NA,T0,-73.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-05-29,NA,35,NA,NA,T0,-65.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-05-29,NA,30.5,NA,NA,T0,-69.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-05-29,NA,3.5,NA,NA,T0,-96.500,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-05-29,NA,33,NA,NA,T0,-67.000,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-05-29,NA,4,NA,NA,T0,-96.000,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-05-29,NA,61.7,NA,NA,T0,-38.300,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-05-29,NA,60,NA,NA,T0,-40.000,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-05-29,NA,46,NA,NA,T0,-54.000,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-05-30,NA,64.5,NA,7:54PM,T1,-35.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-05-30,NA,73,NA,NA,T1,-27.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-05-30,NA,74.5,NA,NA,T1,-25.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-05-30,NA,60.5,NA,NA,T1,-39.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-05-30,NA,4.5,NA,NA,T1,-95.500,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-05-30,NA,57,NA,NA,T1,-43.000,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-05-30,NA,61.5,NA,NA,T1,-38.500,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-05-30,NA,8.5,NA,NA,T1,-91.500,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-05-30,NA,42.5,NA,NA,T1,-57.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-05-30,NA,66,NA,NA,T1,-34.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-05-30,NA,48.5,NA,NA,T1,-51.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-05-30,NA,13.5,NA,NA,T1,-86.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-05-30,NA,44,NA,NA,T1,-56.000,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-05-30,NA,23,NA,NA,T1,-77.000,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-05-30,NA,84,NA,NA,T1,-16.000,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-05-30,NA,50,NA,NA,T1,-50.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-05-30,NA,76,NA,NA,T1,-24.000,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-05-30,NA,70,NA,NA,T1,-30.000,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-06-01,NA,80.5,NA,NA,T1,-19.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-06-01,NA,72.5,NA,NA,T1,-27.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-06-01,NA,78.5,NA,NA,T1,-21.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-06-01,NA,66.5,NA,NA,T1,-33.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-06-01,NA,4,NA,NA,T1,-96.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-06-01,NA,56.75,NA,NA,T1,-43.250,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-06-01,NA,61,NA,NA,T1,-39.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-06-01,NA,5,NA,NA,T1,-95.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-06-01,NA,43,NA,NA,T1,-57.000,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-06-01,NA,65,NA,NA,T1,-35.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-06-01,NA,48,NA,NA,T1,-52.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-06-01,NA,16,NA,NA,T1,-84.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-06-01,NA,45.75,NA,NA,T1,-54.250,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-06-01,NA,20.75,NA,NA,T1,-79.250,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-06-01,NA,80,NA,NA,T1,-20.000,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-06-01,NA,52,NA,NA,T1,-48.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-06-01,NA,75,NA,NA,T1,-25.000,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-06-01,NA,70.5,NA,NA,T1,-29.500,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-06-04,NA,49,NA,NA,T2,-51.000,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-06-04,NA,63.5,NA,NA,T2,-36.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-06-04,NA,63.5,NA,NA,T2,-36.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-06-04,NA,48.5,NA,NA,T2,-51.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-06-04,NA,4.75,NA,NA,T2,-95.250,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-06-04,NA,44,NA,NA,T2,-56.000,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-06-04,NA,47.25,NA,NA,T2,-52.750,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-06-04,NA,0,NA,NA,T2,-100.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-06-04,NA,25.25,NA,NA,T2,-74.750,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-06-04,NA,44.5,NA,NA,T2,-55.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-06-04,NA,35,NA,NA,T2,-65.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-06-04,NA,5,NA,NA,T2,-95.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-06-04,NA,37,NA,NA,T2,-63.000,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-06-04,NA,7,NA,NA,T2,-93.000,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-06-04,NA,64.25,NA,NA,T2,-35.750,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-06-04,NA,46.5,NA,NA,T2,-53.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-06-04,NA,62.5,NA,NA,T2,-37.500,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-06-04,NA,53.5,NA,NA,T2,-46.500,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-06-13,NA,47.5,NA,NA,T0,-52.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-06-13,NA,60,NA,NA,T0,-40.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-06-13,NA,70,NA,NA,T0,-30.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-06-13,NA,47,NA,NA,T0,-53.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-06-13,NA,4,NA,NA,T0,-96.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-06-13,NA,46,NA,NA,T0,-54.000,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-06-13,NA,43.5,NA,NA,T0,-56.500,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-06-13,NA,0,NA,NA,T0,-100.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-06-13,NA,28.5,NA,NA,T0,-71.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-06-13,NA,46.75,NA,NA,T0,-53.250,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-06-13,NA,38,NA,NA,T0,-62.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-06-13,NA,4,NA,NA,T0,-96.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-06-13,NA,38.5,NA,NA,T0,-61.500,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-06-13,NA,10.5,NA,NA,T0,-89.500,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-06-13,NA,70.5,NA,NA,T0,-29.500,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-06-13,NA,46,NA,NA,T0,-54.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-06-13,NA,68.5,NA,NA,T0,-31.500,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-06-13,NA,56.5,NA,NA,T0,-43.500,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-06-15,NA,69.5,NA,NA,T1,-30.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-06-15,NA,73,NA,NA,T1,-27.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-06-15,NA,93.5,NA,NA,T1,-6.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-06-15,NA,61.75,NA,NA,T1,-38.250,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-06-15,NA,4.25,NA,NA,T1,-95.750,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-06-15,NA,59,NA,NA,T1,-41.000,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-06-15,NA,50,NA,NA,T1,-50.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-06-15,NA,22.5,NA,NA,T1,-77.500,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-06-15,NA,45.5,NA,NA,T1,-54.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-06-15,NA,17.5,NA,NA,T1,-82.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-06-15,NA,49.5,NA,NA,T1,-50.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-06-15,NA,17.5,NA,NA,T1,-82.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-06-15,NA,48.25,NA,NA,T1,-51.750,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-06-15,NA,12.72,NA,NA,T1,-87.280,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-06-15,NA,106.75,NA,NA,T1,6.750,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-06-15,NA,58.75,NA,NA,T1,-41.250,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-06-15,NA,82,NA,NA,T1,-18.000,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-06-15,NA,83.5,NA,NA,T1,-16.500,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-06-17,NA,51.5,HEATHER,2PM right before 10cm rain wed 3pm,T2,-48.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-06-17,NA,61.4,HEATHER,NA,T2,-38.600,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-06-17,NA,74,HEATHER,NA,T2,-26.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-06-17,NA,48.5,HEATHER,NA,T2,-51.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-06-17,NA,1.5,HEATHER,NA,T2,-98.500,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-06-17,NA,46.5,HEATHER,NA,T2,-53.500,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-06-17,NA,39,HEATHER,NA,T2,-61.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-06-17,NA,0,HEATHER,NA,T2,-100.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-06-17,NA,29,HEATHER,NA,T2,-71.000,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-06-17,NA,46.25,HEATHER,NA,T2,-53.750,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-06-17,NA,36.5,HEATHER,NA,T2,-63.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-06-17,NA,3.75,HEATHER,NA,T2,-96.250,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-06-17,NA,37.5,HEATHER,NA,T2,-62.500,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-06-17,NA,4.75,HEATHER,NA,T2,-95.250,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-06-17,NA,72.75,HEATHER,NA,T2,-27.250,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-06-17,NA,46.75,HEATHER,NA,T2,-53.250,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-06-17,NA,71,HEATHER,NA,T2,-29.000,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-06-17,NA,60.000,HEATHER,NA,T2,-40.000,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-08-02,NA,,HEATHER,NA,T0,-100.000,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-08-02,NA,64.000,HEATHER,NA,T0,-36.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-08-02,NA,77.000,HEATHER,NA,T0,-23.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-08-02,NA,41.500,HEATHER,NA,T0,-58.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-08-02,NA,4.500,HEATHER,NA,T0,-95.500,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-08-02,NA,42.000,HEATHER,NA,T0,-58.000,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-08-02,NA,11.000,HEATHER,NA,T0,-89.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-08-02,NA,0.000,HEATHER,NA,T0,-100.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-08-02,NA,26.000,HEATHER,NA,T0,-74.000,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-08-02,NA,40.000,HEATHER,NA,T0,-60.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-08-02,NA,33.000,HEATHER,NA,T0,-67.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-08-02,NA,3.000,HEATHER,NA,T0,-97.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-08-02,NA,31.000,HEATHER,NA,T0,-69.000,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-08-02,NA,4.500,HEATHER,NA,T0,-95.500,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-08-02,NA,65.000,HEATHER,NA,T0,-35.000,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-08-02,NA,42.000,HEATHER,NA,T0,-58.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-08-02,NA,61.500,HEATHER,NA,T0,-38.500,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-08-02,NA,53.000,HEATHER,NA,T0,-47.000,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-08-04,2:16pm,64.500,HEATHER,NA,T1,-35.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-08-04,NA,70.000,HEATHER,NA,T1,-30.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-08-04,NA,90.000,HEATHER,NA,T1,-10.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-08-04,NA,NA,HEATHER,NA,T1,NA,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-08-04,NA,0.000,HEATHER,NA,T1,-100.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-08-04,NA,54.500,HEATHER,NA,T1,-45.500,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-08-04,NA,50.000,HEATHER,NA,T1,-50.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-08-04,NA,4.000,HEATHER,NA,T1,-96.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-08-04,NA,39.500,HEATHER,NA,T1,-60.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-08-04,NA,63.500,HEATHER,NA,T1,-36.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-08-04,NA,46.500,HEATHER,NA,T1,-53.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-08-04,NA,10.000,HEATHER,NA,T1,-90.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-08-04,NA,42.500,HEATHER,NA,T1,-57.500,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-08-04,NA,7.000,HEATHER,NA,T1,-93.000,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-08-04,NA,84.500,HEATHER,NA,T1,-15.500,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-08-04,NA,48.000,HEATHER,NA,T1,-52.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-08-04,NA,74.000,HEATHER,NA,T1,-26.000,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-08-04,NA,70.500,HEATHER,NA,T1,-29.500,TRUE
+Ulmus Morton ,Open,UA-SO,F01,2026-08-06,NA,51.000,HEATHER,NA,T2,-49.000,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F02,2026-08-06,NA,59.500,HEATHER,NA,T2,-40.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F03,2026-08-06,NA,82.500,HEATHER,NA,T2,-17.500,TRUE
+Ulmus Morton ,Closed,UA-ST,F04,2026-08-06,NA,45.500,HEATHER,NA,T2,-54.500,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F05,2026-08-06,NA,4.000,HEATHER,NA,T2,-96.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F06,2026-08-06,NA,46.000,HEATHER,NA,T2,-54.000,TRUE
+Gymnocladus dioicus,Closed,GD-ST,F07,2026-08-06,NA,37.000,HEATHER,NA,T2,-63.000,FALSE
+Ulmus Morton ,Partial,UA-SP,F08,2026-08-06,NA,4.000,HEATHER,NA,T2,-96.000,TRUE
+Ulmus Morton ,Open,UA-SO,F09,2026-08-06,NA,28.500,HEATHER,NA,T2,-71.500,TRUE
+Gymnocladus dioicus,Partial,GD-SP,F10,2026-08-06,NA,46.500,HEATHER,NA,T2,-53.500,TRUE
+Gymnocladus dioicus,Open,GD-SO,F11,2026-08-06,NA,38.000,HEATHER,NA,T2,-62.000,TRUE
+Ulmus Morton ,Closed,UA-ST,F12,2026-08-06,NA,0.000,HEATHER,NA,T2,-100.000,FALSE
+Gymnocladus dioicus,Closed,GD-ST,F13,2026-08-06,NA,34.000,HEATHER,NA,T2,-66.000,FALSE
+Ulmus Morton ,Closed,UA-ST,F14,2026-08-06,NA,4.000,HEATHER,NA,T2,-96.000,FALSE
+Gymnocladus dioicus,Partial,GD-SP,F15,2026-08-06,NA,72.500,HEATHER,NA,T2,-27.500,TRUE
+Ulmus Morton ,Open,UA-SO,F16,2026-08-06,NA,44.000,HEATHER,NA,T2,-56.000,TRUE
+Gymnocladus dioicus,Open,GD-SO,F17,2026-08-06,NA,63.500,HEATHER,NA,T2,-36.500,TRUE
+Ulmus Morton ,Partial,UA-SP,F18,2026-08-06,NA,57.000,HEATHER,NA,T2,-43.000,TRUE
+,,,,,,,,,,,
+,,,,,,,,,,,

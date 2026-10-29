@@ -1,0 +1,19 @@
+Year,Block,Fosse,Treatment,Species,Bris_cl0-5spring,Defoliation_cl_0-4spring,Gelure_côte_rue_cl0-4spring,Gelure_côte_trottoir_cl0-4spring,Gelivures_cl:0-4spring,Carence_cl_0-3_spring,Infection_cl_0-3_spring,Embruns_salins _rue_cl_0-4_spring,Embruns_salins_trottoir_cl_0-4_spring,Etat_general_cl_0-4_spring,Notespring,Bris_cl0-5summer,Defoliation_cl0-4summer,Carence_cl0-4summer,Infection_cl0-4summer,etat_general_cl0-4summer,Embruns_rue_summer,Embruns_troittoire_summer,Note_summer
+allyrs,1,F01,Open,Ulmus Morton ,1,2,4,2,2,0,1,0,0,0,0,0,3,0,3,0,0,0,0
+allyrs,1,F02,Partial,Gymnocladus dioicus,3,1,1,0,1,0,0,0,0,0,0,1,1,3,0,1,0,0,0
+allyrs,1,F03,Open,Gymnocladus dioicus,0,2,2,1,3,0,0,0,0,0,0,0,1,5,0,1,0,0,0
+allyrs,1,F04,Closed,Ulmus Morton ,4,2,4,3,3,0,0,0,0,2,0,1,4,0,2,2,0,0,0
+allyrs,1,F05,Closed,Gymnocladus dioicus,2,1,0,3,0,0,0,3,3,1,0,2,0,1,0,1,0,0,0
+allyrs,1,F06,Partial,Ulmus Morton ,3,2,3,3,4,0,0,0,0,1,0,2,4,0,2,1,0,0,0
+allyrs,2,F07,Closed,Gymnocladus dioicus,1,1,1,0,1,0,0,0,0,0,0,1,1,1,0,0,0,0,0
+allyrs,2,F08,Partial,Ulmus Morton ,3,3,4,6,0,0,1,0,0,3,0,2,4,0,1,1,0,0,0
+allyrs,2,F09,Open,Ulmus Morton ,1,2,3,2,2,0,1,0,0,0,0,2,4,0,3,1,0,0,0
+allyrs,2,F10,Partial,Gymnocladus dioicus,3,1,2,4,4,0,1,0,0,3,0,2,2,2,0,1,0,0,0
+allyrs,2,F11,Open,Gymnocladus dioicus,2,2,0,0,3,0,0,0,0,2,0,3,1,1,0,1,0,0,0
+allyrs,2,F12,Closed,Ulmus Morton ,1,3,5,3,1,0,1,0,0,1,0,1,5,0,0,2,1,1,0
+allyrs,3,F13,Closed,Gymnocladus dioicus,1,3,0,0,0,0,0,0,2,2,0,1,0,1,0,4,0,0,0
+allyrs,3,F14,Closed,Ulmus Morton ,1,3,7,7,2,0,1,0,0,4,0,2,5,0,1,2,0,0,0
+allyrs,3,F15,Partial,Gymnocladus dioicus,2,3,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0
+allyrs,3,F16,Open,Ulmus Morton ,3,3,3,3,1,0,0,0,0,1,0,2,3,0,1,0,0,0,0
+allyrs,3,F17,Open,Gymnocladus dioicus,2,3,1,2,1,0,0,0,0,1,0,1,0,2,0,0,0,0,0
+allyrs,3,F18,Partial,Ulmus Morton ,3,3,4,5,1,0,0,0,1,3,0,3,2,1,2,1,0,0,0

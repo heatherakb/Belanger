@@ -1,0 +1,1207 @@
+Date,Bloc,Fosse,Treatment,Species,Code,Height_mm,Notes,BigRain
+2026-08-04,1,F04,Closed,Ulmus Morton ,UA-ST,NA,NA,T1
+2026-06-26,3,F15,Partial,Gymnocladus dioicus,GD-SP,NA,NA,no
+2026-06-21,2,F11,Open,Gymnocladus dioicus,GD-SO,NA,stoped due to rain,T2
+2026-06-21,2,F12,Closed,Ulmus Morton ,UA-ST,NA,NA,T2
+2026-06-21,3,F13,Closed,Gymnocladus dioicus,GD-ST,NA,NA,T2
+2026-06-21,3,F14,Closed,Ulmus Morton ,UA-ST,NA,NA,T2
+2026-06-21,3,F15,Partial,Gymnocladus dioicus,GD-SP,NA,NA,T2
+2026-06-21,3,F16,Open,Ulmus Morton ,UA-SO,NA,NA,T2
+2026-06-21,3,F17,Open,Gymnocladus dioicus,GD-SO,NA,NA,T2
+2026-06-21,3,F18,Partial,Ulmus Morton ,UA-SP,NA,NA,T2
+2026-06-19,3,F13,Closed,Gymnocladus dioicus,GD-ST,NA,missing value,T1
+2026-06-19,3,F18,Partial,Ulmus Morton ,UA-SP,na,missing value,T1
+2026-04-27,2,F12,Closed,Ulmus Morton ,UA-ST,NA,NA,no
+2025-09-02,1,F05,Closed,Gymnocladus dioicus,GD-ST,NA,NA,to check
+2025-06-03,1,F05,Closed,Gymnocladus dioicus,GD-SO,NA,NA,to check
+2025-06-03,2,F12,Closed,Ulmus Morton ,GD-SO,NA,NA,to check
+2024-08-09,3,F18,Partial,Ulmus Morton,UA-SP,112,NA,NA
+2026-06-19,1,F04,Closed,Ulmus Morton ,UA-ST,110.00,NA,T1
+2026-06-15,3,F15,Partial,Gymnocladus dioicus,GD-SP,106.75,NA,T1
+2024-08-09,3,F17,Open,Gymnocladus dioicus,GD-SO,104.5,NA,NA
+2026-06-19,1,F01,Open,Ulmus Morton ,UA-SO,103.00,NA,T1
+2026-06-19,3,F16,Open,Ulmus Morton ,UA-SO,101.00,NA,T1
+2026-06-19,3,F17,Open,Gymnocladus dioicus,GD-SO,101.00,NA,T1
+2026-05-25,3,F15,Partial,Gymnocladus dioicus,GD-SP,101.00,NA,no
+2024-08-09,1,F01,Open,Ulmus Morton,UA-SO,101,NA,NA
+2026-05-14,3,F15,Partial,Gymnocladus dioicus,GD-SP,99.73,NA,T1
+2025-09-02,2,F07,Closed,Gymnocladus dioicus,GD-ST,98.5,NA,to check
+2024-08-09,3,F15,Partial,Gymnocladus dioicus,GD-SP,98.5,NA,NA
+2024-08-09,1,F03,Open,Gymnocladus dioicus,GD-SO,98,NA,NA
+2025-07-08,3,F15,Partial,Gymnocladus dioicus,GD-SP,97.75,NA,to check
+2025-04-08,3,F15,Partial,Gymnocladus dioicus,UA-SO,95.500,NA,to check
+2024-04-30,3,F17,Open,Gymnocladus dioicus,GD-SO,95,NA,NA
+2024-03-27,1,F03,Open,Gymnocladus dioicus,GD-SO,95,NA,NA
+2024-03-27,3,F17,Open,Gymnocladus dioicus,GD-SO,95,NA,NA
+2026-06-21,1,F03,Open,Gymnocladus dioicus,GD-SO,94.00,NA,T2
+2026-05-15,3,F15,Partial,Gymnocladus dioicus,GD-SP,94.00,NA,T2
+2026-05-04,1,F03,Open,Gymnocladus dioicus,GD-SO,94.00,NA,no
+2025-04-08,1,F03,Open,Gymnocladus dioicus,GD-SO,94.000,NA,to check
+2026-09-14,1,F03,Open,Gymnocladus dioicus,GD-SO,93.50,NA,no
+2026-06-15,1,F03,Open,Gymnocladus dioicus,GD-SO,93.50,NA,T1
+2026-08-20,3,F15,Partial,Gymnocladus dioicus,GD-SP,93.00,NA,no
+2026-05-25,1,F03,Open,Gymnocladus dioicus,GD-SO,93.00,NA,no
+2026-05-25,3,F18,Partial,Ulmus Morton ,UA-SP,92.50,NA,no
+2025-09-23,3,F15,Partial,Gymnocladus dioicus,GD-SP,92.5,NA,to check
+2026-05-14,1,F03,Open,Gymnocladus dioicus,GD-SO,92.27,NA,T1
+2026-05-14,3,F17,Open,Gymnocladus dioicus,GD-SO,92.27,NA,T1
+2024-08-09,1,F02,Partial,Gymnocladus dioicus,GD-SP,91.5,NA,NA
+2026-08-20,1,F03,Open,Gymnocladus dioicus,GD-SO,91.00,NA,no
+2025-04-08,3,F17,Open,Gymnocladus dioicus,GD-SO,91.000,NA,to check
+2024-04-30,1,F03,Open,Gymnocladus dioicus,GD-SO,91,NA,NA
+2026-08-20,3,F17,Open,Gymnocladus dioicus,GD-SO,90.50,NA,no
+2026-08-04,1,F03,Open,Gymnocladus dioicus,GD-SO,90.00,NA,T1
+2026-06-26,1,F03,Open,Gymnocladus dioicus,GD-SO,89.50,NA,no
+2024-05-23,1,F03,Open,Gymnocladus dioicus,GD-SO,89.5,NA,NA
+2026-05-25,3,F17,Open,Gymnocladus dioicus,GD-SO,89.00,NA,no
+2025-09-02,1,F03,Open,Gymnocladus dioicus,GD-SO,88.7,NA,to check
+2025-09-02,3,F13,Closed,Gymnocladus dioicus,GD-ST,88.7,NA,to check
+2026-08-24,1,F03,Open,Gymnocladus dioicus,GD-SO,88.50,NA,no
+2024-08-09,2,F10,Partial,Gymnocladus dioicus,GD-SP,88,NA,NA
+2026-06-19,1,F02,Partial,Gymnocladus dioicus,GD-SP,87.00,NA,T1
+2025-07-08,1,F03,Open,Gymnocladus dioicus,GD-SO,87.00,NA,to check
+2025-04-22,1,F01,Open,Ulmus Morton ,GD-SP,87.000,NA,to check
+2025-04-22,1,F01,Open,Ulmus Morton ,UA-SO,87.000,NA,to check
+2026-08-24,3,F15,Partial,Gymnocladus dioicus,GD-SP,86.50,NA,no
+2025-04-15,2,F08,Partial,Ulmus Morton ,UA-SO,86.5,NA,to check
+2024-08-26,3,F17,Open,Gymnocladus dioicus,GD-SO,86.5,NA,NA
+2024-06-07,3,F15,Partial,Gymnocladus dioicus,GD-SP,86.5,NA,NA
+2026-09-14,3,F15,Partial,Gymnocladus dioicus,GD-SP,86.00,NA,no
+2025-05-27,3,F15,Partial,Gymnocladus dioicus,GD-ST,86,NA,to check
+2024-04-16,1,F03,Open,Gymnocladus dioicus,GD-SO,85.5,NA,NA
+2024-03-27,1,F01,Open,Ulmus Morton,UA-SO,85.5,NA,NA
+2024-05-23,3,F17,Open,Gymnocladus dioicus,GD-SO,85,NA,NA
+2026-08-04,3,F15,Partial,Gymnocladus dioicus,GD-SP,84.50,NA,T1
+2026-05-15,1,F03,Open,Gymnocladus dioicus,GD-SO,84.50,NA,T2
+2025-09-23,3,F17,Open,Gymnocladus dioicus,GD-SO,84.5,NA,to check
+2026-06-26,3,F17,Open,Gymnocladus dioicus,GD-SO,84.00,NA,no
+2026-06-21,1,F02,Partial,Gymnocladus dioicus,GD-SP,84.00,NA,T2
+2026-05-30,3,F15,Partial,Gymnocladus dioicus,GD-SP,84.00,NA,T1
+2026-06-15,3,F18,Partial,Ulmus Morton ,UA-SP,83.50,NA,T1
+2025-04-08,1,F01,Open,Ulmus Morton ,UA-SO,83.500,NA,to check
+2024-08-26,1,F03,Open,Gymnocladus dioicus,GD-SO,83.25,NA,NA
+2024-06-07,3,F17,Open,Gymnocladus dioicus,GD-SO,83,NA,NA
+2025-04-22,1,F03,Open,Gymnocladus dioicus,GD-ST,82.750,NA,to check
+2025-04-22,1,F03,Open,Gymnocladus dioicus,UA-SP,82.750,NA,to check
+2026-08-06,1,F03,Open,Gymnocladus dioicus,GD-SO,82.50,NA,T2
+2024-04-30,1,F01,Open,Ulmus Morton,UA-SO,82.5,NA,NA
+2026-06-15,3,F17,Open,Gymnocladus dioicus,GD-SO,82.00,NA,T1
+2026-08-20,1,F02,Partial,Gymnocladus dioicus,GD-SP,81.50,NA,no
+2026-06-26,3,F18,Partial,Ulmus Morton ,UA-SP,81.50,NA,no
+2026-05-04,3,F17,Open,Gymnocladus dioicus,GD-SO,81.50,NA,no
+2026-05-14,3,F18,Partial,Ulmus Morton ,UA-SP,81.09,NA,T1
+2026-06-01,1,F01,Open,Ulmus Morton ,UA-SO,80.50,NA,no
+2025-04-22,3,F15,Partial,Gymnocladus dioicus,GD-ST,80.500,NA,to check
+2025-04-22,3,F15,Partial,Gymnocladus dioicus,UA-ST,80.500,NA,to check
+2026-06-01,3,F15,Partial,Gymnocladus dioicus,GD-SP,80.00,NA,no
+2026-05-19,3,F15,Partial,Gymnocladus dioicus,GD-SP,80.00,NA,no
+2026-05-15,3,F17,Open,Gymnocladus dioicus,GD-SO,80.00,NA,T2
+2025-04-15,1,F06,Partial,Ulmus Morton ,UA-SP,80,NA,to check
+2025-04-01,3,F15,Partial,Gymnocladus dioicus,GD-SP,80,NA,to check
+2024-08-26,1,F02,Partial,Gymnocladus dioicus,GD-SP,80,NA,NA
+2024-05-09,1,F03,Open,Gymnocladus dioicus,GD-SO,80,NA,NA
+2024-04-30,3,F15,Partial,Gymnocladus dioicus,GD-SP,80,NA,NA
+2026-07-13,3,F14,Closed,Ulmus Morton ,UA-ST,79.50,NA,no
+2025-04-22,3,F17,Open,Gymnocladus dioicus,GD-SP,79.500,NA,to check
+2025-05-20,3,F15,Partial,Gymnocladus dioicus,GD-ST,79.00,NA,to check
+2025-04-01,3,F17,Open,Gymnocladus dioicus,GD-SO,79,NA,to check
+2026-05-14,2,F07,Closed,Gymnocladus dioicus,GD-ST,78.76,NA,T1
+2026-06-01,1,F03,Open,Gymnocladus dioicus,GD-SO,78.50,NA,no
+2025-04-08,1,F02,Partial,Gymnocladus dioicus,GD-SP,78.500,NA,to check
+2025-05-27,3,F17,Open,Gymnocladus dioicus,GD-SP,78.3,NA,to check
+2026-08-20,3,F18,Partial,Ulmus Morton ,UA-SP,78.25,NA,no
+2025-09-23,1,F03,Open,Gymnocladus dioicus,GD-SO,78.3,NA,to check
+2025-05-27,1,F03,Open,Gymnocladus dioicus,UA-SO,78,NA,to check
+2024-06-07,1,F03,Open,Gymnocladus dioicus,GD-SO,78,NA,NA
+2024-06-07,3,F18,Partial,Ulmus Morton,UA-SP,78,NA,NA
+2024-05-09,3,F17,Open,Gymnocladus dioicus,GD-SO,78,NA,NA
+2026-09-14,3,F17,Open,Gymnocladus dioicus,GD-SO,77.50,NA,no
+2026-08-24,3,F17,Open,Gymnocladus dioicus,GD-SO,77.50,NA,no
+2026-08-02,1,F03,Open,Gymnocladus dioicus,GD-SO,77.00,NA,T0
+2024-08-09,2,F07,Closed,Gymnocladus dioicus,GD-ST,77,NA,NA
+2024-06-07,3,F16,Open,Ulmus Morton,UA-SO,77,NA,NA
+2026-05-30,3,F17,Open,Gymnocladus dioicus,GD-SO,76.00,NA,T1
+2024-06-07,1,F02,Partial,Gymnocladus dioicus,GD-SP,76,NA,NA
+2024-04-30,1,F02,Partial,Gymnocladus dioicus,GD-SP,76,NA,NA
+2026-06-26,1,F02,Partial,Gymnocladus dioicus,GD-SP,75.50,NA,no
+2026-05-15,3,F18,Partial,Ulmus Morton ,UA-SP,75.50,NA,T2
+2025-04-15,1,F03,Open,Gymnocladus dioicus,GD-ST,75.5,NA,to check
+2026-06-01,3,F17,Open,Gymnocladus dioicus,GD-SO,75.00,NA,no
+2026-05-04,1,F02,Partial,Gymnocladus dioicus,GD-SP,75.00,NA,no
+2025-07-22,3,F15,Partial,Gymnocladus dioicus,GD-SP,75,NA,to check
+2025-04-28,3,F17,Open,Gymnocladus dioicus,GD-SP,75.000,NA,to check
+2025-04-22,1,F02,Partial,Gymnocladus dioicus,GD-SP,75.000,NA,to check
+2025-04-22,1,F02,Partial,Gymnocladus dioicus,GD-SO,75.000,NA,to check
+2024-05-23,1,F02,Partial,Gymnocladus dioicus,GD-SP,75,NA,NA
+2024-08-26,3,F15,Partial,Gymnocladus dioicus,GD-SP,74.75,NA,NA
+2024-07-17,3,F17,Open,Gymnocladus dioicus,GD-SO,74.75,NA,NA
+2026-05-30,1,F03,Open,Gymnocladus dioicus,GD-SO,74.50,NA,T1
+2025-09-23,1,F02,Partial,Gymnocladus dioicus,GD-SP,74.5,NA,to check
+2025-06-30,3,F15,Partial,Gymnocladus dioicus,GD-SP,74.5,NA,to check
+2025-05-20,1,F03,Open,Gymnocladus dioicus,UA-SO,74.50,NA,to check
+2025-04-28,1,F03,Open,Gymnocladus dioicus,GD-SO,74.500,NA,to check
+2025-04-28,3,F15,Partial,Gymnocladus dioicus,GD-ST,74.500,NA,to check
+2024-07-17,3,F15,Partial,Gymnocladus dioicus,GD-SP,74.5,NA,NA
+2026-05-19,3,F17,Open,Gymnocladus dioicus,GD-SO,74.10,NA,no
+2026-08-04,3,F17,Open,Gymnocladus dioicus,GD-SO,74.00,NA,T1
+2026-06-17,1,F03,Open,Gymnocladus dioicus,GD-SO,74.00,NA,T2 and T0
+2026-05-04,1,F01,Open,Ulmus Morton ,UA-SO,74.00,NA,no
+2024-03-27,3,F15,Partial,Gymnocladus dioicus,GD-SP,74,NA,NA
+2025-09-02,3,F14,Closed,Ulmus Morton ,UA-ST,73.8,NA,to check
+2026-05-14,1,F02,Partial,Gymnocladus dioicus,GD-SP,73.63,NA,T1
+2026-05-25,1,F02,Partial,Gymnocladus dioicus,GD-SP,73.50,NA,no
+2025-07-08,1,F02,Partial,Gymnocladus dioicus,GD-SP,73.50,NA,to check
+2025-07-08,3,F17,Open,Gymnocladus dioicus,GD-SO,73.50,NA,to check
+2024-07-17,1,F03,Open,Gymnocladus dioicus,GD-SO,73.5,NA,NA
+2024-04-30,1,F04,Closed,Ulmus Morton,UA-ST,73.5,NA,NA
+2026-08-24,1,F02,Partial,Gymnocladus dioicus,GD-SP,73.25,NA,no
+2026-09-14,1,F02,Partial,Gymnocladus dioicus,GD-SP,73.00,NA,no
+2026-07-27,1,F03,Open,Gymnocladus dioicus,GD-SO,73.00,NA,no
+2026-06-19,2,F09,Open,Ulmus Morton ,UA-SO,73.00,NA,T1
+2026-06-19,2,F12,Closed,Ulmus Morton ,UA-ST,73.00,NA,T1
+2026-06-15,1,F02,Partial,Gymnocladus dioicus,GD-SP,73.00,NA,T1
+2026-05-30,1,F02,Partial,Gymnocladus dioicus,GD-SP,73.00,NA,T1
+2026-05-15,1,F02,Partial,Gymnocladus dioicus,GD-SP,73.00,NA,T2
+2025-06-03,3,F15,Partial,Gymnocladus dioicus,GD-SP,73.000,NA,to check
+2025-03-19,3,F15,Partial,Gymnocladus dioicus,GD-SP,73,NA,to check
+2024-05-23,3,F15,Partial,Gymnocladus dioicus,GD-SP,73,NA,NA
+2024-05-09,3,F15,Partial,Gymnocladus dioicus,GD-SP,73,NA,NA
+2025-09-02,2,F10,Partial,Gymnocladus dioicus,GD-SP,72.8,NA,to check
+2026-06-17,3,F15,Partial,Gymnocladus dioicus,GD-SP,72.75,NA,T2 and T0
+2026-05-19,1,F03,Open,Gymnocladus dioicus,GD-SO,72.70,NA,no
+2026-05-14,2,F10,Partial,Gymnocladus dioicus,GD-SP,72.70,very wet wood,T1
+2026-09-14,3,F18,Partial,Ulmus Morton ,UA-SP,72.50,NA,no
+2026-08-24,3,F18,Partial,Ulmus Morton ,UA-SP,72.50,NA,no
+2026-08-06,3,F15,Partial,Gymnocladus dioicus,GD-SP,72.50,NA,T2
+2026-07-06,1,F03,Open,Gymnocladus dioicus,GD-SO,72.50,NA,no
+2026-06-01,1,F02,Partial,Gymnocladus dioicus,GD-SP,72.50,NA,no
+2026-05-12,3,F15,Partial,Gymnocladus dioicus,GD-SP,72.50,NA,T0
+2025-05-20,3,F17,Open,Gymnocladus dioicus,GD-SP,72.50,NA,to check
+2026-06-09,3,F15,Partial,Gymnocladus dioicus,GD-SP,72.00,NA,no
+2025-08-19,3,F15,Partial,Gymnocladus dioicus,GD-SP,72,NA,to check
+2025-07-16,3,F15,Partial,Gymnocladus dioicus,GD-SP,72,NA,to check
+2025-07-08,3,F18,Partial,Ulmus Morton ,UA-SP,72.00,NA,to check
+2025-05-27,1,F02,Partial,Gymnocladus dioicus,UA-SP,72,NA,to check
+2025-04-28,1,F02,Partial,Gymnocladus dioicus,UA-SO,72.000,NA,to check
+2024-05-09,1,F02,Partial,Gymnocladus dioicus,GD-SP,72,NA,NA
+2026-07-13,1,F03,Open,Gymnocladus dioicus,GD-SO,71.50,NA,no
+2026-04-20,3,F15,Partial,Gymnocladus dioicus,GD-SP,71.50,NA,no
+2026-05-25,1,F01,Open,Ulmus Morton ,UA-SO,71.25,NA,no
+2026-06-17,3,F17,Open,Gymnocladus dioicus,GD-SO,71.00,NA,T2 and T0
+2026-05-25,2,F10,Partial,Gymnocladus dioicus,GD-SP,71.00,NA,no
+2025-06-30,1,F03,Open,Gymnocladus dioicus,GD-SO,71,NA,to check
+2025-05-27,3,F18,Partial,Ulmus Morton ,UA-SO,71,NA,to check
+2025-04-08,1,F04,Closed,Ulmus Morton ,UA-ST,71.000,NA,to check
+2025-04-01,1,F02,Partial,Gymnocladus dioicus,GD-SP,71,NA,to check
+2024-05-23,1,F01,Open,Ulmus Morton,UA-SO,71,NA,NA
+2026-05-14,1,F01,Open,Ulmus Morton ,UA-SO,70.84,"measured with fat stick, so height adjusted for extra volume sticks took up using formula =height- (3/pi*r^2*height) for all measured.",T1
+2026-06-21,2,F10,Partial,Gymnocladus dioicus,GD-SP,70.75,NA,T2
+2026-08-04,3,F18,Partial,Ulmus Morton ,UA-SP,70.50,NA,T1
+2026-06-15,2,F10,Partial,Gymnocladus dioicus,GD-SP,70.50,NA,T1
+2026-06-13,3,F15,Partial,Gymnocladus dioicus,GD-SP,70.50,NA,T0
+2026-06-01,3,F18,Partial,Ulmus Morton ,UA-SP,70.50,NA,no
+2025-05-20,1,F02,Partial,Gymnocladus dioicus,UA-SP,70.50,NA,to check
+2026-04-20,1,F02,Partial,Gymnocladus dioicus,GD-SP,70.25,NA,no
+2025-05-20,1,F01,Open,Ulmus Morton ,GD-SO,70.20,NA,to check
+2026-08-04,1,F02,Partial,Gymnocladus dioicus,GD-SP,70.00,NA,T1
+2026-06-13,1,F03,Open,Gymnocladus dioicus,GD-SO,70.00,NA,T0
+2026-05-30,3,F18,Partial,Ulmus Morton ,UA-SP,70.00,NA,T1
+2026-04-20,1,F03,Open,Gymnocladus dioicus,GD-SO,70.00,NA,no
+2026-04-20,3,F17,Open,Gymnocladus dioicus,GD-SO,70.00,NA,no
+2025-07-08,1,F01,Open,Ulmus Morton ,UA-SO,70.00,NA,to check
+2024-08-09,1,F04,Closed,Ulmus Morton,UA-ST,70,NA,NA
+2026-05-19,1,F02,Partial,Gymnocladus dioicus,GD-SP,69.90,NA,no
+2026-05-04,3,F16,Open,Ulmus Morton ,UA-SO,69.75,NA,no
+2026-06-15,1,F01,Open,Ulmus Morton ,UA-SO,69.50,NA,T1
+2026-05-15,1,F01,Open,Ulmus Morton ,UA-SO,69.50,NA,T2
+2025-09-02,1,F01,Open,Ulmus Morton ,UA-SO,69.5,NA,to check
+2026-08-20,1,F01,Open,Ulmus Morton ,UA-SO,69.00,NA,no
+2026-06-26,2,F10,Partial,Gymnocladus dioicus,GD-SP,69.00,NA,no
+2026-05-15,2,F10,Partial,Gymnocladus dioicus,GD-SP,69.00,NA,T2
+2025-08-04,3,F15,Partial,Gymnocladus dioicus,GD-SP,69,NA,to check
+2025-06-03,1,F03,Open,Gymnocladus dioicus,UA-SO,69.000,NA,to check
+2025-05-27,1,F01,Open,Ulmus Morton ,GD-SO,69,NA,to check
+2024-03-27,1,F04,Closed,Ulmus Morton,UA-ST,69,NA,NA
+2024-03-05,3,F15,Partial,Gymnocladus dioicus,GD-SP,69,NA,NA
+2026-08-20,2,F10,Partial,Gymnocladus dioicus,GD-SP,68.50,NA,no
+2026-06-26,1,F01,Open,Ulmus Morton ,UA-SO,68.50,NA,no
+2026-06-13,3,F17,Open,Gymnocladus dioicus,GD-SO,68.50,NA,T0
+2025-07-22,1,F03,Open,Gymnocladus dioicus,GD-SO,68.5,NA,to check
+2025-06-30,1,F02,Partial,Gymnocladus dioicus,GD-SP,68.5,NA,to check
+2025-04-15,1,F01,Open,Ulmus Morton ,GD-SO,68.5,NA,to check
+2026-06-09,3,F17,Open,Gymnocladus dioicus,GD-SO,68.25,NA,no
+2026-06-19,3,F15,Partial,Gymnocladus dioicus,GD-SP,68.00,NA,T1
+2026-06-09,1,F03,Open,Gymnocladus dioicus,GD-SO,68.00,NA,no
+2025-09-23,3,F18,Partial,Ulmus Morton ,UA-SP,68.0,NA,to check
+2025-07-08,2,F10,Partial,Gymnocladus dioicus,GD-SP,68.00,NA,to check
+2025-06-03,1,F02,Partial,Gymnocladus dioicus,UA-SP,68.000,NA,to check
+2025-04-01,1,F01,Open,Ulmus Morton ,UA-SO,68,NA,to check
+2025-03-27,1,F02,Partial,Gymnocladus dioicus,GD-SO,68,NA,to check
+2024-04-16,3,F15,Partial,Gymnocladus dioicus,GD-SP,68,NA,NA
+2024-04-16,3,F17,Open,Gymnocladus dioicus,GD-SO,68,NA,NA
+2025-04-28,1,F01,Open,Ulmus Morton ,UA-SP,67.500,NA,to check
+2025-03-19,1,F02,Partial,Gymnocladus dioicus,GD-SP,67.5,NA,to check
+2026-06-21,1,F01,Open,Ulmus Morton ,UA-SO,67.10,NA,T2
+2026-05-25,3,F16,Open,Ulmus Morton ,UA-SO,67.00,NA,no
+2026-05-12,1,F02,Partial,Gymnocladus dioicus,GD-SP,67.00,NA,T0
+2026-05-04,3,F15,Partial,Gymnocladus dioicus,GD-SP,67.00,NA,no
+2025-09-23,1,F01,Open,Ulmus Morton ,UA-SO,67.0,NA,to check
+2025-06-25,3,F15,Partial,Gymnocladus dioicus,GD-SP,67,NA,to check
+2025-04-01,1,F03,Open,Gymnocladus dioicus,GD-SO,67,NA,to check
+2025-03-19,1,F03,Open,Gymnocladus dioicus,GD-SO,67,NA,to check
+2024-08-26,1,F01,Open,Ulmus Morton,UA-SO,67,NA,NA
+2024-04-16,1,F01,Open,Ulmus Morton,UA-SO,67,NA,NA
+2026-09-14,1,F01,Open,Ulmus Morton ,UA-SO,66.50,NA,no
+2026-08-24,2,F10,Partial,Gymnocladus dioicus,GD-SP,66.50,NA,no
+2026-06-01,1,F04,Closed,Ulmus Morton ,UA-ST,66.50,NA,no
+2025-07-16,1,F03,Open,Gymnocladus dioicus,GD-SO,66.5,NA,to check
+2025-05-13,1,F02,Partial,Gymnocladus dioicus,UA-SO,66.50,NA,to check
+2025-05-05,3,F15,Partial,Gymnocladus dioicus,GD-SO,66.500,NA,to check
+2025-04-15,3,F17,Open,Gymnocladus dioicus,GD-SO,66.5,NA,to check
+2025-04-01,2,F07,Closed,Gymnocladus dioicus,GD-ST,66.5,NA,to check
+2025-09-23,1,F04,Closed,Ulmus Morton ,UA-ST,66.3,NA,to check
+2026-07-27,3,F15,Partial,Gymnocladus dioicus,GD-SP,66.00,NA,no
+2026-05-30,2,F10,Partial,Gymnocladus dioicus,GD-SP,66.00,NA,T1
+2025-05-13,3,F17,Open,Gymnocladus dioicus,GD-SP,66.00,NA,to check
+2025-03-27,1,F03,Open,Gymnocladus dioicus,UA-ST,66,NA,to check
+2024-07-03,1,F03,Open,Gymnocladus dioicus,GD-SO,66,NA,NA
+2024-07-03,3,F15,Partial,Gymnocladus dioicus,GD-SP,66,NA,NA
+2024-05-23,1,F04,Closed,Ulmus Morton,UA-ST,66,NA,NA
+2024-05-09,1,F01,Open,Ulmus Morton,UA-SO,66,NA,NA
+2024-03-05,1,F03,Open,Gymnocladus dioicus,GD-SO,66,NA,NA
+2026-04-09,1,F02,Partial,Gymnocladus dioicus,GD-SP,65.75,NA,no
+2026-07-06,3,F15,Partial,Gymnocladus dioicus,GD-SP,65.50,NA,no
+2026-05-12,1,F03,Open,Gymnocladus dioicus,GD-SO,65.50,NA,T0
+2025-04-22,1,F04,Closed,Ulmus Morton ,GD-SO,65.500,NA,to check
+2025-04-22,1,F04,Closed,Ulmus Morton ,UA-SO,65.500,NA,to check
+2024-04-16,1,F02,Partial,Gymnocladus dioicus,GD-SP,65.5,NA,NA
+2025-05-05,1,F02,Partial,Gymnocladus dioicus,UA-SO,65.25,NA,to check
+2026-09-14,2,F10,Partial,Gymnocladus dioicus,GD-SP,65.00,NA,no
+2026-08-02,3,F15,Partial,Gymnocladus dioicus,GD-SP,65.00,NA,T0
+2026-06-01,2,F10,Partial,Gymnocladus dioicus,GD-SP,65.00,NA,no
+2026-05-25,1,F04,Closed,Ulmus Morton ,UA-ST,65.00,NA,no
+2026-05-04,1,F04,Closed,Ulmus Morton ,UA-ST,65.00,NA,no
+2026-04-20,3,F18,Partial,Ulmus Morton ,UA-SP,65.00,NA,no
+2025-05-13,3,F15,Partial,Gymnocladus dioicus,GD-SO,65.00,NA,to check
+2025-03-27,3,F15,Partial,Gymnocladus dioicus,UA-ST,65,NA,to check
+2024-09-11,3,F15,Partial,Gymnocladus dioicus,GD-SP,65,NA,NA
+2024-08-09,2,F09,Open,Ulmus Morton,UA-SO,65,NA,NA
+2026-08-24,1,F01,Open,Ulmus Morton ,UA-SO,64.75,NA,no
+2026-05-19,3,F18,Partial,Ulmus Morton ,UA-SP,64.75,NA,no
+2025-07-08,1,F04,Closed,Ulmus Morton ,UA-ST,64.75,NA,to check
+2026-08-04,1,F01,Open,Ulmus Morton ,UA-SO,64.50,2:16PM,T1
+2026-05-30,1,F01,Open,Ulmus Morton ,UA-SO,64.50,7:54PM,T1
+2025-07-22,3,F17,Open,Gymnocladus dioicus,GD-SO,64.5,NA,to check
+2025-06-03,3,F17,Open,Gymnocladus dioicus,GD-SO,64.500,NA,to check
+2025-05-13,1,F03,Open,Gymnocladus dioicus,GD-SP,64.50,NA,to check
+2025-04-08,2,F09,Open,Ulmus Morton ,UA-SO,64.500,NA,to check
+2024-09-11,3,F17,Open,Gymnocladus dioicus,GD-SO,64.5,NA,NA
+2024-04-30,2,F07,Closed,Gymnocladus dioicus,GD-ST,64.5,NA,NA
+2026-05-14,1,F04,Closed,Ulmus Morton ,UA-ST,64.31,NA,T1
+2026-06-09,1,F02,Partial,Gymnocladus dioicus,GD-SP,64.25,NA,no
+2026-06-04,3,F15,Partial,Gymnocladus dioicus,GD-SP,64.25,NA,T2
+2026-08-02,1,F02,Partial,Gymnocladus dioicus,GD-SP,64.00,NA,T0
+2026-07-13,3,F17,Open,Gymnocladus dioicus,GD-SO,64.00,NA,no
+2025-06-30,3,F17,Open,Gymnocladus dioicus,GD-SO,64,NA,to check
+2025-04-01,1,F04,Closed,Ulmus Morton ,UA-ST,64,NA,to check
+2024-08-09,2,F08,Partial,Ulmus Morton,UA-SP,64,NA,NA
+2024-05-23,2,F10,Partial,Gymnocladus dioicus,GD-SP,64,NA,NA
+2026-08-06,3,F17,Open,Gymnocladus dioicus,GD-SO,63.50,NA,T2
+2026-08-04,2,F10,Partial,Gymnocladus dioicus,GD-SP,63.50,NA,T1
+2026-06-04,1,F02,Partial,Gymnocladus dioicus,GD-SP,63.50,NA,T2
+2026-06-04,1,F03,Open,Gymnocladus dioicus,GD-SO,63.50,NA,T2
+2026-05-04,1,F06,Partial,Ulmus Morton ,UA-SP,63.50,NA,no
+2025-07-22,1,F02,Partial,Gymnocladus dioicus,GD-SP,63.5,NA,to check
+2025-04-08,2,F07,Closed,Gymnocladus dioicus,GD-ST,63.500,NA,to check
+2025-04-08,2,F11,Open,Gymnocladus dioicus,GD-SO,63.500,NA,to check
+2024-08-26,1,F04,Closed,Ulmus Morton,UA-ST,63.5,NA,NA
+2024-07-17,1,F04,Closed,Ulmus Morton,UA-ST,63.5,NA,NA
+2025-04-15,3,F16,Open,Ulmus Morton ,UA-SO,63.25,NA,to check
+2026-06-21,2,F07,Closed,Gymnocladus dioicus,GD-ST,63.00,NA,T2
+2026-06-19,1,F03,Open,Gymnocladus dioicus,GD-SO,63.00,?,T1
+2026-05-25,2,F07,Closed,Gymnocladus dioicus,GD-ST,63.00,NA,no
+2026-05-19,1,F01,Open,Ulmus Morton ,UA-SO,63.00,NA,no
+2026-05-15,1,F04,Closed,Ulmus Morton ,UA-ST,63.00,NA,T2
+2026-05-15,2,F07,Closed,Gymnocladus dioicus,GD-ST,63.00,NA,T2
+2026-05-12,3,F17,Open,Gymnocladus dioicus,GD-SO,63.00,NA,T0
+2026-04-20,1,F01,Open,Ulmus Morton ,UA-SO,63.00,NA,no
+2025-06-25,1,F03,Open,Gymnocladus dioicus,GD-SO,63,NA,to check
+2025-04-01,3,F18,Partial,Ulmus Morton ,UA-SP,63,NA,to check
+2024-08-09,1,F06,Partial,Ulmus Morton,UA-SP,63,NA,NA
+2024-04-30,2,F09,Open,Ulmus Morton,UA-SO,63,NA,NA
+2026-05-04,3,F18,Partial,Ulmus Morton ,UA-SP,62.75,NA,no
+2026-06-04,3,F17,Open,Gymnocladus dioicus,GD-SO,62.50,NA,T2
+2025-04-28,1,F04,Closed,Ulmus Morton ,GD-SP,62.500,NA,to check
+2026-06-21,1,F04,Closed,Ulmus Morton ,UA-ST,62.00,NA,T2
+2026-04-09,3,F15,Partial,Gymnocladus dioicus,GD-SP,62.00,NA,no
+2025-07-16,1,F02,Partial,Gymnocladus dioicus,GD-SP,62,NA,to check
+2025-05-20,2,F07,Closed,Gymnocladus dioicus,GD-ST,62.00,NA,to check
+2025-04-08,3,F16,Open,Ulmus Morton ,UA-ST,62.000,NA,to check
+2024-05-09,1,F04,Closed,Ulmus Morton,UA-ST,62,NA,NA
+2026-06-15,1,F04,Closed,Ulmus Morton ,UA-ST,61.75,NA,T1
+2024-09-11,1,F03,Open,Gymnocladus dioicus,GD-SO,61.75,NA,NA
+2026-05-29,3,F16,Open,Ulmus Morton ,UA-SO,61.70,NA,T0
+2026-05-14,1,F06,Partial,Ulmus Morton ,UA-SP,61.52,NA,T1
+2026-08-02,3,F17,Open,Gymnocladus dioicus,GD-SO,61.50,NA,T0
+2026-05-30,2,F07,Closed,Gymnocladus dioicus,GD-ST,61.50,NA,T1
+2026-04-20,1,F04,Closed,Ulmus Morton ,UA-ST,61.50,NA,no
+2025-05-20,1,F04,Closed,Ulmus Morton ,GD-SP,61.50,NA,to check
+2025-05-05,1,F03,Open,Gymnocladus dioicus,GD-SP,61.5,NA,to check
+2026-06-17,1,F02,Partial,Gymnocladus dioicus,GD-SP,61.40,NA,T2 and T0
+2025-09-02,1,F02,Partial,Gymnocladus dioicus,GD-SP,61.4,NA,to check
+2026-06-01,2,F07,Closed,Gymnocladus dioicus,GD-ST,61.00,NA,no
+2025-05-20,3,F18,Partial,Ulmus Morton ,UA-SO,61.00,NA,to check
+2025-03-19,1,F04,Closed,Ulmus Morton ,UA-ST,61,NA,to check
+2024-08-09,2,F11,Open,Gymnocladus dioicus,GD-SO,61,NA,NA
+2024-06-07,1,F01,Open,Ulmus Morton,UA-SO,61,NA,NA
+2026-09-14,1,F04,Closed,Ulmus Morton ,UA-ST,60.50,NA,no
+2026-08-20,1,F04,Closed,Ulmus Morton ,UA-ST,60.50,NA,no
+2026-05-30,1,F04,Closed,Ulmus Morton ,UA-ST,60.50,NA,T1
+2026-05-25,1,F06,Partial,Ulmus Morton ,UA-SP,60.50,NA,no
+2024-08-26,3,F18,Partial,Ulmus Morton,UA-SP,60.5,NA,NA
+2026-06-17,3,F18,Partial,Ulmus Morton ,UA-SP,60.00,NA,T2 and T0
+2026-06-13,1,F02,Partial,Gymnocladus dioicus,GD-SP,60.00,NA,T0
+2026-05-29,1,F02,Partial,Gymnocladus dioicus,GD-SP,60.00,NA,T0
+2026-05-29,3,F17,Open,Gymnocladus dioicus,GD-SO,60.00,NA,T0
+2026-05-12,3,F18,Partial,Ulmus Morton ,UA-SP,60.00,NA,T0
+2026-04-20,2,F10,Partial,Gymnocladus dioicus,GD-SP,60.00,NA,no
+2025-08-19,3,F17,Open,Gymnocladus dioicus,GD-SO,60,NA,to check
+2025-07-16,3,F17,Open,Gymnocladus dioicus,GD-SO,60,NA,to check
+2024-04-16,1,F04,Closed,Ulmus Morton,UA-ST,60,NA,NA
+2026-08-06,1,F02,Partial,Gymnocladus dioicus,GD-SP,59.50,NA,T2
+2026-06-26,1,F06,Partial,Ulmus Morton ,UA-SP,59.50,NA,no
+2025-03-19,1,F01,Open,Ulmus Morton ,UA-SO,59.5,NA,to check
+2025-04-28,2,F07,Closed,Gymnocladus dioicus,GD-ST,59.250,NA,to check
+2024-04-30,3,F14,Closed,Ulmus Morton,UA-ST,59.25,NA,NA
+2026-06-19,1,F06,Partial,Ulmus Morton ,UA-SP,59.00,NA,T1
+2026-06-15,1,F06,Partial,Ulmus Morton ,UA-SP,59.00,NA,T1
+2026-05-15,1,F06,Partial,Ulmus Morton ,UA-SP,59.00,NA,T2
+2025-04-28,3,F18,Partial,Ulmus Morton ,UA-SO,59.000,NA,to check
+2025-04-08,1,F06,Partial,Ulmus Morton ,UA-SP,59.000,NA,to check
+2024-06-07,1,F04,Closed,Ulmus Morton,UA-ST,59,NA,NA
+2026-06-15,3,F16,Open,Ulmus Morton ,UA-SO,58.75,NA,T1
+2026-07-27,3,F17,Open,Gymnocladus dioicus,GD-SO,58.50,NA,no
+2026-05-29,1,F04,Closed,Ulmus Morton ,UA-ST,58.50,NA,T0
+2026-05-19,2,F10,Partial,Gymnocladus dioicus,GD-SP,58.50,NA,no
+2026-05-12,1,F01,Open,Ulmus Morton ,UA-SO,58.50,NA,T0
+2025-08-19,1,F03,Open,Gymnocladus dioicus,GD-SO,58.5,NA,to check
+2025-03-27,1,F01,Open,Ulmus Morton ,GD-SP,58.5,NA,to check
+2025-03-27,1,F04,Closed,Ulmus Morton ,GD-ST,58.5,NA,to check
+2026-08-24,1,F04,Closed,Ulmus Morton ,UA-ST,58.00,NA,no
+2026-08-20,1,F06,Partial,Ulmus Morton ,UA-SP,58.00,NA,no
+2026-06-21,1,F06,Partial,Ulmus Morton ,UA-SP,58.00,NA,T2
+2026-05-19,1,F04,Closed,Ulmus Morton ,UA-ST,58.00,NA,no
+2026-04-20,2,F07,Closed,Gymnocladus dioicus,GD-ST,58.00,NA,no
+2026-04-09,1,F03,Open,Gymnocladus dioicus,GD-SO,58.00,NA,no
+2025-09-23,1,F06,Partial,Ulmus Morton ,UA-SP,58.0,NA,to check
+2025-07-22,1,F01,Open,Ulmus Morton ,UA-SO,58,NA,to check
+2025-06-25,1,F02,Partial,Gymnocladus dioicus,GD-SP,58,NA,to check
+2025-05-27,1,F04,Closed,Ulmus Morton ,GD-SP,58,NA,to check
+2024-07-03,1,F02,Partial,Gymnocladus dioicus,GD-SP,58,NA,NA
+2024-07-03,3,F17,Open,Gymnocladus dioicus,GD-SO,58,NA,NA
+2024-05-23,1,F06,Partial,Ulmus Morton,UA-SP,58,NA,NA
+2026-05-14,3,F16,Open,Ulmus Morton ,UA-SO,57.79,NA,T1
+2026-07-06,3,F17,Open,Gymnocladus dioicus,GD-SO,57.75,NA,no
+2026-06-09,3,F18,Partial,Ulmus Morton ,UA-SP,57.50,NA,no
+2025-08-19,1,F02,Partial,Gymnocladus dioicus,GD-SP,57.5,NA,to check
+2026-09-14,1,F06,Partial,Ulmus Morton ,UA-SP,57.00,NA,no
+2026-08-06,3,F18,Partial,Ulmus Morton ,UA-SP,57.00,NA,T2
+2026-07-13,3,F18,Partial,Ulmus Morton ,UA-SP,57.00,NA,no
+2026-05-30,1,F06,Partial,Ulmus Morton ,UA-SP,57.00,NA,T1
+2025-05-27,1,F06,Partial,Ulmus Morton ,UA-ST,57,NA,to check
+2025-04-15,3,F18,Partial,Ulmus Morton ,UA-SP,57,NA,to check
+2024-08-26,2,F10,Partial,Gymnocladus dioicus,GD-SP,57,NA,NA
+2026-06-01,1,F06,Partial,Ulmus Morton ,UA-SP,56.75,NA,no
+2026-06-13,3,F18,Partial,Ulmus Morton ,UA-SP,56.50,NA,T0
+2025-07-08,1,F06,Partial,Ulmus Morton ,UA-SP,56.50,NA,to check
+2025-06-25,3,F17,Open,Gymnocladus dioicus,GD-SO,56.5,NA,to check
+2025-05-05,1,F04,Closed,Ulmus Morton ,GD-SO,56.5,NA,to check
+2025-04-08,3,F18,Partial,Ulmus Morton ,UA-SP,56.500,NA,to check
+2025-03-27,3,F17,Open,Gymnocladus dioicus,UA-SO,56.5,NA,to check
+2024-09-11,1,F02,Partial,Gymnocladus dioicus,GD-SP,56.5,NA,NA
+2025-05-13,1,F04,Closed,Ulmus Morton ,GD-SO,56.30,NA,to check
+2026-08-24,1,F06,Partial,Ulmus Morton ,UA-SP,56.00,NA,no
+2026-05-15,3,F16,Open,Ulmus Morton ,UA-SO,56.00,NA,T2
+2024-08-26,1,F06,Partial,Ulmus Morton,UA-SP,56,NA,NA
+2024-04-30,2,F11,Open,Gymnocladus dioicus,GD-SO,56,NA,NA
+2026-04-20,1,F06,Partial,Ulmus Morton ,UA-SP,55.75,NA,no
+2026-05-25,3,F13,Closed,Gymnocladus dioicus,GD-ST,55.50,NA,no
+2026-05-19,1,F06,Partial,Ulmus Morton ,UA-SP,55.50,NA,no
+2025-04-15,3,F14,Closed,Ulmus Morton ,UA-ST,55.5,NA,to check
+2026-08-20,3,F13,Closed,Gymnocladus dioicus,GD-ST,55.00,NA,no
+2025-06-03,1,F04,Closed,Ulmus Morton ,GD-SP,55.000,NA,to check
+2025-06-03,3,F18,Partial,Ulmus Morton ,UA-SP,55.000,NA,to check
+2025-03-27,2,F07,Closed,Gymnocladus dioicus,GD-ST,55,NA,to check
+2024-08-09,3,F13,Closed,Gymnocladus dioicus,GD-ST,55,NA,NA
+2024-08-09,3,F16,Open,Ulmus Morton,UA-SO,55,NA,NA
+2026-08-04,1,F06,Partial,Ulmus Morton ,UA-SP,54.50,NA,T1
+2025-06-30,3,F18,Partial,Ulmus Morton ,UA-SP,54.5,NA,to check
+2024-05-23,2,F09,Open,Ulmus Morton,UA-SO,54.5,NA,NA
+2026-04-09,1,F04,Closed,Ulmus Morton ,UA-ST,54.25,NA,no
+2026-05-12,1,F04,Closed,Ulmus Morton ,UA-ST,54.00,NA,T0
+2025-05-27,2,F10,Partial,Gymnocladus dioicus,UA-SP,54,NA,to check
+2024-08-09,2,F12,Closed,Ulmus Morton,UA-ST,54,NA,NA
+2024-03-05,1,F04,Closed,Ulmus Morton,UA-ST,54,NA,NA
+2025-05-20,1,F06,Partial,Ulmus Morton ,UA-ST,53.70,NA,to check
+2026-07-06,1,F02,Partial,Gymnocladus dioicus,GD-SP,53.50,NA,no
+2026-06-04,3,F18,Partial,Ulmus Morton ,UA-SP,53.50,NA,T2
+2026-05-04,2,F11,Open,Gymnocladus dioicus,GD-SO,53.50,NA,no
+2025-06-03,1,F01,Open,Ulmus Morton ,GD-SO,53.5,NA,to check
+2025-05-13,1,F01,Open,Ulmus Morton ,UA-SP,53.50,NA,to check
+2025-05-05,3,F17,Open,Gymnocladus dioicus,GD-SP,53.5,NA,to check
+2025-04-22,2,F09,Open,Ulmus Morton ,UA-ST,53.500,NA,to check
+2025-04-22,2,F09,Open,Ulmus Morton ,UA-SP,53.500,NA,to check
+2025-08-23,3,F15,Partial,Gymnocladus dioicus,GD-SP,53.25,NA,to check
+2026-05-14,2,F11,Open,Gymnocladus dioicus,GD-SO,53.13,very wet wood,T1
+2026-08-02,3,F18,Partial,Ulmus Morton ,UA-SP,53.00,NA,T0
+2025-04-01,1,F06,Partial,Ulmus Morton ,UA-SP,53,NA,to check
+2026-07-13,1,F02,Partial,Gymnocladus dioicus,GD-SP,52.50,NA,no
+2026-05-12,1,F06,Partial,Ulmus Morton ,UA-SP,52.50,NA,T0
+2025-06-30,1,F01,Open,Ulmus Morton ,UA-SO,52.5,NA,to check
+2025-06-30,1,F04,Closed,Ulmus Morton ,UA-ST,52.5,NA,to check
+2024-06-07,1,F06,Partial,Ulmus Morton,UA-SP,52.5,NA,NA
+2024-03-27,2,F11,Open,Gymnocladus dioicus,GD-SO,52.5,NA,NA
+2026-06-26,3,F16,Open,Ulmus Morton ,UA-SO,52.00,NA,no
+2026-06-01,3,F16,Open,Ulmus Morton ,UA-SO,52.00,NA,no
+2025-07-22,3,F18,Partial,Ulmus Morton ,UA-SP,52,NA,to check
+2024-07-17,1,F02,Partial,Gymnocladus dioicus,GD-SP,52,NA,NA
+2026-05-14,3,F13,Closed,Gymnocladus dioicus,GD-ST,51.73,NA,T1
+2026-06-17,1,F01,Open,Ulmus Morton ,UA-SO,51.50,NA,T2 and T0
+2025-03-19,2,F07,Closed,Gymnocladus dioicus,GD-ST,51.5,NA,to check
+2026-08-24,3,F13,Closed,Gymnocladus dioicus,GD-ST,51.00,NA,no
+2026-08-06,1,F01,Open,Ulmus Morton ,UA-SO,51.00,NA,T2
+2026-06-19,2,F08,Partial,Ulmus Morton ,UA-SP,51.00,NA,T1
+2026-06-09,2,F10,Partial,Gymnocladus dioicus,GD-SP,51.00,NA,no
+2026-05-19,2,F07,Closed,Gymnocladus dioicus,GD-ST,51.00,NA,no
+2026-05-12,2,F07,Closed,Gymnocladus dioicus,GD-ST,51.00,NA,T0
+2025-04-22,3,F16,Open,Ulmus Morton ,GD-ST,51.000,NA,to check
+2025-04-22,3,F16,Open,Ulmus Morton ,UA-ST,51.000,NA,to check
+2025-04-01,2,F09,Open,Ulmus Morton ,UA-SO,51,NA,to check
+2024-05-09,1,F06,Partial,Ulmus Morton,UA-SP,51,NA,NA
+2026-05-04,2,F07,Closed,Gymnocladus dioicus,GD-ST,50.75,NA,no
+2026-06-09,1,F04,Closed,Ulmus Morton ,UA-ST,50.50,NA,no
+2026-05-12,2,F10,Partial,Gymnocladus dioicus,GD-SP,50.50,NA,T0
+2025-09-23,3,F16,Open,Ulmus Morton ,UA-SO,50.5,NA,to check
+2025-07-08,2,F09,Open,Ulmus Morton ,UA-SO,50.50,NA,to check
+2026-08-04,2,F07,Closed,Gymnocladus dioicus,GD-ST,50.00,NA,T1
+2026-07-27,1,F02,Partial,Gymnocladus dioicus,GD-SP,50.00,NA,no
+2026-07-06,3,F18,Partial,Ulmus Morton ,UA-SP,50.00,NA,no
+2026-06-26,2,F11,Open,Gymnocladus dioicus,GD-SO,50.00,NA,no
+2026-06-15,2,F07,Closed,Gymnocladus dioicus,GD-ST,50.00,NA,T1
+2026-05-30,3,F16,Open,Ulmus Morton ,UA-SO,50.00,NA,T1
+2026-05-25,2,F11,Open,Gymnocladus dioicus,GD-SO,50.00,NA,no
+2026-05-15,2,F11,Open,Gymnocladus dioicus,GD-SO,50.00,NA,T2
+2026-05-04,2,F10,Partial,Gymnocladus dioicus,GD-SP,50.00,NA,no
+2026-04-20,3,F16,Open,Ulmus Morton ,UA-SO,50.00,NA,no
+2025-07-16,1,F04,Closed,Ulmus Morton ,UA-ST,50,NA,to check
+2025-07-16,3,F18,Partial,Ulmus Morton ,UA-SP,50,NA,to check
+2025-05-20,2,F10,Partial,Gymnocladus dioicus,UA-SP,50.00,NA,to check
+2025-04-22,2,F11,Open,Gymnocladus dioicus,UA-ST,50.000,NA,to check
+2025-04-22,2,F11,Open,Gymnocladus dioicus,UA-SP,50.000,NA,to check
+2025-03-19,3,F17,Open,Gymnocladus dioicus,GD-SO,50,NA,to check
+2024-07-03,3,F18,Partial,Ulmus Morton,UA-SP,50,NA,NA
+2024-06-07,2,F07,Closed,Gymnocladus dioicus,GD-ST,50,NA,NA
+2024-06-07,2,F11,Open,Gymnocladus dioicus,GD-SO,50,NA,NA
+2024-05-23,2,F11,Open,Gymnocladus dioicus,GD-SO,50,NA,NA
+2024-03-27,3,F16,Open,Ulmus Morton,UA-SO,50,NA,NA
+2025-07-08,2,F11,Open,Gymnocladus dioicus,GD-SO,49.75,NA,to check
+2026-08-20,2,F11,Open,Gymnocladus dioicus,GD-SO,49.50,NA,no
+2026-07-27,3,F18,Partial,Ulmus Morton ,UA-SP,49.50,NA,no
+2026-06-15,2,F11,Open,Gymnocladus dioicus,GD-SO,49.50,NA,T1
+2026-06-09,1,F01,Open,Ulmus Morton ,UA-SO,49.50,NA,no
+2025-05-05,1,F01,Open,Ulmus Morton ,UA-SP,49.500,NA,to check
+2024-09-11,3,F18,Partial,Ulmus Morton,UA-SP,49.5,NA,NA
+2024-04-30,2,F12,Closed,Ulmus Morton,UA-ST,49.5,NA,NA
+2025-05-27,2,F09,Open,Ulmus Morton ,GD-ST,49.3,NA,to check
+2024-03-05,3,F17,Open,Gymnocladus dioicus,GD-SO,49.2,NA,NA
+2026-06-09,1,F06,Partial,Ulmus Morton ,UA-SP,49.00,NA,no
+2026-06-04,1,F01,Open,Ulmus Morton ,UA-SO,49.00,"T2 delayed due to another rainfall, 2026-05-30",T2
+2026-04-27,3,F15,Partial,Gymnocladus dioicus,GD-SP,49.00,NA,no
+2025-06-17,1,F03,Open,Gymnocladus dioicus,GD-SO,49.000,NA,to check
+2025-06-03,1,F06,Partial,Ulmus Morton ,GD-ST,49.000,NA,to check
+2025-05-13,3,F16,Open,Ulmus Morton ,UA-ST,49.00,NA,to check
+2025-04-01,2,F11,Open,Gymnocladus dioicus,GD-SO,49,NA,to check
+2025-04-01,3,F16,Open,Ulmus Morton ,UA-SO,49,NA,to check
+2024-09-11,1,F04,Closed,Ulmus Morton,UA-ST,49,NA,NA
+2024-04-30,3,F16,Open,Ulmus Morton,UA-SO,49,NA,NA
+2026-09-14,2,F11,Open,Gymnocladus dioicus,GD-SO,48.50,NA,no
+2026-06-17,1,F04,Closed,Ulmus Morton ,UA-ST,48.50,NA,T2 and T0
+2026-06-04,1,F04,Closed,Ulmus Morton ,UA-ST,48.50,NA,T2
+2026-05-30,2,F11,Open,Gymnocladus dioicus,GD-SO,48.50,NA,T1
+2026-05-12,3,F16,Open,Ulmus Morton ,UA-SO,48.50,NA,T0
+2025-09-23,2,F11,Open,Gymnocladus dioicus,GD-SO,48.5,NA,to check
+2025-06-30,1,F06,Partial,Ulmus Morton ,UA-SP,48.5,NA,to check
+2025-05-20,3,F16,Open,Ulmus Morton ,UA-ST,48.50,NA,to check
+2024-07-17,3,F18,Partial,Ulmus Morton,UA-SP,48.5,NA,NA
+2024-06-07,2,F09,Open,Ulmus Morton,UA-SO,48.5,NA,NA
+2024-03-27,1,F02,Partial,Gymnocladus dioicus,GD-SP,48.5,NA,NA
+2026-06-15,3,F13,Closed,Gymnocladus dioicus,GD-ST,48.25,NA,T1
+2026-06-09,2,F07,Closed,Gymnocladus dioicus,GD-ST,48.25,NA,no
+2025-07-22,1,F04,Closed,Ulmus Morton ,UA-ST,48.25,NA,to check
+2026-08-24,2,F11,Open,Gymnocladus dioicus,GD-SO,48.00,NA,no
+2026-08-24,3,F16,Open,Ulmus Morton ,UA-SO,48.00,NA,no
+2026-08-04,3,F16,Open,Ulmus Morton ,UA-SO,48.00,NA,T1
+2026-06-01,2,F11,Open,Gymnocladus dioicus,GD-SO,48.00,NA,no
+2026-05-04,2,F09,Open,Ulmus Morton ,UA-SO,48.00,NA,no
+2025-06-17,3,F15,Partial,Gymnocladus dioicus,GD-SP,48.000,NA,to check
+2025-05-27,2,F07,Closed,Gymnocladus dioicus,GD-ST,48,NA,to check
+2025-05-27,3,F16,Open,Ulmus Morton ,UA-ST,48,NA,to check
+2025-04-28,3,F16,Open,Ulmus Morton ,UA-ST,48.000,NA,to check
+2024-05-09,2,F10,Partial,Gymnocladus dioicus,GD-SP,48,NA,NA
+2026-05-25,2,F09,Open,Ulmus Morton ,UA-SO,47.75,NA,no
+2026-05-19,3,F16,Open,Ulmus Morton ,UA-SO,47.54,NA,no
+2026-06-26,3,F13,Closed,Gymnocladus dioicus,GD-ST,47.50,NA,no
+2026-06-13,1,F01,Open,Ulmus Morton ,UA-SO,47.50,NA,T0
+2026-06-09,3,F16,Open,Ulmus Morton ,UA-SO,47.50,NA,no
+2026-04-09,3,F17,Open,Gymnocladus dioicus,GD-SO,47.50,NA,no
+2025-07-08,3,F16,Open,Ulmus Morton ,UA-SO,47.50,NA,to check
+2025-06-25,1,F06,Partial,Ulmus Morton ,UA-SP,47.5,NA,to check
+2026-09-14,3,F16,Open,Ulmus Morton ,UA-SO,47.25,NA,no
+2026-06-04,2,F07,Closed,Gymnocladus dioicus,GD-ST,47.25,NA,T2
+2026-04-09,1,F06,Partial,Ulmus Morton ,UA-SP,47.25,NA,no
+2025-07-08,2,F08,Partial,Ulmus Morton ,UA-SP,47.25,NA,to check
+2026-05-14,2,F09,Open,Ulmus Morton ,UA-SO,47.07,NA,T1
+2026-05-14,3,F14,Closed,Ulmus Morton ,UA-ST,47.07,very wet wood,T1
+2026-06-26,1,F04,Closed,Ulmus Morton ,UA-ST,47.00,NA,no
+2026-06-13,1,F04,Closed,Ulmus Morton ,UA-ST,47.00,NA,T0
+2025-06-17,1,F02,Partial,Gymnocladus dioicus,GD-SP,47.000,NA,to check
+2025-06-09,3,F15,Partial,Gymnocladus dioicus,GD-SP,47.000,NA,to check
+2025-05-27,2,F11,Open,Gymnocladus dioicus,UA-SO,47,NA,to check
+2024-08-26,3,F16,Open,Ulmus Morton,UA-SO,47,NA,NA
+2026-06-17,3,F16,Open,Ulmus Morton ,UA-SO,46.75,NA,T2 and T0
+2026-06-13,2,F10,Partial,Gymnocladus dioicus,GD-SP,46.75,NA,T0
+2026-08-20,3,F16,Open,Ulmus Morton ,UA-SO,46.50,NA,no
+2026-08-06,2,F10,Partial,Gymnocladus dioicus,GD-SP,46.50,NA,T2
+2026-08-04,2,F11,Open,Gymnocladus dioicus,GD-SO,46.50,NA,T1
+2026-06-26,2,F09,Open,Ulmus Morton ,UA-SO,46.50,NA,no
+2026-06-17,1,F06,Partial,Ulmus Morton ,UA-SP,46.50,NA,T2 and T0
+2026-06-04,3,F16,Open,Ulmus Morton ,UA-SO,46.50,NA,T2
+2026-05-04,3,F13,Closed,Gymnocladus dioicus,GD-ST,46.50,NA,no
+2025-04-28,2,F09,Open,Ulmus Morton ,GD-ST,46.500,NA,to check
+2025-04-28,2,F11,Open,Gymnocladus dioicus,UA-SO,46.500,NA,to check
+2024-07-03,1,F04,Closed,Ulmus Morton,UA-ST,46.5,NA,NA
+2026-06-17,2,F10,Partial,Gymnocladus dioicus,GD-SP,46.25,NA,T2 and T0
+2026-08-06,1,F06,Partial,Ulmus Morton ,UA-SP,46.00,NA,T2
+2026-06-13,1,F06,Partial,Ulmus Morton ,UA-SP,46.00,NA,T0
+2026-06-13,3,F16,Open,Ulmus Morton ,UA-SO,46.00,NA,T0
+2026-05-29,3,F18,Partial,Ulmus Morton ,UA-SP,46.00,NA,T0
+2025-07-16,1,F01,Open,Ulmus Morton ,UA-SO,46,NA,to check
+2025-06-25,2,F11,Open,Gymnocladus dioicus,GD-SO,46,NA,to check
+2025-06-17,3,F17,Open,Gymnocladus dioicus,GD-SO,46.000,NA,to check
+2025-05-13,1,F06,Partial,Ulmus Morton ,GD-ST,46.00,NA,to check
+2025-03-19,1,F06,Partial,Ulmus Morton ,UA-SP,46,NA,to check
+2024-08-26,2,F09,Open,Ulmus Morton,UA-SO,46,NA,NA
+2024-05-23,3,F18,Partial,Ulmus Morton,UA-SP,46,NA,NA
+2026-06-01,3,F13,Closed,Gymnocladus dioicus,GD-ST,45.75,NA,no
+2026-08-06,1,F04,Closed,Ulmus Morton ,UA-ST,45.50,NA,T2
+2026-06-15,2,F09,Open,Ulmus Morton ,UA-SO,45.50,NA,T1
+2026-04-27,1,F02,Partial,Gymnocladus dioicus,GD-SP,45.50,NA,no
+2025-06-25,3,F18,Partial,Ulmus Morton ,UA-SP,45.5,NA,to check
+2025-05-20,2,F09,Open,Ulmus Morton ,GD-ST,45.50,NA,to check
+2026-09-14,2,F07,Closed,Gymnocladus dioicus,GD-ST,45.00,NA,no
+2026-08-20,2,F09,Open,Ulmus Morton ,UA-SO,45.00,NA,no
+2026-08-02,1,F01,Open,Ulmus Morton ,UA-SO,45.00,NA,T0
+2026-07-13,3,F15,Partial,Gymnocladus dioicus,GD-SP,45.00,NA,no
+2026-06-19,2,F11,Open,Gymnocladus dioicus,GD-SO,45.00,NA,T1
+2026-04-09,3,F18,Partial,Ulmus Morton ,UA-SP,45.00,NA,no
+2025-08-12,3,F17,Open,Gymnocladus dioicus,GD-SO,45,NA,to check
+2025-06-30,3,F16,Open,Ulmus Morton ,UA-SO,45,NA,to check
+2025-06-03,3,F16,Open,Ulmus Morton ,UA-SO,45.000,NA,to check
+2025-05-20,2,F11,Open,Gymnocladus dioicus,UA-SO,45.00,NA,to check
+2025-03-19,3,F16,Open,Ulmus Morton ,UA-SO,45,NA,to check
+2024-07-17,3,F16,Open,Ulmus Morton,UA-SO,45,NA,NA
+2024-06-07,2,F10,Partial,Gymnocladus dioicus,GD-SP,45,NA,NA
+2024-05-09,2,F11,Open,Gymnocladus dioicus,GD-SO,45,NA,NA
+2026-09-14,3,F13,Closed,Gymnocladus dioicus,GD-ST,44.50,NA,no
+2026-06-21,2,F09,Open,Ulmus Morton ,UA-SO,44.50,NA,T2
+2026-06-04,2,F10,Partial,Gymnocladus dioicus,GD-SP,44.50,NA,T2
+2026-05-19,3,F13,Closed,Gymnocladus dioicus,GD-ST,44.50,NA,no
+2026-05-15,2,F09,Open,Ulmus Morton ,UA-SO,44.50,NA,T2
+2026-05-15,3,F13,Closed,Gymnocladus dioicus,GD-ST,44.50,NA,T2
+2026-04-20,2,F11,Open,Gymnocladus dioicus,GD-SO,44.50,small quantity of water avasilable for test ,no
+2025-09-23,2,F09,Open,Ulmus Morton ,UA-SO,44.5,NA,to check
+2025-07-16,1,F06,Partial,Ulmus Morton ,UA-SP,44.5,NA,to check
+2025-06-25,1,F04,Closed,Ulmus Morton ,UA-ST,44.5,NA,to check
+2025-05-05,3,F16,Open,Ulmus Morton ,UA-ST,44.5,NA,to check
+2025-04-08,3,F13,Closed,Gymnocladus dioicus,GD-ST,44.500,NA,to check
+2024-05-23,3,F16,Open,Ulmus Morton,UA-SO,44.5,NA,NA
+2026-08-06,3,F16,Open,Ulmus Morton ,UA-SO,44.00,NA,T2
+2026-06-04,1,F06,Partial,Ulmus Morton ,UA-SP,44.00,NA,T2
+2026-05-30,3,F13,Closed,Gymnocladus dioicus,GD-ST,44.00,NA,T1
+2026-04-09,2,F07,Closed,Gymnocladus dioicus,GD-ST,44.00,NA,no
+2025-05-27,2,F08,Partial,Ulmus Morton ,UA-SP,44,NA,to check
+2025-04-01,3,F13,Closed,Gymnocladus dioicus,GD-ST,44,NA,to check
+2025-03-27,3,F16,Open,Ulmus Morton ,GD-SP,44,NA,to check
+2024-05-09,2,F09,Open,Ulmus Morton,UA-SO,44,NA,NA
+2025-09-02,2,F11,Open,Gymnocladus dioicus,GD-SO,43.6,NA,to check
+2026-06-13,2,F07,Closed,Gymnocladus dioicus,GD-ST,43.50,NA,T0
+2026-05-29,1,F05,Closed,Gymnocladus dioicus,GD-ST,43.50,NA,T0
+2026-04-27,1,F04,Closed,Ulmus Morton ,UA-ST,43.50,NA,no
+2025-07-22,1,F06,Partial,Ulmus Morton ,UA-SP,43.5,NA,to check
+2025-07-22,3,F16,Open,Ulmus Morton ,UA-SO,43.5,NA,to check
+2025-04-01,2,F08,Partial,Ulmus Morton ,UA-SP,43.5,NA,to check
+2025-03-19,2,F11,Open,Gymnocladus dioicus,GD-SO,43.5,NA,to check
+2024-04-30,2,F10,Partial,Gymnocladus dioicus,GD-SP,43.5,NA,NA
+2024-04-30,3,F13,Closed,Gymnocladus dioicus,GD-ST,43.5,NA,NA
+2025-06-30,2,F10,Partial,Gymnocladus dioicus,GD-SP,43.4,NA,to check
+2025-04-22,3,F13,Closed,Gymnocladus dioicus,GD-SP,43.250,NA,to check
+2026-06-19,2,F10,Partial,Gymnocladus dioicus,GD-SP,43.00,NA,T1
+2026-06-01,2,F09,Open,Ulmus Morton ,UA-SO,43.00,NA,no
+2025-08-19,1,F06,Partial,Ulmus Morton ,UA-SP,43,NA,to check
+2025-06-30,2,F11,Open,Gymnocladus dioicus,GD-SO,43,NA,to check
+2025-05-13,3,F18,Partial,Ulmus Morton ,UA-SO,43.00,NA,to check
+2025-04-22,2,F07,Closed,Gymnocladus dioicus,UA-SP,43.000,NA,to check
+2025-04-22,2,F07,Closed,Gymnocladus dioicus,UA-ST,43.000,NA,to check
+2026-04-09,1,F01,Open,Ulmus Morton ,UA-SO,42.75,NA,no
+2026-09-14,2,F09,Open,Ulmus Morton ,UA-SO,42.50,NA,no
+2026-08-24,2,F09,Open,Ulmus Morton ,UA-SO,42.50,NA,no
+2026-08-04,3,F13,Closed,Gymnocladus dioicus,GD-ST,42.50,NA,T1
+2026-07-13,1,F01,Open,Ulmus Morton ,UA-SO,42.50,NA,no
+2026-05-30,2,F09,Open,Ulmus Morton ,UA-SO,42.50,NA,T1
+2026-04-09,3,F16,Open,Ulmus Morton ,UA-SO,42.50,NA,no
+2025-07-16,3,F16,Open,Ulmus Morton ,UA-SO,42.5,NA,to check
+2025-07-08,3,F13,Closed,Gymnocladus dioicus,GD-ST,42.50,NA,to check
+2024-08-26,2,F08,Partial,Ulmus Morton,UA-SP,42.5,NA,NA
+2025-09-23,3,F13,Closed,Gymnocladus dioicus,GD-ST,42.3,NA,to check
+2026-05-29,1,F01,Open,Ulmus Morton ,UA-SO,42.20,NA,T0
+2026-08-02,1,F06,Partial,Ulmus Morton ,UA-SP,42.00,NA,T0
+2026-08-02,3,F16,Open,Ulmus Morton ,UA-SO,42.00,NA,T0
+2026-07-06,3,F16,Open,Ulmus Morton ,UA-SO,42.00,NA,no
+2025-08-19,3,F18,Partial,Ulmus Morton ,UA-SP,42,NA,to check
+2025-05-27,3,F13,Closed,Gymnocladus dioicus,GD-SO,42,NA,to check
+2025-04-28,2,F08,Partial,Ulmus Morton ,UA-SP,42.000,NA,to check
+2025-03-19,3,F13,Closed,Gymnocladus dioicus,GD-ST,42,NA,to check
+2025-04-28,3,F13,Closed,Gymnocladus dioicus,GD-SO,41.750,NA,to check
+2026-08-02,1,F04,Closed,Ulmus Morton ,UA-ST,41.50,NA,T0
+2026-05-29,2,F08,Partial,Ulmus Morton ,UA-SP,41.50,NA,T0
+2026-04-20,3,F13,Closed,Gymnocladus dioicus,GD-ST,41.50,NA,no
+2025-08-12,3,F15,Partial,Gymnocladus dioicus,GD-SP,41.5,NA,to check
+2025-07-16,2,F07,Closed,Gymnocladus dioicus,GD-ST,41.5,NA,to check
+2025-06-25,1,F01,Open,Ulmus Morton ,UA-SO,41.5,NA,to check
+2025-06-25,3,F16,Open,Ulmus Morton ,UA-SO,41.5,NA,to check
+2025-03-27,2,F11,Open,Gymnocladus dioicus,GD-SO,41.5,NA,to check
+2024-09-11,3,F16,Open,Ulmus Morton,UA-SO,41.5,NA,NA
+2024-05-23,3,F13,Closed,Gymnocladus dioicus,GD-ST,41.5,NA,NA
+2026-04-27,1,F03,Open,Gymnocladus dioicus,GD-SO,41.25,NA,no
+2026-07-27,1,F01,Open,Ulmus Morton ,UA-SO,41.00,NA,no
+2026-07-13,1,F04,Closed,Ulmus Morton ,UA-ST,41.00,NA,no
+2026-07-06,1,F06,Partial,Ulmus Morton ,UA-SP,41.00,NA,no
+2026-05-29,2,F07,Closed,Gymnocladus dioicus,GD-ST,41.00,NA,T0
+2025-08-12,1,F01,Open,Ulmus Morton ,UA-SO,41,NA,to check
+2024-06-07,3,F13,Closed,Gymnocladus dioicus,GD-ST,41,NA,NA
+2024-05-09,3,F16,Open,Ulmus Morton,UA-SO,41,NA,NA
+2025-09-02,1,F06,Partial,Ulmus Morton ,UA-SP,40.7,NA,to check
+2026-07-06,1,F04,Closed,Ulmus Morton ,UA-ST,40.50,NA,no
+2025-03-19,2,F09,Open,Ulmus Morton ,UA-SO,40.5,NA,to check
+2024-07-03,3,F16,Open,Ulmus Morton,UA-SO,40.5,NA,NA
+2026-08-02,2,F10,Partial,Gymnocladus dioicus,GD-SP,40.00,NA,T0
+2026-07-13,1,F06,Partial,Ulmus Morton ,UA-SP,40.00,NA,no
+2025-05-20,3,F13,Closed,Gymnocladus dioicus,GD-SO,40.00,NA,to check
+2025-03-27,2,F09,Open,Ulmus Morton ,UA-SO,40,NA,to check
+2024-04-30,1,F06,Partial,Ulmus Morton,UA-SP,40,NA,NA
+2024-03-05,1,F02,Partial,Gymnocladus dioicus,GD-SP,39.6,NA,NA
+2026-08-04,2,F09,Open,Ulmus Morton ,UA-SO,39.50,NA,T1
+2026-07-27,3,F16,Open,Ulmus Morton ,UA-SO,39.50,NA,no
+2026-06-09,2,F11,Open,Gymnocladus dioicus,GD-SO,39.50,NA,no
+2026-05-19,2,F09,Open,Ulmus Morton ,UA-SO,39.50,NA,no
+2025-08-23,3,F17,Open,Gymnocladus dioicus,GD-SO,39.5,NA,to check
+2025-03-27,3,F13,Closed,Gymnocladus dioicus,UA-SP,39.5,NA,to check
+2024-08-26,3,F13,Closed,Gymnocladus dioicus,GD-ST,39.5,NA,NA
+2024-04-16,3,F16,Open,Ulmus Morton,UA-SO,39.5,NA,NA
+2026-04-20,2,F09,Open,Ulmus Morton ,UA-SO,39.25,less sediment- light brown,no
+2026-06-17,2,F07,Closed,Gymnocladus dioicus,GD-ST,39.00,NA,T2 and T0
+2026-06-09,3,F13,Closed,Gymnocladus dioicus,GD-ST,39.00,NA,no
+2025-08-19,3,F16,Open,Ulmus Morton ,UA-SO,39,NA,to check
+2025-07-16,2,F11,Open,Gymnocladus dioicus,GD-SO,39,NA,to check
+2025-05-13,2,F07,Closed,Gymnocladus dioicus,UA-SP,39.00,NA,to check
+2024-08-26,2,F11,Open,Gymnocladus dioicus,GD-SO,39,NA,NA
+2024-03-05,1,F01,Open,Gymnocladus dioicus,UA-SO,39,NA,NA
+2026-07-06,1,F01,Open,Ulmus Morton ,UA-SO,38.75,NA,no
+2026-06-13,3,F13,Closed,Gymnocladus dioicus,GD-ST,38.50,NA,T0
+2026-05-19,2,F11,Open,Gymnocladus dioicus,GD-SO,38.50,NA,no
+2025-06-30,2,F09,Open,Ulmus Morton ,UA-SO,38.5,NA,to check
+2025-06-25,3,F13,Closed,Gymnocladus dioicus,GD-ST,38.5,NA,to check
+2026-08-06,2,F11,Open,Gymnocladus dioicus,GD-SO,38.00,NA,T2
+2026-07-27,1,F06,Partial,Ulmus Morton ,UA-SP,38.00,NA,no
+2026-06-13,2,F11,Open,Gymnocladus dioicus,GD-SO,38.00,NA,T0
+2026-05-12,3,F13,Closed,Gymnocladus dioicus,GD-ST,38.00,NA,T0
+2025-06-30,3,F13,Closed,Gymnocladus dioicus,GD-ST,38,NA,to check
+2025-06-17,3,F16,Open,Ulmus Morton ,UA-SO,38.000,NA,to check
+2025-06-03,2,F07,Closed,Gymnocladus dioicus,UA-SP,38.000,NA,to check
+2025-06-03,2,F11,Open,Gymnocladus dioicus,GD-SP,38.000,NA,to check
+2024-07-03,1,F01,Open,Ulmus Morton,UA-SO,38,NA,NA
+2024-04-16,2,F07,Closed,Gymnocladus dioicus,GD-ST,38,NA,NA
+2024-04-16,2,F09,Open,Ulmus Morton,UA-SO,38,NA,NA
+2026-06-17,3,F13,Closed,Gymnocladus dioicus,GD-ST,37.50,NA,T2 and T0
+2025-08-23,1,F03,Open,Gymnocladus dioicus,GD-SO,37.5,NA,to check
+2025-06-03,2,F09,Open,Ulmus Morton ,UA-SP,37.500,NA,to check
+2025-04-15,2,F09,Open,Ulmus Morton ,GD-SP,37.5,NA,to check
+2025-08-19,1,F04,Closed,Ulmus Morton ,UA-ST,37.3,NA,to check
+2025-04-15,3,F13,Closed,Gymnocladus dioicus,GD-ST,37.25,NA,to check
+2024-09-11,1,F06,Partial,Ulmus Morton,UA-SP,37.25,NA,NA
+2026-08-06,2,F07,Closed,Gymnocladus dioicus,GD-ST,37.00,NA,T2
+2026-06-04,3,F13,Closed,Gymnocladus dioicus,GD-ST,37.00,NA,T2
+2026-05-25,2,F08,Partial,Ulmus Morton ,UA-SP,37.00,NA,no
+2026-04-09,3,F13,Closed,Gymnocladus dioicus,GD-ST,37.00,NA,no
+2025-08-19,2,F11,Open,Gymnocladus dioicus,GD-SO,37,NA,to check
+2025-07-16,3,F13,Closed,Gymnocladus dioicus,GD-ST,37,NA,to check
+2026-06-17,2,F11,Open,Gymnocladus dioicus,GD-SO,36.50,NA,T2 and T0
+2025-06-17,1,F04,Closed,Ulmus Morton ,UA-ST,36.500,NA,to check
+2025-06-03,3,F13,Closed,Gymnocladus dioicus,GD-ST,36.500,NA,to check
+2025-03-27,1,F06,Partial,Ulmus Morton ,UA-SO,36.5,NA,to check
+2024-08-09,3,F14,Closed,Ulmus Morton,UA-ST,36.5,NA,NA
+2024-06-07,3,F14,Closed,Ulmus Morton,UA-ST,36.5,NA,NA
+2024-04-16,3,F14,Closed,Ulmus Morton,UA-ST,36.5,NA,NA
+2026-07-27,1,F04,Closed,Ulmus Morton ,UA-ST,36.00,NA,no
+2026-07-13,3,F16,Open,Ulmus Morton ,UA-SO,36.00,NA,no
+2026-06-19,1,F05,Closed,Gymnocladus dioicus,GD-ST,36.00,NA,T1
+2025-08-23,2,F11,Open,Gymnocladus dioicus,GD-SO,36,NA,to check
+2025-07-22,2,F09,Open,Ulmus Morton ,UA-SO,36,NA,to check
+2025-07-16,2,F10,Partial,Gymnocladus dioicus,GD-SP,36,NA,to check
+2025-06-17,3,F18,Partial,Ulmus Morton ,UA-SP,36.000,NA,to check
+2024-09-11,2,F09,Open,Ulmus Morton,UA-SO,36,NA,NA
+2025-05-05,2,F09,Open,Ulmus Morton ,UA-SP,35.5,NA,to check
+2025-09-02,3,F18,Partial,Ulmus Morton ,UA-SP,35.2,NA,to check
+2026-06-26,2,F07,Closed,Gymnocladus dioicus,GD-ST,35.00,NA,no
+2026-06-04,2,F11,Open,Gymnocladus dioicus,GD-SO,35.00,NA,T2
+2026-05-29,2,F11,Open,Gymnocladus dioicus,GD-SO,35.00,NA,T0
+2025-05-13,2,F09,Open,Ulmus Morton ,UA-SP,35.00,NA,to check
+2025-05-05,2,F07,Closed,Gymnocladus dioicus,UA-SP,35,NA,to check
+2024-07-03,1,F06,Partial,Ulmus Morton,UA-SP,35,NA,NA
+2024-03-05,3,F16,Open,Ulmus Morton,UA-SO,34.8,NA,NA
+2026-07-13,3,F13,Closed,Gymnocladus dioicus,GD-ST,34.50,NA,no
+2026-07-06,2,F10,Partial,Gymnocladus dioicus,GD-SP,34.50,NA,no
+2025-05-20,2,F08,Partial,Ulmus Morton ,UA-SP,34.50,NA,to check
+2025-05-13,3,F13,Closed,Gymnocladus dioicus,UA-ST,34.50,NA,to check
+2026-08-06,3,F13,Closed,Gymnocladus dioicus,GD-ST,34.00,NA,T2
+2026-07-13,2,F11,Open,Gymnocladus dioicus,GD-SO,34.00,NA,no
+2026-05-12,2,F09,Open,Ulmus Morton ,UA-SO,34.00,NA,T0
+2025-08-23,1,F02,Partial,Gymnocladus dioicus,GD-SP,34,NA,to check
+2025-07-22,3,F13,Closed,Gymnocladus dioicus,GD-ST,34,NA,to check
+2025-06-03,2,F10,Partial,Gymnocladus dioicus,UA-SO,34.000,NA,to check
+2024-05-09,2,F07,Closed,Gymnocladus dioicus,GD-ST,34,NA,NA
+2024-05-09,3,F14,Closed,Ulmus Morton,UA-ST,34,NA,NA
+2025-07-16,2,F09,Open,Ulmus Morton ,UA-SO,33.5,NA,to check
+2025-05-05,3,F13,Closed,Gymnocladus dioicus,UA-ST,33.5,NA,to check
+2024-09-11,2,F11,Open,Gymnocladus dioicus,GD-SO,33.25,NA,NA
+2026-08-02,2,F11,Open,Gymnocladus dioicus,GD-SO,33.00,NA,T0
+2026-07-06,3,F13,Closed,Gymnocladus dioicus,GD-ST,33.00,NA,no
+2026-05-29,3,F14,Closed,Ulmus Morton ,UA-ST,33.00,NA,T0
+2025-05-13,2,F11,Open,Gymnocladus dioicus,GD-SP,33.00,NA,to check
+2025-05-05,2,F11,Open,Gymnocladus dioicus,GD-SP,33,NA,to check
+2025-03-19,3,F18,Partial,Ulmus Morton ,UA-SP,33,NA,to check
+2024-04-16,2,F11,Open,Gymnocladus dioicus,GD-SO,33,NA,NA
+2025-09-02,1,F04,Closed,Ulmus Morton ,UA-ST,32.6,NA,to check
+2025-06-17,1,F06,Partial,Ulmus Morton ,UA-SP,32.500,NA,to check
+2025-04-08,3,F14,Closed,Ulmus Morton ,GD-SP,32.500,NA,to check
+2026-07-27,2,F10,Partial,Gymnocladus dioicus,GD-SP,32.00,NA,no
+2026-07-06,2,F11,Open,Gymnocladus dioicus,GD-SO,32.00,NA,no
+2025-08-19,3,F13,Closed,Gymnocladus dioicus,GD-ST,32,NA,to check
+2025-07-22,2,F11,Open,Gymnocladus dioicus,GD-SO,32,NA,to check
+2025-06-09,1,F03,Open,Gymnocladus dioicus,GD-SO,32.000,NA,to check
+2026-04-09,2,F10,Partial,Gymnocladus dioicus,GD-SP,31.50,NA,no
+2025-04-15,1,F02,Partial,Gymnocladus dioicus,UA-ST,31.5,NA,to check
+2024-07-03,2,F11,Open,Gymnocladus dioicus,GD-SO,31.5,NA,NA
+2024-05-23,2,F08,Partial,Ulmus Morton,UA-SP,31.5,NA,NA
+2025-07-08,2,F07,Closed,Gymnocladus dioicus,GD-ST,31.25,NA,to check
+2026-08-02,3,F13,Closed,Gymnocladus dioicus,GD-ST,31.00,NA,T0
+2025-08-12,1,F02,Partial,Gymnocladus dioicus,GD-SP,31,NA,to check
+2025-04-22,3,F14,Closed,Ulmus Morton ,UA-SO,31.000,NA,to check
+2025-04-22,3,F14,Closed,Ulmus Morton ,GD-SO,31.000,NA,to check
+2025-04-01,3,F14,Closed,Ulmus Morton ,UA-ST,31,NA,to check
+2026-06-09,2,F09,Open,Ulmus Morton ,UA-SO,30.50,NA,no
+2026-05-29,2,F12,Closed,Ulmus Morton ,UA-ST,30.50,NA,T0
+2024-09-11,1,F01,Open,Ulmus Morton,UA-SO,30.5,NA,NA
+2024-05-09,3,F13,Closed,Gymnocladus dioicus,GD-ST,30.5,NA,NA
+2025-08-04,3,F17,Open,Gymnocladus dioicus,GD-SO,30.25,NA,to check
+2026-04-27,3,F16,Open,Ulmus Morton ,UA-SO,30.00,NA,no
+2025-05-05,3,F18,Partial,Ulmus Morton ,UA-SO,30,NA,to check
+2025-04-28,3,F14,Closed,Ulmus Morton ,UA-ST,30.000,NA,to check
+2025-04-22,1,F06,Partial,Ulmus Morton ,UA-SP,29.750,NA,to check
+2025-04-22,1,F06,Partial,Ulmus Morton ,GD-SO,29.750,NA,to check
+2025-06-09,3,F17,Open,Gymnocladus dioicus,GD-SO,29.500,NA,to check
+2024-04-16,3,F13,Closed,Gymnocladus dioicus,GD-ST,29.5,NA,NA
+2026-06-17,2,F09,Open,Ulmus Morton ,UA-SO,29.00,NA,T2 and T0
+2025-06-25,2,F09,Open,Ulmus Morton ,UA-SO,29,NA,to check
+2025-06-09,1,F02,Partial,Gymnocladus dioicus,GD-SP,29.000,NA,to check
+2025-04-15,1,F04,Closed,Ulmus Morton ,UA-SP,29,NA,to check
+2026-08-06,2,F09,Open,Ulmus Morton ,UA-SO,28.50,NA,T2
+2026-06-13,2,F09,Open,Ulmus Morton ,UA-SO,28.50,NA,T0
+2025-06-17,1,F01,Open,Ulmus Morton ,UA-SO,28.500,NA,to check
+2025-05-13,2,F10,Partial,Gymnocladus dioicus,UA-SO,28.50,NA,to check
+2024-09-11,2,F08,Partial,Ulmus Morton,UA-SP,28.5,NA,NA
+2024-03-05,2,F11,Open,Gymnocladus dioicus,GD-SO,28.5,NA,NA
+2025-05-20,3,F14,Closed,Ulmus Morton ,UA-ST,27.50,NA,to check
+2025-04-01,2,F10,Partial,Gymnocladus dioicus,GD-SP,27.5,NA,to check
+2026-05-29,2,F10,Partial,Gymnocladus dioicus,GD-SP,27.00,NA,T0
+2026-04-09,2,F11,Open,Gymnocladus dioicus,GD-SO,27.00,NA,no
+2025-06-30,2,F08,Partial,Ulmus Morton ,UA-SP,27,NA,to check
+2025-03-19,3,F14,Closed,Ulmus Morton ,UA-ST,27,NA,to check
+2024-08-26,2,F07,Closed,Gymnocladus dioicus,GD-ST,27,NA,NA
+2026-07-27,3,F13,Closed,Gymnocladus dioicus,GD-ST,26.50,NA,no
+2025-04-08,2,F12,Closed,Ulmus Morton ,UA-ST,26.500,NA,to check
+2024-09-11,2,F10,Partial,Gymnocladus dioicus,GD-SP,26.5,NA,NA
+2026-08-02,2,F09,Open,Ulmus Morton ,UA-SO,26.00,NA,T0
+2026-07-27,2,F11,Open,Gymnocladus dioicus,GD-SO,26.00,NA,no
+2026-05-15,3,F14,Closed,Ulmus Morton ,UA-ST,26.00,NA,T2
+2026-05-12,2,F11,Open,Gymnocladus dioicus,GD-SO,26.00,NA,T0
+2026-04-27,1,F06,Partial,Ulmus Morton ,UA-SP,26.00,NA,no
+2024-07-03,2,F07,Closed,Gymnocladus dioicus,GD-ST,26,NA,NA
+2025-07-22,2,F08,Partial,Ulmus Morton ,UA-SP,25.5,NA,to check
+2025-03-27,3,F18,Partial,Ulmus Morton ,GD-SO,25.5,NA,to check
+2024-09-11,3,F13,Closed,Gymnocladus dioicus,GD-ST,25.5,NA,NA
+2026-06-04,2,F09,Open,Ulmus Morton ,UA-SO,25.25,NA,T2
+2024-07-17,2,F11,Open,Gymnocladus dioicus,GD-SO,25.25,NA,NA
+2026-05-14,2,F08,Partial,Ulmus Morton ,UA-SP,25.17,NA,T1
+2026-04-27,3,F18,Partial,Ulmus Morton ,UA-SP,25.00,NA,no
+2025-05-27,3,F14,Closed,Ulmus Morton ,UA-ST,25,NA,to check
+2025-08-23,1,F06,Partial,Ulmus Morton ,UA-SP,24.75,NA,to check
+2025-09-02,3,F15,Partial,Gymnocladus dioicus,GD-SP,24.7,NA,to check
+2026-09-14,3,F14,Closed,Ulmus Morton ,UA-ST,24.50,NA,no
+2025-07-16,2,F08,Partial,Ulmus Morton ,UA-SP,24,NA,to check
+2025-03-27,3,F14,Closed,Ulmus Morton ,GD-ST,24,NA,to check
+2026-04-27,1,F01,Open,Ulmus Morton ,UA-SO,23.75,NA,no
+2026-04-27,3,F17,Open,Gymnocladus dioicus,GD-SO,23.75,NA,no
+2025-06-09,1,F04,Closed,Ulmus Morton ,UA-ST,23.500,NA,to check
+2025-05-05,3,F14,Closed,Ulmus Morton ,GD-ST,23.5,NA,to check
+2024-07-17,1,F06,Partial,Ulmus Morton,UA-SP,23.5,NA,NA
+2024-07-03,2,F09,Open,Ulmus Morton,UA-SO,23.5,NA,NA
+2026-07-06,2,F07,Closed,Gymnocladus dioicus,GD-ST,23.25,NA,no
+2025-07-22,2,F10,Partial,Gymnocladus dioicus,GD-SP,23.25,NA,to check
+2025-04-28,1,F06,Partial,Ulmus Morton ,UA-ST,23.250,NA,to check
+2026-07-27,2,F09,Open,Ulmus Morton ,UA-SO,23.00,NA,no
+2026-05-30,3,F14,Closed,Ulmus Morton ,UA-ST,23.00,NA,T1
+2026-04-27,2,F07,Closed,Gymnocladus dioicus,GD-ST,23.00,NA,no
+2025-06-17,2,F11,Open,Gymnocladus dioicus,GD-SO,23.000,NA,to check
+2024-07-17,1,F01,Open,Ulmus Morton,UA-SO,23,NA,NA
+2026-06-15,2,F08,Partial,Ulmus Morton ,UA-SP,22.50,NA,T1
+2026-04-20,3,F14,Closed,Ulmus Morton ,UA-ST,22.50,NA,no
+2025-08-23,3,F16,Open,Ulmus Morton ,UA-SO,22.5,NA,to check
+2025-07-22,2,F07,Closed,Gymnocladus dioicus,GD-ST,22.5,NA,to check
+2025-05-13,3,F14,Closed,Ulmus Morton ,GD-ST,22.50,NA,to check
+2024-09-11,2,F07,Closed,Gymnocladus dioicus,GD-ST,22.5,NA,NA
+2025-08-23,1,F04,Closed,Ulmus Morton ,UA-ST,22,NA,to check
+2025-06-09,3,F16,Open,Ulmus Morton ,UA-SO,22.000,NA,to check
+2024-07-03,3,F13,Closed,Gymnocladus dioicus,GD-ST,22,NA,NA
+2024-05-09,3,F18,Partial,Ulmus Morton,UA-SP,22,NA,NA
+2026-04-09,2,F09,Open,Ulmus Morton ,UA-SO,21.50,NA,no
+2025-04-15,2,F10,Partial,Gymnocladus dioicus,GD-SO,21.25,NA,to check
+2024-03-27,2,F12,Closed,Ulmus Morton,UA-ST,21,NA,NA
+2026-07-06,2,F09,Open,Ulmus Morton ,UA-SO,20.75,NA,no
+2026-06-01,3,F14,Closed,Ulmus Morton ,UA-ST,20.75,NA,no
+2026-05-04,2,F12,Closed,Ulmus Morton ,UA-ST,20.75,NA,no
+2025-04-22,2,F12,Closed,Ulmus Morton ,GD-ST,20.750,NA,to check
+2025-04-22,2,F12,Closed,Ulmus Morton ,UA-SO,20.750,NA,to check
+2026-07-13,2,F10,Partial,Gymnocladus dioicus,GD-SP,20.50,NA,no
+2025-06-17,3,F13,Closed,Gymnocladus dioicus,GD-ST,20.500,NA,to check
+2025-06-09,3,F18,Partial,Ulmus Morton ,UA-SP,20.500,NA,to check
+2025-06-17,2,F09,Open,Ulmus Morton ,UA-SO,19.500,NA,to check
+2025-04-01,2,F12,Closed,Ulmus Morton ,UA-ST,19.5,NA,to check
+2025-03-19,2,F12,Closed,Ulmus Morton ,UA-ST,19.5,NA,to check
+2025-03-19,2,F10,Partial,Gymnocladus dioicus,GD-SP,19,NA,to check
+2026-08-20,2,F12,Closed,Ulmus Morton ,UA-ST,18.50,NA,no
+2025-07-08,2,F12,Closed,Ulmus Morton ,UA-ST,18.50,NA,to check
+2025-05-27,2,F12,Closed,Ulmus Morton ,GD-SP,18.5,NA,to check
+2025-08-19,2,F09,Open,Ulmus Morton ,UA-SO,18,NA,to check
+2025-06-25,2,F08,Partial,Ulmus Morton ,UA-SP,18,NA,to check
+2025-06-25,2,F10,Partial,Gymnocladus dioicus,GD-SP,18,NA,to check
+2025-04-28,2,F12,Closed,Ulmus Morton ,GD-SP,18.000,NA,to check
+2024-07-03,3,F14,Closed,Ulmus Morton,UA-ST,18,NA,NA
+2024-05-23,2,F12,Closed,Ulmus Morton,UA-ST,18,NA,NA
+2024-03-27,3,F13,Closed,Gymnocladus dioicus,GD-ST,18,NA,NA
+2026-06-15,2,F12,Closed,Ulmus Morton ,UA-ST,17.50,NA,T1
+2026-05-15,2,F12,Closed,Ulmus Morton ,UA-ST,17.50,NA,T2
+2025-06-09,1,F06,Partial,Ulmus Morton ,UA-SP,17.500,NA,to check
+2025-06-03,3,F14,Closed,Ulmus Morton ,UA-ST,17.500,NA,to check
+2025-08-23,1,F01,Open,Ulmus Morton ,UA-SO,17.25,NA,to check
+2024-08-26,3,F14,Closed,Ulmus Morton,UA-ST,17.25,NA,NA
+2026-05-14,2,F12,Closed,Ulmus Morton ,UA-ST,17.24,NA,T1
+2025-08-23,2,F09,Open,Ulmus Morton ,UA-SO,17,NA,to check
+2025-08-23,3,F13,Closed,Gymnocladus dioicus,GD-ST,17,NA,to check
+2025-04-08,2,F10,Partial,Gymnocladus dioicus,GD-SP,17.000,NA,to check
+2024-06-07,2,F12,Closed,Ulmus Morton,UA-ST,17,NA,NA
+2024-03-27,2,F09,Open,Ulmus Morton,UA-SO,17,NA,NA
+2025-04-15,2,F11,Open,Gymnocladus dioicus,UA-ST,16.75,NA,to check
+2025-09-02,2,F12,Closed,Ulmus Morton ,UA-ST,16.7,NA,to check
+2026-05-25,2,F12,Closed,Ulmus Morton ,UA-ST,16.50,NA,no
+2026-04-27,3,F13,Closed,Gymnocladus dioicus,GD-ST,16.50,NA,no
+2025-08-23,3,F18,Partial,Ulmus Morton ,UA-SP,16.5,NA,to check
+2025-05-05,1,F06,Partial,Ulmus Morton ,GD-ST,16.5,NA,to check
+2024-05-09,2,F12,Closed,Ulmus Morton,UA-ST,16.5,NA,NA
+2026-04-20,2,F12,Closed,Ulmus Morton ,UA-ST,16.25,very murky,no
+2026-06-21,2,F08,Partial,Ulmus Morton ,UA-SP,16.00,NA,T2
+2026-06-01,2,F12,Closed,Ulmus Morton ,UA-ST,16.00,NA,no
+2026-05-04,3,F14,Closed,Ulmus Morton ,UA-ST,16.00,NA,no
+2024-06-07,2,F08,Partial,Ulmus Morton,UA-SP,16,NA,NA
+2025-03-27,2,F12,Closed,Ulmus Morton ,UA-ST,15.5,NA,to check
+2024-07-03,2,F08,Partial,Ulmus Morton,UA-SP,15.5,NA,NA
+2025-09-02,2,F08,Partial,Ulmus Morton ,UA-SP,15.4,NA,to check
+2024-03-05,3,F13,Closed,Gymnocladus dioicus,GD-ST,15.4,NA,NA
+2026-09-14,2,F12,Closed,Ulmus Morton ,UA-ST,15.00,NA,no
+2026-06-19,2,F07,Closed,Gymnocladus dioicus,GD-ST,15.00,NA,T1
+2025-06-09,1,F01,Open,Ulmus Morton ,UA-SO,15.000,NA,to check
+2025-06-03,2,F08,Partial,Ulmus Morton ,GD-ST,15.000,NA,to check
+2025-04-22,3,F18,Partial,Ulmus Morton ,UA-ST,15.000,NA,to check
+2025-04-22,3,F18,Partial,Ulmus Morton ,UA-SO,15.000,NA,to check
+2024-07-17,3,F13,Closed,Gymnocladus dioicus,GD-ST,15,NA,NA
+2024-03-05,3,F18,Partial,Ulmus Morton,UA-SP,15,NA,NA
+2025-09-23,2,F08,Partial,Ulmus Morton ,UA-SP,14.5,NA,to check
+2025-04-15,1,F05,Closed,Gymnocladus dioicus,GD-ST,14.5,NA,to check
+2024-05-23,2,F07,Closed,Gymnocladus dioicus,GD-ST,14.5,NA,NA
+2024-03-05,2,F07,Closed,Gymnocladus dioicus,GD-ST,14.5,NA,NA
+2025-05-20,2,F12,Closed,Ulmus Morton ,GD-SP,14.00,NA,to check
+2025-05-13,2,F08,Partial,Ulmus Morton ,GD-ST,14.00,NA,to check
+2025-04-08,2,F08,Partial,Ulmus Morton ,UA-SP,14.000,NA,to check
+2025-04-28,2,F10,Partial,Gymnocladus dioicus,UA-SP,13.750,NA,to check
+2026-05-30,2,F12,Closed,Ulmus Morton ,UA-ST,13.50,NA,T1
+2025-08-12,1,F04,Closed,Ulmus Morton ,UA-ST,13.5,NA,to check
+2025-07-08,3,F14,Closed,Ulmus Morton ,UA-ST,13.00,NA,to check
+2025-06-30,2,F07,Closed,Gymnocladus dioicus,GD-ST,13,NA,to check
+2024-07-17,2,F07,Closed,Gymnocladus dioicus,GD-ST,13,NA,NA
+2026-06-15,3,F14,Closed,Ulmus Morton ,UA-ST,12.75,NA,T1
+2025-09-02,3,F17,Open,Gymnocladus dioicus,GD-SO,12.6,NA,to check
+2026-08-20,2,F08,Partial,Ulmus Morton ,UA-SP,12.50,NA,no
+2026-05-25,3,F14,Closed,Ulmus Morton ,UA-ST,12.50,NA,no
+2025-08-04,1,F02,Partial,Gymnocladus dioicus,GD-SP,12.5,NA,to check
+2025-09-02,2,F09,Open,Ulmus Morton ,UA-SO,12.4,NA,to check
+2026-04-27,2,F11,Open,Gymnocladus dioicus,GD-SO,12.00,NA,no
+2025-09-23,2,F12,Closed,Ulmus Morton ,UA-ST,12.0,NA,to check
+2024-08-26,2,F12,Closed,Ulmus Morton,UA-ST,12,NA,NA
+2024-07-17,2,F09,Open,Ulmus Morton,UA-SO,12,NA,NA
+2024-04-30,3,F18,Partial,Ulmus Morton,UA-SP,12,NA,NA
+2024-07-17,3,F14,Closed,Ulmus Morton,UA-ST,11.5,NA,NA
+2025-09-02,3,F16,Open,Ulmus Morton ,UA-SO,11.2,NA,to check
+2026-08-02,2,F07,Closed,Gymnocladus dioicus,GD-ST,11.00,NA,T0
+2025-08-23,2,F10,Partial,Gymnocladus dioicus,GD-SP,11,NA,to check
+2025-03-27,2,F10,Partial,Gymnocladus dioicus,GD-SP,11,NA,to check
+2026-06-13,3,F14,Closed,Ulmus Morton ,UA-ST,10.50,NA,T0
+2025-07-16,3,F14,Closed,Ulmus Morton ,UA-ST,10.5,NA,to check
+2024-04-30,2,F08,Partial,Ulmus Morton,UA-SP,10.5,NA,NA
+2024-04-16,2,F10,Partial,Gymnocladus dioicus,GD-SP,10.5,NA,NA
+2024-04-16,3,F18,Partial,Ulmus Morton,UA-SP,10.5,NA,NA
+2024-03-27,2,F07,Closed,Gymnocladus dioicus,GD-ST,10.5,NA,NA
+2026-08-20,2,F07,Closed,Gymnocladus dioicus,GD-ST,10.00,NA,no
+2026-08-04,2,F12,Closed,Ulmus Morton ,UA-ST,10.00,NA,T1
+2026-07-13,2,F08,Partial,Ulmus Morton ,UA-SP,10.00,NA,no
+2026-08-24,2,F12,Closed,Ulmus Morton ,UA-ST,9.50,NA,no
+2026-05-12,3,F14,Closed,Ulmus Morton ,UA-ST,9.50,NA,T0
+2025-05-05,2,F12,Closed,Ulmus Morton ,GD-SO,9.5,NA,to check
+2025-03-19,2,F08,Partial,Ulmus Morton ,UA-SP,9.5,NA,to check
+2025-08-04,1,F03,Open,Gymnocladus dioicus,GD-SO,9.25,NA,to check
+2025-05-13,2,F12,Closed,Ulmus Morton ,GD-SO,9.25,NA,to check
+2025-06-09,3,F13,Closed,Gymnocladus dioicus,GD-ST,9.000,NA,to check
+2024-04-16,2,F12,Closed,Ulmus Morton,UA-ST,9,NA,NA
+2026-08-20,3,F14,Closed,Ulmus Morton ,UA-ST,8.50,NA,no
+2026-05-30,2,F08,Partial,Ulmus Morton ,UA-SP,8.50,NA,T1
+2026-04-27,2,F09,Open,Ulmus Morton ,UA-SO,8.00,NA,no
+2025-08-04,3,F13,Closed,Gymnocladus dioicus,GD-ST,8,NA,to check
+2025-06-25,2,F12,Closed,Ulmus Morton ,UA-ST,8,NA,to check
+2025-06-17,2,F10,Partial,Gymnocladus dioicus,GD-SP,8.000,NA,to check
+2025-06-09,2,F11,Open,Gymnocladus dioicus,GD-SO,8.000,NA,to check
+2024-07-03,2,F10,Partial,Gymnocladus dioicus,GD-SP,8,NA,NA
+2024-04-16,1,F06,Partial,Ulmus Morton,UA-SP,8,NA,NA
+2026-04-27,2,F10,Partial,Gymnocladus dioicus,GD-SP,7.50,NA,no
+2025-08-19,2,F10,Partial,Gymnocladus dioicus,GD-SP,7.5,NA,to check
+2025-08-04,3,F16,Open,Ulmus Morton ,UA-SO,7.5,NA,to check
+2025-06-17,2,F07,Closed,Gymnocladus dioicus,GD-ST,7.500,NA,to check
+2025-06-09,2,F07,Closed,Gymnocladus dioicus,GD-ST,7.500,NA,to check
+2026-06-09,3,F14,Closed,Ulmus Morton ,UA-ST,7.25,NA,no
+2026-08-04,3,F14,Closed,Ulmus Morton ,UA-ST,7.00,NA,T1
+2026-06-04,3,F14,Closed,Ulmus Morton ,UA-ST,7.00,NA,T2
+2025-08-23,2,F07,Closed,Gymnocladus dioicus,GD-ST,7,NA,to check
+2025-08-04,1,F04,Closed,Ulmus Morton ,UA-ST,7,NA,to check
+2025-08-04,1,F06,Partial,Ulmus Morton ,UA-SP,7,NA,to check
+2025-06-25,2,F07,Closed,Gymnocladus dioicus,GD-ST,7,NA,to check
+2025-06-03,2,F12,Closed,Ulmus Morton ,UA-ST,7.000,NA,to check
+2024-03-05,3,F14,Closed,Ulmus Morton,UA-ST,6.7,NA,NA
+2026-08-24,2,F07,Closed,Gymnocladus dioicus,GD-ST,6.50,NA,no
+2025-08-12,2,F11,Open,Gymnocladus dioicus,GD-SO,6.5,NA,to check
+2025-05-05,2,F10,Partial,Gymnocladus dioicus,UA-SO,6.5,NA,to check
+2025-08-12,1,F01,Open,Ulmus Morton ,UA-SO,6,NA,to check
+2024-07-17,2,F08,Partial,Ulmus Morton,UA-SP,6,NA,NA
+2026-07-27,2,F07,Closed,Gymnocladus dioicus,GD-ST,5.75,NA,no
+2025-07-22,2,F12,Closed,Ulmus Morton ,UA-ST,5.5,NA,to check
+2025-05-27,1,F05,Closed,Gymnocladus dioicus,GD-SO,5.4,NA,to check
+2026-06-09,2,F12,Closed,Ulmus Morton ,UA-ST,5.00,NA,no
+2026-06-04,2,F12,Closed,Ulmus Morton ,UA-ST,5.00,NA,T2
+2026-06-01,2,F08,Partial,Ulmus Morton ,UA-SP,5.00,NA,no
+2026-05-19,3,F14,Closed,Ulmus Morton ,UA-ST,5.00,NA,no
+2025-08-04,3,F18,Partial,Ulmus Morton ,UA-SP,5,NA,to check
+2025-06-03,1,F05,Closed,Gymnocladus dioicus,UA-ST,5.000,NA,to check
+2025-05-13,1,F05,Closed,Gymnocladus dioicus,UA-ST,5.0,NA,to check
+2025-04-15,3,F15,Partial,Gymnocladus dioicus,GD-SP,5,NA,to check
+2024-08-09,1,F05,Closed,Gymnocladus dioicus,GD-ST,5,NA,NA
+2024-03-05,2,F09,Open,Ulmus Morton,UA-SO,4.8,NA,NA
+2026-08-24,3,F14,Closed,Ulmus Morton ,UA-ST,4.75,NA,no
+2026-06-17,3,F14,Closed,Ulmus Morton ,UA-ST,4.75,NA,T2 and T0
+2026-06-04,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.75,NA,T2
+2025-06-09,2,F09,Open,Ulmus Morton ,UA-SO,4.750,NA,to check
+2024-09-11,3,F14,Closed,Ulmus Morton,UA-ST,4.75,NA,NA
+2026-09-14,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.50,NA,no
+2026-08-02,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.50,NA,T0
+2026-08-02,3,F14,Closed,Ulmus Morton ,UA-ST,4.50,NA,T0
+2026-07-06,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.50,NA,no
+2026-06-26,3,F14,Closed,Ulmus Morton ,UA-ST,4.50,NA,no
+2026-05-30,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.50,NA,T1
+2025-09-23,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,NA,to check
+2025-08-23,2,F12,Closed,Ulmus Morton ,UA-ST,4.5,NA,to check
+2025-08-19,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,NA,to check
+2025-08-04,1,F01,Open,Ulmus Morton ,UA-SO,4.5,NA,to check
+2025-07-16,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,NA,to check
+2025-07-16,2,F12,Closed,Ulmus Morton ,UA-ST,4.5,NA,to check
+2025-07-08,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.50,NA,to check
+2025-06-30,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,NA,to check
+2025-05-20,1,F05,Closed,Gymnocladus dioicus,GD-SO,4.50,NA,to check
+2025-04-08,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.500,NA,to check
+2025-04-01,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,NA,to check
+2024-06-07,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,NA,NA
+2024-05-23,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,NA,NA
+2024-05-09,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.5,NA,NA
+2024-03-05,2,F10,Partial,Gymnocladus dioicus,GD-SP,4.3,NA,NA
+2026-06-15,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.25,NA,T1
+2025-07-22,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.25,NA,to check
+2024-08-26,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.25,NA,NA
+2024-03-05,1,F06,Partial,Ulmus Morton,UA-SP,4.2,NA,NA
+2026-08-24,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.00,NA,no
+2026-08-20,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.00,NA,no
+2026-08-06,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.00,NA,T2
+2026-08-06,2,F08,Partial,Ulmus Morton ,UA-SP,4.00,NA,T2
+2026-08-06,3,F14,Closed,Ulmus Morton ,UA-ST,4.00,NA,T2
+2026-08-04,2,F08,Partial,Ulmus Morton ,UA-SP,4.00,NA,T1
+2026-06-19,3,F14,Closed,Ulmus Morton ,UA-ST,4.00,NA,T1
+2026-06-13,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.00,NA,T0
+2026-06-13,2,F12,Closed,Ulmus Morton ,UA-ST,4.00,NA,T0
+2026-06-09,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.00,NA,no
+2026-06-01,1,F05,Closed,Gymnocladus dioicus,GD-ST,4.00,NA,no
+2026-05-29,1,F06,Partial,Ulmus Morton ,UA-SP,4.00,NA,T0
+2026-05-29,3,F15,Partial,Gymnocladus dioicus,GD-SP,4.00,NA,T0
+2025-08-19,2,F08,Partial,Ulmus Morton ,UA-SP,4,NA,to check
+2025-08-19,2,F12,Closed,Ulmus Morton ,UA-ST,4,NA,to check
+2025-08-04,2,F11,Open,Gymnocladus dioicus,GD-SO,4,NA,to check
+2025-06-30,2,F12,Closed,Ulmus Morton ,UA-ST,4,NA,to check
+2025-04-28,1,F05,Closed,Gymnocladus dioicus,GD-SO,4.000,NA,to check
+2025-03-19,1,F05,Closed,Gymnocladus dioicus,GD-ST,4,NA,to check
+2024-09-11,2,F12,Closed,Ulmus Morton,UA-ST,4,NA,NA
+2024-07-03,2,F12,Closed,Ulmus Morton,UA-ST,4,NA,NA
+2024-04-30,1,F05,Closed,Gymnocladus dioicus,GD-ST,4,NA,NA
+2024-03-27,1,F06,Partial,Ulmus Morton,UA-SP,4,NA,NA
+2024-03-05,1,F05,Closed,Gymnocladus dioicus,GD-ST,4,NA,NA
+2026-07-27,1,F05,Closed,Gymnocladus dioicus,GD-ST,3.75,NA,no
+2026-07-27,3,F14,Closed,Ulmus Morton ,UA-ST,3.75,NA,no
+2026-06-17,2,F12,Closed,Ulmus Morton ,UA-ST,3.75,NA,T2 and T0
+2024-03-05,2,F12,Closed,Ulmus Morton,UA-ST,3.6,NA,NA
+2026-09-14,2,F08,Partial,Ulmus Morton ,UA-SP,3.50,NA,no
+2026-08-24,2,F08,Partial,Ulmus Morton ,UA-SP,3.50,NA,no
+2026-07-06,3,F14,Closed,Ulmus Morton ,UA-ST,3.50,NA,no
+2026-05-29,3,F13,Closed,Gymnocladus dioicus,GD-ST,3.50,NA,T0
+2025-08-12,2,F12,Closed,Ulmus Morton ,UA-ST,3.5,NA,to check
+2025-06-17,2,F12,Closed,Ulmus Morton ,UA-ST,3.500,NA,to check
+2024-07-17,2,F12,Closed,Ulmus Morton,UA-ST,3.5,NA,NA
+2026-07-06,2,F12,Closed,Ulmus Morton ,UA-ST,3.25,NA,no
+2026-06-26,1,F05,Closed,Gymnocladus dioicus,GD-ST,3.25,NA,no
+2025-08-23,3,F14,Closed,Ulmus Morton ,UA-ST,3.25,NA,to check
+2026-08-02,2,F12,Closed,Ulmus Morton ,UA-ST,3.00,NA,T0
+2026-07-13,2,F12,Closed,Ulmus Morton ,UA-ST,3.00,NA,no
+2025-08-19,2,F07,Closed,Gymnocladus dioicus,GD-ST,3,NA,to check
+2025-08-12,2,F09,Open,Ulmus Morton ,UA-SO,3,NA,to check
+2025-08-04,2,F09,Open,Ulmus Morton ,UA-SO,3,NA,to check
+2025-06-25,1,F05,Closed,Gymnocladus dioicus,GD-ST,3,NA,to check
+2025-06-17,2,F08,Partial,Ulmus Morton ,UA-SP,3.000,NA,to check
+2024-05-23,3,F14,Closed,Ulmus Morton,UA-ST,3,NA,NA
+2024-03-27,3,F14,Closed,Ulmus Morton,UA-ST,3,NA,NA
+2024-03-27,3,F18,Partial,Ulmus Morton,UA-SP,2.8,NA,NA
+2026-06-26,2,F08,Partial,Ulmus Morton ,UA-SP,2.50,NA,no
+2026-06-21,1,F05,Closed,Gymnocladus dioicus,GD-ST,2.50,NA,T2
+2026-05-25,1,F05,Closed,Gymnocladus dioicus,GD-ST,2.50,NA,no
+2025-08-04,2,F08,Partial,Ulmus Morton ,UA-SP,2.5,NA,to check
+2025-05-05,2,F08,Partial,Ulmus Morton ,GD-ST,2.5,NA,to check
+2025-04-15,2,F07,Closed,Gymnocladus dioicus,UA-SO,2.5,NA,to check
+2024-09-11,1,F05,Closed,Gymnocladus dioicus,GD-ST,2.5,NA,NA
+2024-03-27,2,F10,Partial,Gymnocladus dioicus,GD-SP,2.5,NA,NA
+2025-04-22,1,F05,Closed,Gymnocladus dioicus,UA-SO,2.250,NA,to check
+2025-04-22,1,F05,Closed,Gymnocladus dioicus,GD-SP,2.250,NA,to check
+2026-04-09,3,F14,Closed,Ulmus Morton ,UA-ST,2.00,NA,no
+2025-08-12,3,F16,Open,Ulmus Morton ,UA-SO,2,NA,to check
+2026-06-17,1,F05,Closed,Gymnocladus dioicus,GD-ST,1.50,NA,T2 and T0
+2025-08-23,2,F08,Partial,Ulmus Morton ,UA-SP,1.5,NA,to check
+2025-08-19,3,F14,Closed,Ulmus Morton ,UA-ST,1.5,NA,to check
+2025-05-05,1,F05,Closed,Gymnocladus dioicus,UA-ST,1.5,NA,to check
+2025-08-12,1,F03,Open,Gymnocladus dioicus,GD-SO,1,NA,to check
+2025-08-12,3,F13,Closed,Gymnocladus dioicus,GD-ST,1,NA,to check
+2025-08-04,2,F12,Closed,Ulmus Morton ,UA-ST,1,NA,to check
+2025-06-30,3,F14,Closed,Ulmus Morton ,UA-ST,1,NA,to check
+2025-03-27,1,F05,Closed,Gymnocladus dioicus,UA-SP,1,NA,to check
+2025-03-27,2,F08,Partial,Ulmus Morton ,UA-SP,1,NA,to check
+2024-03-27,1,F05,Closed,Gymnocladus dioicus,GD-ST,1,NA,NA
+2024-03-05,2,F08,Partial,Ulmus Morton,UA-SP,0.8,NA,NA
+2025-08-23,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.75,NA,to check
+2026-07-27,2,F12,Closed,Ulmus Morton ,UA-ST,0.50,NA,no
+2025-09-23,2,F10,Partial,Gymnocladus dioicus,GD-SP,0.5,NA,to check
+2025-08-12,3,F14,Closed,Ulmus Morton ,UA-ST,0.5,NA,to check
+2025-08-04,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.5,NA,to check
+2025-08-04,2,F07,Closed,Gymnocladus dioicus,GD-ST,0.5,NA,to check
+2025-08-04,2,F10,Partial,Gymnocladus dioicus,GD-SP,0.5,NA,to check
+2025-07-22,3,F14,Closed,Ulmus Morton ,UA-ST,0.5,NA,to check
+2025-06-09,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.500,NA,to check
+2025-08-12,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.05,NA,to check
+2026-08-06,2,F12,Closed,Ulmus Morton ,UA-ST,0.00,NA,T2
+2026-08-04,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,T1
+2026-08-02,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,T0
+2026-07-27,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,no
+2026-07-13,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,no
+2026-07-13,2,F07,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,no
+2026-07-13,2,F09,Open,Ulmus Morton ,UA-SO,0.00,NA,no
+2026-07-06,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,no
+2026-06-26,2,F12,Closed,Ulmus Morton ,UA-ST,0.00,NA,no
+2026-06-17,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,T2 and T0
+2026-06-13,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,T0
+2026-06-09,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,no
+2026-06-04,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,T2
+2026-05-29,1,F03,Open,Gymnocladus dioicus,GD-SO,0.00,NA,T0
+2026-05-29,2,F09,Open,Ulmus Morton ,UA-SO,0.00,NA,T0
+2026-05-19,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,no
+2026-05-19,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,no
+2026-05-19,2,F12,Closed,Ulmus Morton ,UA-ST,0.00,NA,no
+2026-05-15,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,T2
+2026-05-15,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,T2
+2026-05-14,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,T1
+2026-05-12,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,T0
+2026-05-12,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,T0
+2026-05-12,2,F12,Closed,Ulmus Morton ,UA-ST,0.00,NA,T0
+2026-05-04,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,no
+2026-05-04,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,no
+2026-04-27,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,no
+2026-04-27,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,no
+2026-04-27,3,F14,Closed,Ulmus Morton ,UA-ST,0.00,NA,no
+2026-04-20,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,no
+2026-04-20,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,no
+2026-04-09,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.00,NA,no
+2026-04-09,2,F08,Partial,Ulmus Morton ,UA-SP,0.00,NA,no
+2026-04-09,2,F12,Closed,Ulmus Morton ,UA-ST,0.00,NA,no
+2025-09-23,2,F07,Closed,Gymnocladus dioicus,GD-ST,0.0,NA,to check
+2025-09-23,3,F14,Closed,Ulmus Morton ,UA-ST,0.0,NA,to check
+2025-08-12,1,F06,Partial,Ulmus Morton ,UA-SP,0,NA,to check
+2025-08-12,2,F07,Closed,Gymnocladus dioicus,GD-ST,0,NA,to check
+2025-08-12,2,F08,Partial,Ulmus Morton ,UA-SP,0,NA,to check
+2025-08-12,2,F10,Partial,Gymnocladus dioicus,GD-SP,0,NA,to check
+2025-08-12,3,F18,Partial,Ulmus Morton ,UA-SP,0,NA,to check
+2025-08-04,3,F14,Closed,Ulmus Morton ,UA-ST,0,NA,to check
+2025-06-25,3,F14,Closed,Ulmus Morton ,UA-ST,0,NA,to check
+2025-06-17,1,F05,Closed,Gymnocladus dioicus,GD-ST,0.000,NA,to check
+2025-06-17,3,F14,Closed,Ulmus Morton ,UA-ST,0.000,NA,to check
+2025-06-09,2,F08,Partial,Ulmus Morton ,UA-SP,0.000,NA,to check
+2025-06-09,2,F10,Partial,Gymnocladus dioicus,GD-SP,0.000,NA,to check
+2025-06-09,2,F12,Closed,Ulmus Morton ,UA-ST,0.000,NA,to check
+2025-06-09,3,F14,Closed,Ulmus Morton ,UA-ST,0.000,NA,to check
+2025-04-22,2,F08,Partial,Ulmus Morton ,GD-SP,0.000,NA,to check
+2025-04-22,2,F10,Partial,Gymnocladus dioicus,GD-SO,0.000,NA,to check
+2025-04-22,2,F08,Partial,Ulmus Morton ,GD-ST,0.000,NA,to check
+2025-04-22,2,F10,Partial,Gymnocladus dioicus,GD-ST,0.000,NA,to check
+2025-04-15,2,F12,Closed,Ulmus Morton ,GD-SP,0,NA,to check
+2024-07-17,1,F05,Closed,Gymnocladus dioicus,GD-ST,0,NA,NA
+2024-07-17,2,F10,Partial,Gymnocladus dioicus,GD-SP,0,NA,NA
+2024-07-03,1,F05,Closed,Gymnocladus dioicus,GD-ST,0,NA,NA
+2024-05-09,2,F08,Partial,Ulmus Morton,UA-SP,0,NA,NA
+2024-04-16,1,F05,Closed,Gymnocladus dioicus,GD-ST,0,NA,NA
+2024-04-16,2,F08,Partial,Ulmus Morton,UA-SP,0,NA,NA
+2024-03-27,2,F08,Partial,Ulmus Morton,UA-SP,0,NA,NA
