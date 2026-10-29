@@ -1,0 +1,13 @@
+# 99_render_report.R
+# Render a project report when analysis is complete
+
+source("R/00_setup.R")
+
+# This file can be extended to call rmarkdown::render() for a report.
+# Example:
+# rmarkdown::render(
+#   input = "docs/report_template.Rmd",
+#   output_dir = file.path(project_root, "outputs", "reports")
+# )
+
+message("Add report-generation logic here when the final report template is ready.")
