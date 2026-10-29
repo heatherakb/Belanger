@@ -3,6 +3,8 @@
 getwd()
 setwd("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis/B-H1")
 condb_allyears<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Rue Belanger Data/Complete data/B_waterqual_alldates_2024-2026.csv", encoding = "latin1")
+rain_allyears<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/weather data/historique-meteo-montreal-2024-2026.csv", encoding = "latin1")
+
 library(dplyr)
 library(lme4)
 library(multcomp)
@@ -14,12 +16,13 @@ library(tidyr)
 condb_allyears<- condb_allyears |>
   mutate(across(mVpH:Height_mm, as.numeric))
 condb_allyears$Fosse<-as.factor(condb_allyears$Fosse)
+condb_allyears$Treatment <- factor(condb_allyears$Treatment, levels = c("Open", "Partial", "Closed"))
 condb_allyears$Date<-as.Date(condb_allyears$Date)
 condb_allyears$Year <- format(as.Date(condb_allyears$Date), "%Y")
 condb_allyears$Year<-as.factor(condb_allyears$Year)
-condb_allyears$Treatment<-as.factor(condb_allyears$Treatment)
 condb_allyears$MonthDay<-format(as.Date(condb_allyears$Date), "%m-%d")
 condb_allyears$MonthDay2000 <- as.Date(paste0("2000-", condb_allyears$MonthDay))
+condb_allyears$doy       <- as.numeric(format(as.Date(condb_allyears$MonthDay2000), "%j"))
 plot(Cond_mS~Date, data= condb_allyears)
 
   #add spring flush
@@ -51,9 +54,8 @@ condb_allyears <- condb_allyears %>%
 ##modelling Conductivity##########
   ###model 1: all season, with year as a factor####
       #to make model valid, we took the log of our response variable, year and its effect on treatment and spring flush, as well as fosse were random variables
-model_cond <- lmer(log(Cond_mS) ~ Treatment * season + Year + (1 | Fosse),
-                   data = condb_allyears, REML = TRUE)
-plot(model_cond)
+    model_cond <- lmer(log(Cond_mS) ~ Treatment * season+(1+season*Treatment|Year)+(1|Fosse), data = condb_allyears, REML=TRUE)
+    plot(model_cond)
     anova(model_cond,type = 3)
     model_cond
     
@@ -69,21 +71,15 @@ plot(model_cond)
     season_per_treat<-emmeans(model_cond, pairwise~season|Treatment, adjust="tukey", type = "response")
     season_per_treat$emmeans
     season_per_treat$contrasts
-  ###model 2: invalid####
   ###model 3: MonthDay rather than summer -spring categories ####
     ####GAM####
     #(uses General Additive Models instead of linear models, which allow for flexibility in date, rather than a forced linear relationship, and therefore fits the data better)
-    #install.packages(c("mgcv", "gratia", "emmeans", "ggplot2"))  # mgcv is likely already there
+    #install.packages(c("mgcv", "gratia", "emmeans", "ggplot2"))
     
     library(mgcv)      # gam(), s(), gam.check()
     library(gratia)    # draw(), difference_smooths(), appraise()
     library(emmeans)   # optional: contrasts at specific dates
     library(ggplot2)   # plotting
-    
-    condb_allyears$doy       <- as.numeric(format(as.Date(condb_allyears$MonthDay2000), "%j"))
-    condb_allyears$Treatment <- factor(condb_allyears$Treatment)
-    condb_allyears$Fosse     <- factor(condb_allyears$Fosse)
-    condb_allyears$Year      <- factor(condb_allyears$Year)
     
     m_gam <- gam(log(Cond_mS) ~ Treatment +
                    s(doy, by = Treatment, k = 20) +
@@ -125,7 +121,7 @@ plot(model_cond)
     
     #can't do emmeans because its a numerical value
     plot(log(Cond_mS)~MonthDay2000, data = condb_allyears)
-  ###Model 4: Mode ling the possible effect of accumulation####
+  ###Model 4: Modeling the possible effect of accumulation####
     #Test the year affect for possible accumulation, I want to test if the line modelling the data is significantly different each year.
     ####accumulation total average
     model_Accum <- lmer(log(Cond_mS) ~ Treatment * season*Year+(1|Fosse), data = condb_allyears, REML=TRUE)
@@ -144,20 +140,16 @@ plot(model_cond)
     treatxseason_per_year<-emmeans(model_Accum, pairwise~Year|season:Treatment, adjust="tukey", type= "response")
     treatxseason_per_year
     
-    ####accumulation in growth season to do it####
+    ####accumulation in growth season only, ie. summer conductivity comparisons between years####
     condb_summer<-condb_allyears%>%
       filter(condb_allyears$season == "summer")
     model_Accum_summer <- lmer(log(Cond_mS) ~ Treatment * Year+(1|Fosse), data = condb_summer, REML=TRUE)
     plot(model_Accum_summer)
     anova(model_Accum_summer, Type = 3)
     
-    emm_cond_Accum_summer<-emmeans(model_Accum_summer, pairwise~Year|Treatment, type = "response") |>
-      as.data.frame() |>
-      mutate(Year = as.numeric(as.character(Year))) |>
-      rename(Cond = response)
-      emm_cond_Accum_summer
-      
-
+    emm_cond_Accum_summer<-emmeans(model_Accum_summer, pairwise~Year|Treatment, type = "response")
+    emm_cond_Accum_summer
+    summary(model_Accum_summer)
 ##Modelling Cl data ####
 #we only have 2 years of data for the cl concentrations, therefore we put year in as a fixed effect to interact with other years
   ###LMER####
@@ -202,9 +194,28 @@ plot(model_cond)
   draw(m_gam)                     # one curve per treatment
   difference_smooths(m_gam, select = "s(doy)") |> draw()   # where treatments differ
   gam.check(m_gam)
+  ####aug 2026 tests####
+  
+  null_mod_cond <-lm(log(Cl)~1, data=condb_allyears)
+  model_cl <- lmer(log(Cl) ~ Treatment * season+(1|Year)+(1|Fosse), data = condb_allyears, REML=TRUE)
+  
+  AIC(null_mod_cond)
+  AIC(model_cl)
+  #model is better than the null model.
+  
+  #Test the year affect for possible accumulation, I want to test if the line modelling the data is significantly different each year.
+  model_Accumcl <- lmer(log(Cl) ~ Treatment * season*Year+(1|Fosse), data = condb_allyears, REML=TRUE)
+  plot(model_Accumcl)
+  anova(model_Accumcl, Type = 3)
+  
+  emm_cond_Accumcl<-emmeans(model_Accumcl, ~Treatment*season*Year, type = "response")
+  emm_cond_Accumcl
+  #Yearly differences within season.
+  year_per_season<-emmeans(model_Accumcl, pairwise~Year|season, adjust="tukey", type = "response")
+  year_per_season$emmeans
+  year_per_season$contrasts
 
-
-# Graphs: conductivity, Rue Belanger ----------------------------------------
+## Graphs: conductivity, Rue Belanger ----------------------------------------
   # Run after your data-loading / cleaning section (needs condb_allyears with
   # Date, Year, Fosse, Treatment, season, Cond_mS) and model_noyear.
   
@@ -213,9 +224,14 @@ plot(model_cond)
   library(emmeans)
   library(multcomp)
   library(ggrepel)
+  ###graphs####
   
-  ###claude script to be modified####
- 
+  ###based on graphs made with assistance from claude####
+  #prompt:
+  #1. timeline from first year until now (breaks each year to account for no data measured in winter months), 
+  #2. averages no year for spring and summer boxplot per treatment, 
+  #3. treatments over season 
+  #4. modelling accumulation in some way?
   condb_allyears$date2000 <- as.Date(paste0("2000-", format(condb_allyears$Date, "%m-%d")))
   
   # Geometric mean (the right "average" for a log-scale variable)
@@ -225,17 +241,43 @@ plot(model_cond)
     exp(mean(log(x)))
   }
   
+  # Timeline for study over years
+    x_window <- as.Date(c("2000-03-01", "2000-10-01"))
+    
+    # Removal dates, converted to the fake year 2000 to match MonthDay2000
+    barrier_removal <- data.frame(
+      Year = c(2024, 2025, 2026),
+      MonthDay2000 = as.Date(c("2000-05-08", "2000-05-06", "2000-05-08"))
+    )
+    
+    # Study start date for each year, expressed in the fake year 2000
+    study_start <- data.frame(
+      Year   = factor(c(2024, 2025, 2026)),
+      start2000 = as.Date(c("2000-03-05", "2000-03-19", "2000-04-09"))
+    )
+  
   #### 1. Timeline, first year to now, one panel per year ----
   # space = "free_x" makes each panel only as wide as its sampling window,
   # so the winter gap is removed instead of stretched across the plot.
-  p_timeline <- ggplot(condb_allyears, aes(x = Date, y = Cond_mS, colour = Treatment)) +
+
+  
+  p_timeline <- ggplot(condb_allyears, aes(x = MonthDay2000, y = Cond_mS, colour = Treatment)) +
     geom_point(alpha = 0.2, size = 1) +
     stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 0.8) +
     stat_summary(fun = mean, geom = "point", size = 1.8) +
-    facet_grid(. ~ Year, scales = "free_x", space = "free_x") +
-    scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+    geom_vline(data = barrier_removal,
+               aes(xintercept = MonthDay2000),
+               inherit.aes = FALSE,
+               linetype = "dashed", colour = "black", linewidth = 0.6) +
+    geom_text(data = barrier_removal,
+              aes(x = MonthDay2000, y = Inf, label = "Barriers removed"),
+              inherit.aes = FALSE, angle = 90, vjust = -0.4, hjust = 1.1, size = 3) +
+    facet_wrap(~ Year, nrow = 1) +
+    scale_x_date(date_breaks = "1 month", date_labels = "%b",
+                 expand = expansion(mult = 0.02)) +
+    coord_cartesian(xlim = x_window) +
     scale_y_log10() +
-    labs(x = "Month", y = "Mean Conductivity (mS/cm) - log scale", colour = "Treatment") +
+    labs(x = "Month", y = "Conductivity (Mean, mS/cm)", colour = "Treatment") +
     theme_bw() +
     theme(panel.spacing.x = unit(0.4, "lines"),
           axis.text.x = element_text(angle = 45, hjust = 1))
@@ -244,9 +286,9 @@ plot(model_cond)
   ggsave("timeline_conductivity.png", p_timeline, width = 11, height = 4, dpi = 300)
   
   #### 2. Spring vs. summer boxplots per treatment (years pooled) ----
-  # Letters come from model_noyear (Tukey within season). Remove the
-  # geom_text() line if you only want the boxplots.
-  emm_season <- emmeans(model_noyear, ~ Treatment | season)
+  # Letters come from the accumulationCl_model (Tukey within season). Remove the
+
+    emm_season <- emmeans(model_Accum, ~ Treatment | season)
   letters_df <- emmeans:::cld.emmGrid(emm_season, Letters = letters, adjust = "tukey") |>
     as.data.frame() |>
     mutate(.group = trimws(.group))
@@ -261,7 +303,7 @@ plot(model_cond)
               inherit.aes = FALSE) +
     facet_wrap(~ season) +
     scale_y_log10() +
-    labs(x = "Treatment", y = "Conductivity (mS/cm) - log scale") +
+    labs(x = "Treatment", y = "Conductivity (mS/cm)") +
     theme_bw() +
     theme(legend.position = "none")
   p_box
@@ -269,94 +311,121 @@ plot(model_cond)
    ggsave("boxplot_season_treatment.png", p_box, width = 7, height = 4, dpi = 300)
   
   #### 3. basic plot of treatments over season ####
-  # numeric (days since 1970) -> Date on the 2000 calendar
   condb_allyears$date2000 <- as.Date(condb_allyears$MonthDay2000, origin = "1970-01-01")
-  
-  ggplot(condb_allyears, aes(x = date2000, y = Cond_mS,
-                             colour = Treatment, fill = Treatment)) +
-    geom_point(alpha = 0.25, size = 1.5) +
-    geom_smooth(method = "gam", formula = y ~ s(x, k = 8), se = TRUE, alpha = 0.2) +
-    scale_x_date(date_breaks = "1 month", date_labels = "%b") +
-    scale_y_log10()+
-    labs(x = "Month", y = "Conductivity (mS/cm) -log scale", colour = "Treatment", fill = "Treatment") +
-    theme_bw()
-  ggsave("Treatments_over_season_gam.png", p_box, width = 7, height = 4, dpi = 300)
-  
+   
+   
+   p_gam <- ggplot(condb_allyears, aes(x = date2000, y = log(Cond_mS),
+                                       colour = Treatment, fill = Treatment)) +
+     geom_point(alpha = 0.25, size = 1.5) +
+     geom_smooth(method = "gam", formula = y ~ s(x, k = 8), se = TRUE, alpha = 0.2) +
+     # study start, one line per year
+     geom_vline(data = study_start,
+                aes(xintercept = start2000, linetype = Year),
+                inherit.aes = FALSE, colour = "grey50", linewidth = 0.6) +
+     # barrier removal
+     geom_vline(xintercept = as.Date("2000-05-07"),
+                linetype = "dashed", colour = "red3", linewidth = 0.9) +
+     annotate("text", x = as.Date("2000-05-07"), y = Inf, label = "Barriers removed",
+              angle = 90, vjust = -0.4, hjust = 1.1, size = 3, color = "red3") +
+     scale_linetype_manual(name = "Study start",
+                           values = c("2024" = "solid", "2025" = "dotted", "2026" = "twodash")) +
+     scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+     labs(x = "Month", y = "log(Conductivity, mS/cm)",
+          colour = "Treatment", fill = "Treatment") +
+     theme_bw()
+   
+   p_gam
+   ggsave("Treatments_over_season_gam.png", p_box, width = 7, height = 4, dpi = 300)
+   
+   
   #####Cl curve ####
-  ######LMER####
-  ggplot(condb_allyears, aes(x = date2000, y = Cl,
+
+  ggplot(condb_allyears, aes(x = date2000, y = log(Cl),
                              colour = Treatment, fill = Treatment)) +
     geom_point(alpha = 0.25, size = 1.5) +
     geom_smooth(method = "gam", formula = y ~ s(x, k = 8), se = TRUE, alpha = 0.2) +
     stat_summary(aes(group = Treatment), fun = gmean, geom = "line", linewidth = 0.8) +
     stat_summary(aes(group = Treatment), fun = gmean, geom = "point", linewidth = 0.8) +
-    scale_y_log10()+
     scale_x_date(date_breaks = "1 month", date_labels = "%b") +
-    labs(x = "Month", y = "Chlorine in water ( Cl- mg/L) - geometric mean, log scale", colour = "Treatment", fill = "Treatment") +
+    labs(x = "Month", y = "log(Cl- in water (geometric mean, mg/L)", colour = "Treatment", fill = "Treatment") +
     theme_bw()
   ggsave("Cl_over_season.png", p_box, width = 7, height = 4, dpi = 300)
-  
-  ######GAM####
-  ggplot(condb_allyears, aes(x = date2000, y = Cl,
-                             colour = Treatment, fill = Treatment)) +
-    geom_point(alpha = 0.25, size = 1.5) +
-    geom_smooth(method = "gam", formula = y ~ s(x, k = 6), se = TRUE, alpha = 0.2) +
-    scale_y_log10()+
-    scale_x_date(date_breaks = "1 month", date_labels = "%b") +
-    labs(x = "Month", y = "Chlorine in water, (Cl- mg/L) - log scale", colour = "Treatment", fill = "Treatment") +
-    theme_bw()
-  ggsave("Cl_Treatments_over_season_gam.png", p_box, width = 7, height = 4, dpi = 300)
   
   #### 4. Accumulation across years ----
   # If salts accumulate, the same time of year should sit higher each year,
   # especially the late-season baseline, and pit-level summer means should rise.
   
   ###### 4a. Seasonal curves overlaid by year, one panel per treatment ----
-  p_accum_curves <- ggplot(condb_allyears,
-                           aes(x = date2000, y = Cond_mS, colour = Year, fill = Year)) +
-    geom_point(alpha = 0.15, size = 1) +
-    geom_smooth(method = "gam", formula = y ~ s(x, k = 6), se = TRUE, alpha = 0.15) +
-    facet_wrap(~ Treatment) +
-    scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  # install.packages("ggh4x")
+  library(ggh4x) 
+  
+  # One colour per treatment, same as ggplot's default palette
+  trt_levels <- c("Open", "Partial", "Closed")
+  trt_cols   <- c(Open = "#00BA38", Partial = "#619CFF", Closed = "#F8766D")
+  
+  
+  summer_raw <- condb_allyears |>
+    filter(season == "summer") |>
+    mutate(month = as.numeric(format(date2000, "%m")))
+  
+  p_accum_pits <- ggplot(pit_summer, aes(x = Year, y = Cond)) +
+    geom_violin(data = summer_raw,
+                aes(y = Cond_mS, group = Year),
+                width = 0.5, fill = "grey90", colour = "grey30",
+                outlier.shape = NA, alpha = 0.6) +
+    geom_point(data = summer_raw,
+               aes(y = Cond_mS, colour = month),
+               position = position_jitter(width = 0.12, height = 0),
+               alpha = 0.6, size = 1.5) +
+    scale_colour_viridis_c(name = "Month", option = "plasma", direction = -1,
+                           breaks = 3:9, labels = month.abb[3:9],
+                           limits = c(3, 9),
+                           guide = guide_colourbar(reverse = TRUE)) +
+    geom_line(aes(group = Fosse), colour = "grey30", alpha = 0.35, size =1) +
+    geom_text_repel(
+      data = function(d) d |> group_by(Fosse) |> slice_tail(n = 1),
+      aes(label = Fosse),
+      colour = "grey30",
+      size = 3, hjust = -4, direction = "y",
+      nudge_x = 0.1, segment.size = 0.2, min.segment.length = 0,
+      show.legend = FALSE
+    ) +
+    facet_wrap2(~ Treatment,
+                strip = strip_themed(
+                  background_x = elem_list_rect(fill = unname(trt_cols)),
+                  text_x       = elem_list_text(colour = "black", face = "bold")
+                )) +
+    labs(x = "Year", y = "Summer conductivity (mS/cm) - log scale ") +
     scale_y_log10() +
-    scale_colour_viridis_d(end = 0.85) +
-    scale_fill_viridis_d(end = 0.85) +
-    labs(x = "Month", y = "Conductivity (mS/cm) - log scale)") +
-    theme_bw()
-  p_accum_curves
+    theme_bw() +
+    theme(legend.position = "right")
+  
+  
+  p_accum_pits
   
   ggsave("accumulation_curves.png", p_accum_curves, width = 10, height = 4, dpi = 300)
   
   ##### 4b. Summer mean per pit across years (thin lines = pits, bold = treatment) ----
-  
-  # 2. Per-pit summer values (geometric mean, to match the log-scale model)
   pit_summer <- condb_allyears |>
-    filter(season == "summer", is.finite(Cond_mS), Cond_mS > 0) |>
+    filter(season == "summer") |>
     group_by(Fosse, Treatment, Year) |>
-    summarise(Cond = mean(Cond_mS), .groups = "drop") |>
-    mutate(Year = as.numeric(as.character(Year)))
+    summarise(mean_Cond = mean((Cond_mS), na.rm = TRUE), .groups = "drop") |>
+    mutate(Cond = mean_Cond)
   
-  # 3. Plot
   p_accum_pits <- ggplot(pit_summer, aes(x = Year, y = Cond, colour = Treatment)) +
     geom_line(aes(group = Fosse), alpha = 0.35) +
+    geom_jitter(aes(alpha = 0.35))
     geom_text_repel(
       data = function(d) d |> group_by(Fosse) |> slice_tail(n = 1),
       aes(label = Fosse),
       size = 3, hjust = 0, direction = "y",
       nudge_x = 0.1, segment.size = 0.2, min.segment.length = 0,
       show.legend = FALSE
-    ) +
-    geom_errorbar(data = emm_cond_Accum_summer, aes(ymin = lower.CL, ymax = upper.CL),
-                  width = 0.08, linewidth = 0.8) +
-    geom_line(data = emm_cond_Accum_summer, aes(group = Treatment), linewidth = 1.3) +
-    geom_point(data = emm_cond_Accum_summer, size = 3) +
+    )+
+    stat_summary(aes(group = Treatment), geom = "line", linewidth = 1.3) +
+    stat_summary(geom = "point", size = 3) +
     facet_wrap(~ Treatment) +
-    scale_x_discrete(breaks = sort(unique(pit_summer$Year)),
-                       expand = expansion(mult = c(0.05, 0.2))) +   # room for labels
-    scale_y_log10() +
-    labs(x = "Year",
-         y = "Summer conductivity (mS/cm) - log scale)",
-         caption = "Thick line: model-estimated geometric mean (95% CI). Thin lines: per-pit geometric means.") +
+    labs(x = "Year", y = "Summer conductivity per pit (mean, mS/cm)") +
     theme_bw() +
     theme(legend.position = "none")
   p_accum_pits
@@ -395,23 +464,32 @@ plot(model_cond)
   # With only 3 years this is a rough trend, so report it with caution.
   pit_summer$Year_num <- as.numeric(as.character(pit_summer$Year))
   
-  m_trend <- lmer(log(Cond) ~ Treatment * Year_num + (1 | Fosse), data = pit_summer)
+  m_trend <- lmer(Cond_geo ~ Treatment * Year_num + (1 | Fosse), data = pit_summer)
   anova(m_trend)
-  plot(m_trend)
+  
   # Slope per treatment on the log scale, then converted to a yearly ratio
   trend <- emtrends(m_trend, ~ Treatment, var = "Year_num")
   summary(trend, infer = TRUE)   # slopes, CIs, test against 0
   # exp(slope) = multiplicative change in conductivity per year
 trend
 
-##Bibliography for libraries####
-library(grateful)
-cite_packages(output = "paragraph", out.dir = ".")
-# Or scan a specific script instead of the session
-install.packages("remotes")
-install.packages("ggplot2")
-cite_packages(output = "paragraph", out.dir = ".", pkgs = "remotes",
-              omit = NULL)
-renv::dependencies("waterqual_belangerH1-4_oct-6.R")   # all packages the script uses
-pkgs <- c("base", (.packages()))      # currently attached packages
-knitr::write_bib(pkgs, file = "all_packages.bib")
+###testing covar between water height and conductivity####
+#not sig
+library(lme4); library(lmerTest); library(emmeans)
+
+condb_allyears$doy <- lubridate::yday(condb_allyears$Date)
+
+m <- lmer(log(Cond_mS) ~ Height_mm * Treatment + scale(doy) + Year + (1 | Fosse), data = condb_allyears)
+
+
+anova(m)
+test(emtrends(m, ~ Treatment, var = "Height_mm"))
+
+summer_raw <- condb_allyears |>
+  filter(season == "summer") |>
+  mutate(month = as.numeric(format(date2000, "%m")))
+
+
+
+
+
