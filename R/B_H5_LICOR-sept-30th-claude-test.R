@@ -3,10 +3,13 @@ library(lmerTest)   # lmer() with p-values + Type III anova
 library(emmeans)
 library(flextable)
 library(officer)
+library(here)
 
 # ---- 1. Data ---------------------------------------------------------------
-setwd("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Rue Belanger Data/Complete data")
-licor <- read.csv("LICOR-Belanger-2024-2026.csv", show_col_types = FALSE) %>%
+project_root <- here::here()
+data_dir <- file.path(project_root, "data", "raw")
+
+licor <- read.csv(file.path(data_dir, "LICOR-Belanger-2024-2026.csv"), show_col_types = FALSE) %>%
   mutate(
     Fosse     = factor(Fosse),
     Species   = factor(Species),
@@ -51,12 +54,14 @@ ft <- flextable(anova_tab) %>%
   theme_booktabs() %>%
   autofit()
 
+output_dir <- file.path(project_root, "outputs", "figures")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
 read_docx() %>%
   body_add_par("ANOVA (Type III) - Treatment x Species, LICOR data", style = "heading 1") %>%
   body_add_flextable(ft) %>%
-  print(target = "LICOR_anova_treatment.docx")
+  print(target = file.path(output_dir, "LICOR_anova_treatment.docx"))
 
 # ---- 5. (Optional) Tukey post-hoc for Treatment, one variable --------------
 m <- lmer(gsw ~ Treatment * Species + (1|Fosse) + (1|Date), data = licor)
 emmeans(m, pairwise ~ Treatment, adjust = "tukey")
-
