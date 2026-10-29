@@ -2,9 +2,16 @@ B_H4_soil
 
 ####load and format data####
 library(dplyr)
+library(here)
 
-soil_2026<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis/soil_data_NRAL.csv", fileEncoding = "latin1")
-setwd("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis")
+project_root <- here::here()
+data_dir <- file.path(project_root, "data", "raw")
+if (!dir.exists(data_dir)) {
+  data_dir <- file.path(project_root, "data")
+}
+
+soil_2026 <- read.csv(file.path(data_dir, "soil_data_NRAL.csv"), fileEncoding = "latin1")
+setwd(project_root)
 soil_2026 <- soil_2026 |>
   mutate(across(TN:NH4.N, as.numeric))
 
@@ -282,7 +289,7 @@ library(multcompView)
 
 # ── 1. Load & prepare data ───────────────────────────────────────────────────
 
-soil<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis/soil_data_NRAL.csv", fileEncoding = "latin1")
+soil <- read.csv(file.path(data_dir, "soil_data_NRAL.csv"), fileEncoding = "latin1")
 
 # Treatment lookup from tree_belanger (SO = Open, SP = Partial, ST = Closed)
 treatment_map <- data.frame(
@@ -340,7 +347,7 @@ summary_table <- bel %>%
   pivot_wider(names_from = Treatment, values_from = `Mean ± SD`)
 
 print(summary_table)
-write.csv(summary_table, "summary_Belanger_by_treatment.csv", row.names = FALSE)
+write.csv(summary_table, file.path(project_root, "results", "summaries", "summary_Belanger_by_treatment.csv"), row.names = FALSE)
 
 
 
@@ -405,7 +412,7 @@ loadings <- as.data.frame(pca_result$rotation) %>%
       str_replace("EC_uS/cm", "EC")
   )
 
-# ── 3. Biplot ────────────────────────────────────────────────────────────────
+# ── 3. Biplot ────────────────────────────────────────────────────────────�[...]
 
 ggplot() +
   # Arrows
@@ -438,4 +445,5 @@ ggplot() +
   theme(legend.position = "right") +
   geom_hline(yintercept = 0, linetype = "dashed", colour = "grey70") +
   geom_vline(xintercept = 0, linetype = "dashed", colour = "grey70")
+
 
