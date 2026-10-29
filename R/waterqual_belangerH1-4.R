@@ -1,7 +1,6 @@
 #B_H1----
 ##Load conductivity data and setting up temporal and seasonal variables ####
-getwd()
-setwd("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis/B-H1")
+
 condb_allyears<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Rue Belanger Data/Complete data/B_waterqual_alldates_2024-2026.csv", encoding = "latin1")
 rain_allyears<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/weather data/historique-meteo-montreal-2024-2026.csv", encoding = "latin1")
 
