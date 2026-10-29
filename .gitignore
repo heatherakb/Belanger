@@ -1,40 +1,50 @@
-# Belanger
+# History files
+.Rhistory
+.Rapp.history
 
-This repository is set up for the Belanger tree plot study and intended for analyses of:
+# Session Data files
+.RData
+.RDataTmp
 
-- water measurements
-- soil characteristics
-- tree characteristics
-- leaf characteristics
-- temporal change over a 4-year period
+# User-specific files
+.Ruserdata
 
-## Repository structure
+# Example code in package build process
+*-Ex.R
 
-- `R/`: analysis scripts and setup code
-- `data/raw/`: original raw data files
-- `data/cleaned/`: cleaned datasets ready for analysis
-- `data/metadata/`: variable definitions and data dictionaries
-- `outputs/figures/`: plots and visual summaries
-- `outputs/tables/`: summary tables and model outputs
-- `outputs/reports/`: rendered reports
-- `docs/`: project notes and analysis documentation
-- `results/summaries/`: final summary outputs for sharing
+# Output files from R CMD build
+/*.tar.gz
 
-## Recommended analysis plan
+# Output files from R CMD check
+/*.Rcheck/
 
-1. Import and validate raw datasets
-2. Standardize variable names and date formats
-3. Merge water, soil, tree, and leaf observations by plot and year
-4. Explore temporal trends across the 4-year period
-5. Produce descriptive statistics and visual summaries
-6. Save final outputs for reporting and presentation
+# RStudio files
+.Rproj.user/
 
-## Start here
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
 
-Open the R project in RStudio:
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
 
-```r
-source("R/00_setup.R")
-```
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
 
-Then continue with the numbered analysis scripts in the `R/` folder.
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# R Environment Variables
+.Renviron
+.env
+
+# pkgdown site
+docs/
+
+# translation temp files
+po/*~
+
+# RStudio Connect folder
+rsconnect/
