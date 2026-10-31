@@ -1,6 +1,5 @@
 #B_H1----
 ##Load conductivity data and setting up temporal and seasonal variables ####
-
 library(here)
 project_root <- here::here()
 data_dir <- file.path(project_root, "data", "raw")
@@ -53,11 +52,43 @@ condb_allyears$season<-as.factor(condb_allyears$season)
 #filter out dates which only have water-height data
 condb_allyears <- condb_allyears %>%
   filter(!Date %in% as.Date(c("2025-06-03", "2025-06-17", "2025-06-30", "2025-07-16")))
+#correct conductivity typo
 
 ##modelling Conductivity##########
+
+# Sample data frame
+
+condb_allyears<- condb_allyears %>%
+  mutate(Cond_uS = ifelse(Date == "2024-03-05" & Fosse=="F09", 8300, Cond_uS))
+
+# Change Charlie's Score to 95
+df <- df %>%
+  mutate(Score = ifelse(Name == "Charlie", 95, Score))
+
+# Print updated data
+print("Updated Data:")
+print(df)
+
+###global model####
+#accounting for seasonal changes each year,
+#check for repeat dates on diff years
+#
+
+#needed to make log valid
+off <- min(condb_allyears$Cond_mS[condb_allyears$Cond_mS > 0], na.rm = TRUE) / 2
+
+Model_cond_global<-lmer(log(Cond_mS+off)~Treatment*MonthDay2000+(1|Fosse)+(1|Year), data=condb_allyears, REML = TRUE)
+
+plot(Model_cond_global)
+summary(Model_cond_global)
+Anova_global<-anova(Model_cond_global)
+Anova_global
+
+
 ###model 1: all season, with year as a factor####
 #to make model valid, we took the log of our response variable, year and its effect on treatment and spring flush, as well as fosse were random variables
 model_cond <- lmer(log(Cond_mS) ~ Treatment * season+(1+season*Treatment|Year)+(1|Fosse), data = condb_allyears, REML=TRUE)
+
 plot(model_cond)
 anova(model_cond,type = 3)
 model_cond

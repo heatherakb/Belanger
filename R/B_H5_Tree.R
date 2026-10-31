@@ -13,9 +13,14 @@ library(multcomp)
 library(multcompView)
 library(ggplot2)
 library(tidyr)
-setwd("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis")
-treeb <- read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Rue Belanger Data/Complete data/Trees_Belanger_2023-2026.csv",
-                  encoding = "latin1")
+library(here)
+
+project_root <- here::here()
+data_dir <- file.path(project_root, "data", "raw")
+output_dir <- file.path(project_root, "outputs", "figures")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+treeb <- read.csv(file.path(data_dir, "Trees_Belanger_2023-2026.csv"), encoding = "latin1")
 
 treeb <- treeb |>
   mutate(
@@ -29,11 +34,11 @@ treeb <- treeb |>
     CD_mean_cm = (CD__perp_cm + CD_para_cm) / 2,
     vigor=H_cm/TD_cm
     )
-    #combined stem Total diameter estimation for trees. (only effects F13), 
+    #combined stem Total diameter estimation for trees. (only effects F13),
       #*consider removing year 2025-2026 since it burned down.
     treeb$TD_cm1<-sqrt(exp(treeb$TD_cm)+exp(treeb$TD_2_cm))
     #NA will not be analysed, as data was not above level of detection
-    
+
 ## Cleaning year to year differences
   # Growth traits exist in most years, chemistry only in some.
 treeb |>
@@ -41,10 +46,10 @@ treeb |>
   summarise(across(c(TD_cm, CD_mean_cm, H_cm, CLperc, NITROGEN_ASIS, P, K, MG, CA),
                    ~ sum(!is.na(.x)))) |>
   print()
- 
+
 # 2.Growth measures####
   ##2a.Growth over time (each year 2023-2026) -------------------------
-  ###Modelling LMER####   
+  ###Modelling LMER####
  #remove the F13 burnt tree for 2026
       treeb_growth <- treeb |>
         mutate(across(c("TD_cm1", "H_cm", "CD_mean_cm", "FD_percent", "vigor"),     # your measurement columns
@@ -60,16 +65,16 @@ treeb |>
         cat("\n\n==================================\n")
         cat("Growth trait:", v, "\n")
         cat("==================================\n")
-        
+
         d <- treeb_growth |> filter(!is.na(.data[[v]]), .data[[v]] > 0)
         f <- as.formula(paste0("log(", v, ") ~ ", rhs, " + (1|Fosse)"))
-        
+
         m <- lmer(f, data = d, REML = TRUE)
         growth_models[[v]] <- m
-        
+
         print(anova(m))                                   # Type III (lmerTest)
         cat("Singular fit:", isSingular(m), "\n")
-        
+
       # growth rate per treatment: slope on log scale, exp(slope)-1 = % per year? no sig
         tr <- emtrends(m, ~ Treatment, var = "Year_num")
         emtrends(m, ~ Treatment | Species, var = "Year_num")
@@ -77,23 +82,23 @@ treeb |>
       }
       # difference in growth rate curves between species or treatment? no sig
       tr <- emtrends(m, ~ Treatment | Species, var = "Year_num")
-      
+
       summary(tr, infer = TRUE)                      # growth rate per treatment, per species
       pairs(tr, adjust = "tukey")                    # Open - Partial, Open - Closed, Partial - Closed
       test(pairs(tr), joint = TRUE)                  # overall test of equal slopes, one per species
-  
+
   ###Plotting LMER: growth by treatment####
   #set plot growth function
       plot_growth <- function(v) {
         m <- growth_models[[v]]
         d <- treeb_growth |> filter(!is.na(.data[[v]]), .data[[v]] > 0)
         yrs <- sort(unique(d$Year_num))
-        
+
         emm <- emmeans(m, ~ Year_num | Treatment * Species,
                        at = list(Year_num = seq(min(yrs), max(yrs), by = 0.1)),
                        type = "response") |>
           as.data.frame()
-        
+
         ggplot() +
           geom_line(data = d, aes(Year_num, .data[[v]], group = Fosse, colour = Species),
                     alpha = 0.25) +
@@ -120,7 +125,7 @@ treeb |>
       }
 
 # no significant models
-##2c. Total growth (TD sig treatment effect (partial worse for log-ratio)) #### 
+##2c. Total growth (TD sig treatment effect (partial worse for log-ratio)) ####
 
   #exclude burnt tree
       treeb_growth <- treeb_growth |>
@@ -137,10 +142,10 @@ treeb_total <- treeb_growth |>
   mutate(
     TD_growth_cm  = TD_cm1_2026 - TD_cm1_2023,
     TD_pct_growth = TD_growth_cm / TD_cm1_2023 * 100,
-    
+
     CD_growth_cm  = CD_mean_cm_2026 - CD_mean_cm_2023,
     CD_pct_growth = CD_growth_cm / CD_mean_cm_2023 * 100,
-    
+
     H_growth_cm   = H_cm_2026 - H_cm_2024,
     H_pct_growth  = H_growth_cm / H_cm_2024 * 100
   )
@@ -160,13 +165,13 @@ for (v in resp) {
   cat("\n\n==================================\n")
   cat("Response:", v, "\n")
   cat("==================================\n")
-  
+
   d <- treeb_total |> filter(is.finite(.data[[v]]))     # drops NA/Inf (missing year, burned tree, etc.)
   m <- lm(as.formula(paste(v, "~ Treatment * Species")), data = d)
   total_models[[v]] <- m
-  
+
   print(anova(m))
-  
+
   # Tukey comparisons of treatments within each species
   emm <- emmeans(m, ~ Treatment | Species)
   print(pairs(emm, adjust = "tukey"))
@@ -187,10 +192,10 @@ for (v in chem_vars) {
   cat("\n\n==================================\n")
   cat("Chemistry:", v, "\n")
   cat("==================================\n")
-  
+
   d <- treeb |> filter(!is.na(.data[[v]]))
   n_years <- n_distinct(d$Year)
-  
+
   if (n_years == 1) {
     m <- lm(as.formula(paste(v, "~ Treatment * Species")), data = d)
   } else {
@@ -378,7 +383,7 @@ add_model_sheets <- function(wb, model_list, prefix) {
     tab   <- anova_df(model_list[[v]])
     addWorksheet(wb, sheet)
     writeData(wb, sheet, tab, headerStyle = header_style)
-    
+
     p_col <- which(names(tab) == "Pr(>F)")
     sig_rows <- which(!is.na(tab[[p_col]]) & tab[[p_col]] < 0.05)
     if (length(sig_rows) > 0) {
@@ -417,20 +422,20 @@ saveWorkbook(wb, "ANOVA_tables_trees_Belanger.xlsx", overwrite = TRUE)
 
 tukey_for_sig <- function(model_list, group, alpha = 0.05) {
   out <- list()
-  
+
   for (v in names(model_list)) {
     m <- model_list[[v]]
     a <- as.data.frame(anova(m))
     p <- a[["Pr(>F)"]]
     names(p) <- rownames(a)
     sig_terms <- names(p)[!is.na(p) & p < alpha & grepl("Treatment", names(p))]
-    
+
     for (term in sig_terms) {
       parts   <- strsplit(term, ":")[[1]]
       slope   <- "Year_num" %in% parts
       by_vars <- setdiff(parts, c("Treatment", "Year_num"))
       if (length(by_vars) == 0) by_vars <- NULL
-      
+
       res <- tryCatch({
         if (slope) {
           em <- emtrends(m, specs = "Treatment", var = "Year_num", by = by_vars)
@@ -438,7 +443,7 @@ tukey_for_sig <- function(model_list, group, alpha = 0.05) {
           em <- emmeans(m, specs = "Treatment", by = by_vars, type = "response")
         }
         pr <- as.data.frame(pairs(em, adjust = "tukey"))
-        
+
         # one common name for the effect size, plus what it means
         if ("ratio" %in% names(pr)) {
           pr <- dplyr::rename(pr, estimate = ratio); pr$scale <- "ratio"
@@ -454,7 +459,7 @@ tukey_for_sig <- function(model_list, group, alpha = 0.05) {
         message("Skipped ", v, " / ", term, ": ", conditionMessage(e))
         NULL
       })
-      
+
       out[[paste(v, term)]] <- res
     }
   }
@@ -472,19 +477,19 @@ if (nrow(tukey_all) == 0) {
 } else {
   tukey_all <- tukey_all |>
     mutate(across(where(is.numeric), ~ signif(.x, 4)))
-  
+
   cat("\n\n==================================\n")
   cat("Tukey contrasts for significant Treatment terms (p < 0.05 only)\n")
   cat("==================================\n")
   print(as.data.frame(filter(tukey_all, p.value < 0.05)), row.names = FALSE)
-  
-  
-  
+
+
+
   # Everything (significant and not), one sheet
   library(openxlsx)
   wb_tk <- createWorkbook()
   hs <- createStyle(textDecoration = "bold", fgFill = "#D9E1F2", border = "bottom")
-  
+
   addWorksheet(wb_tk, "Tukey_all")
   writeData(wb_tk, "Tukey_all", as.data.frame(tukey_all), headerStyle = hs)
   sig_rows <- which(tukey_all$p.value < 0.05)
@@ -494,7 +499,7 @@ if (nrow(tukey_all) == 0) {
   }
   setColWidths(wb_tk, "Tukey_all", cols = seq_len(ncol(tukey_all)), widths = "auto")
   freezePane(wb_tk, "Tukey_all", firstRow = TRUE)
-  
+
   saveWorkbook(wb_tk, "Tukey_contrasts_trees_Belanger.xlsx", overwrite = TRUE)
 }
 
@@ -551,7 +556,7 @@ treeh <- treeh |>
     # mean crown diameter from the two perpendicular measures
   )
 
-###Modelling LMER####   
+###Modelling LMER####
 
 
 health_vars <- treeh |>
@@ -566,27 +571,27 @@ for (v in health_vars) {
   cat("\n\n==================================\n")
   cat("Health trait:", v, "\n")
   cat("==================================\n")
-  
+
   d <- treeh |> dplyr::filter(!is.na(.data[[v]]))
   f <- as.formula(paste0("log1p(", v, ") ~ ", rhs))   # or log1p(...) if zeros exist
   m <- glmmTMB(as.formula(paste0(v, " ~ ", rhs)),
                data = d, family = tweedie(link = "log"))
   if (is.null(m)) next
-  
+
   Health_models[[v]] <- m
-  
+
   print(anova(m))
   cat("Singular fit:", isSingular(m), "\n")
 }
 
-  
-  
-  
-  
-  
- 
+
+
+
+
+
+
   car::Anova(m, type = 3)
-  
+
 # difference in growth rate curves between species or treatment? no sig
 #tr <- emtrends(m, ~ Treatment | Species)
 
@@ -600,12 +605,12 @@ plot_health <- function(v) {
   m <- growth_models[[v]]
   d <- treeb_growth |> filter(!is.na(.data[[v]]), .data[[v]] > 0)
   yrs <- sort(unique(d$Year_num))
-  
+
   emm <- emmeans(m, ~ Year_num | Treatment * Species,
                  at = list(Year_num = seq(min(yrs), max(yrs), by = 0.1)),
                  type = "response") |>
     as.data.frame()
-  
+
   ggplot() +
     geom_line(data = d, aes(Year_num, .data[[v]], group = Fosse, colour = Species),
               alpha = 0.25) +
@@ -632,7 +637,7 @@ for (v in names(growth_models)) {
 }
 
 # no significant models
-##2c. Total growth (TD sig treatment effect (partial worse for log-ratio)) #### 
+##2c. Total growth (TD sig treatment effect (partial worse for log-ratio)) ####
 
 #exclude burnt tree
 treeb_growth <- treeb_growth |>
@@ -649,10 +654,10 @@ treeb_total <- treeb_growth |>
   mutate(
     TD_growth_cm  = TD_cm1_2026 - TD_cm1_2023,
     TD_pct_growth = TD_growth_cm / TD_cm1_2023 * 100,
-    
+
     CD_growth_cm  = CD_mean_cm_2026 - CD_mean_cm_2023,
     CD_pct_growth = CD_growth_cm / CD_mean_cm_2023 * 100,
-    
+
     H_growth_cm   = H_cm_2026 - H_cm_2024,
     H_pct_growth  = H_growth_cm / H_cm_2024 * 100
   )
@@ -672,13 +677,13 @@ for (v in resp) {
   cat("\n\n==================================\n")
   cat("Response:", v, "\n")
   cat("==================================\n")
-  
+
   d <- treeb_total |> filter(is.finite(.data[[v]]))     # drops NA/Inf (missing year, burned tree, etc.)
   m <- lm(as.formula(paste(v, "~ Treatment * Species")), data = d)
   total_models[[v]] <- m
-  
+
   print(anova(m))
-  
+
   # Tukey comparisons of treatments within each species
   emm <- emmeans(m, ~ Treatment | Species)
   print(pairs(emm, adjust = "tukey"))
