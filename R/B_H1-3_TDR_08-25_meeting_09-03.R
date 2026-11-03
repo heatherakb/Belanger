@@ -434,22 +434,19 @@ g7 <- ggplot(agg, aes(point, Conductivity, fill = Treatment)) +
 
 # Save ####
 #####Graphs to outputs folder####
-out <- "C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis/R_outputs"
-dir.create(out, showWarnings = FALSE)
 
-ggsave(file.path(out, "TDR2_timeline.png"),    g1, width = 11, height = 5, dpi = 300)
-ggsave(file.path(out, "TDR2_seasonal.png"),    g2, width = 11, height = 5, dpi = 300)
-ggsave(file.path(out, "TDR2_box_letters.png"), g3, width = 9,  height = 5, dpi = 300)
-ggsave(file.path(out, "TDR2_emmeans.png"),     g4, width = 9,  height = 5, dpi = 300)
-ggsave(file.path(out, "TDR2_springflush.png"), g5, width = 9,  height = 5, dpi = 300)
-ggsave(file.path(out, "TDR2_humidity.png"),    g6, width = 12, height = 6, dpi = 300)
-ggsave(file.path(out, "TDR2_conductivity.png"),    g6.5, width = 12, height = 6, dpi = 300)
-ggsave(file.path(out, "TDR2_conductivity-per-point.png"), g3.5, width = 11, height = 5, dpi = 300)
+
+ggsave(file.path(figure_dir, "TDR2_timeline.png"),    g1, width = 11, height = 5, dpi = 300)
+ggsave(file.path(figure_dir, "TDR2_seasonal.png"),    g2, width = 11, height = 5, dpi = 300)
+ggsave(file.path(figure_dir, "TDR2_box_letters.png"), g3, width = 9,  height = 5, dpi = 300)
+ggsave(file.path(figure_dir, "TDR2_emmeans.png"),     g4, width = 9,  height = 5, dpi = 300)
+ggsave(file.path(figure_dir, "TDR2_springflush.png"), g5, width = 9,  height = 5, dpi = 300)
+ggsave(file.path(figure_dir, "TDR2_humidity.png"),    g6, width = 12, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "TDR2_conductivity.png"),    g6.5, width = 12, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "TDR2_conductivity-per-point.png"), g3.5, width = 11, height = 5, dpi = 300)
 
 ####Export Results to Excel####
 library(openxlsx)
-setwd("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis/Soil and TDR")
-
 # Tools and formatting
 bold <- createStyle(textDecoration = "bold")
 
@@ -543,7 +540,7 @@ for (s in names(emm_specs)) {
   write_emm_sheet(wb, s, get(obj))
 }
 
-saveWorkbook(wb, "TDR_Belanger_results.xlsx", overwrite = TRUE)
+saveWorkbook(wb,table_dir, "TDR_Belanger_results.xlsx", overwrite = TRUE)
 
 if (length(skipped)) {
   warning("Not found in the session, so not exported: ",
