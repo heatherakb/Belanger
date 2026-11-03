@@ -17,10 +17,16 @@ library(lmerTest)
 library(dplyr)
 library(ggplot2)
 library(patchwork)
-getwd()
-setwd("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis")
-TDRb_allyrs<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Rue Belanger Data/Complete data/TDR-Belanger-2023-2026.csv", fileEncoding = "Latin1")
+library(here)
 
+
+project_root <- here::here()
+data_dir <- file.path(project_root, "data", "raw")
+figure_dir <- file.path(project_root, "outputs", "figures")
+table_dir <- file.path(project_root, "outputs", "tables")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+TDRb_allyrs <- read.csv(file.path(data_dir,"TDR-Belanger-2023-2026.csv"), fileEncoding = "latin1")
 summary(TDRb_allyrs)
 
 TDRb_allyrs <- TDRb_allyrs |>
@@ -68,33 +74,7 @@ plot(Humidity~Date_Vis, data= TDRb_allyrs)
 
 #needed to make log valid
 off <- min(TDRb_allyrs$Conductivity[TDRb_allyrs$Conductivity > 0], na.rm = TRUE) / 2
-
 TDRb_allyrs$Date_vis<-as.numeric(TDRb_allyrs$Date_Vis)
-model_TDR5<-lmer(log(Conductivity+off) ~Treatment*Point*Date_Vis*Humidity+(1|Fosse)+(1|ID)+(1|Year), data=TDRb_allyrs, REML = TRUE)
-plot(model_TDR5)
-lme4::getME(model_TDR5, "X") |> qr() |> (\(q) c(rank = q$rank, ncol = ncol(q$qr)))()
-colnames(getME(model_TDR5, "X"))[qr(getME(model_TDR5, "X"))$pivot[-seq_len(qr(getME(m, "X"))$rank)]]
-
-AnovaTimelineTDR<-anova(model_TDR5, type = 3)
-AnovaTimelineTDR
-plot(residuals(model_TDR5))
-
-re <- ranef(model_TDR5)
-qqnorm(re$Fosse[,1]);               qqline(re$Fosse[,1])
-qqnorm(re$`Treatment:Fosse`[,1]);   qqline(re$`Treatment:Fosse`[,1])
-qqnorm(re$ID[,1]);                  qqline(re$ID[,1])
-
-
-#pairwise comparisons for the timeline model
-
-point_diff_TDR5<-emmeans(model_TDR5, pairwise~Point, adjust="tukey", type="response")
-treatment_per_point_TDR5<-emmeans(model_TDR5, pairwise~Treatment|Point, adjust="tukey", type="response")
-
-point_diff_TDR5
-treatment_per_point_TDR5
-
-with(TDRb_allyrs, table(Treatment, Year))
-with(TDRb_allyrs, table(Treatment, Point, Year))   # concrete was poured 2024-05-21, and so one spot could not be tested in f15 that day
 
 ####model with seasonal date####
 #could replace Date_Vis with MonthDay2000 for seasonal comparison
@@ -124,15 +104,22 @@ treatment_per_date_real <- emmeans(model_TDR5.2, pairwise ~ Treatment | MonthDay
 
 library(glmmTMB)
 TDRb_allyrs$Date_Vis<-as.factor(TDRb_allyrs$Date_Vis)
-model_TDR5.3<-glmer(Conductivity~Humidity+Treatment*Point*springflush+(1|Fosse)+(1|ID), data=TDRb_allyrs, family = "Poisson")
-	
+model_TDR5.3 <- glmer(
+  Conductivity ~ Humidity +
+    Treatment * Point * springflush +
+    (1 | Fosse) +
+    (1 | ID),
+  data = TDRb_allyrs,
+  family = poisson
+)
+
 plot(model_TDR5.3)
 anova(model_TDR5.3)
-	
+
 	#significant different MonthDay_c, and Treatment:Monthday
-	
+
 	#new pairwise comparisons of new significant diff: Point, Date, Treatment:Point, Treatment:Date and Point:Date
-point_by_date<-emmeans(model_TDR5.3, pairwise~Treatnen==, adjust="tukey",type= "response")
+point_by_date<-emmeans(model_TDR5.3, pairwise~Treatment==, adjust="tukey",type= "response")
 	  #since date is now continuous, we removed it as a factor
 
 point_by_date
@@ -143,11 +130,11 @@ point_by_date
 
 
 
-## Spring flush seasonal model , as an additional factor 
+## Spring flush seasonal model , as an additional factor
 #currently not used in analysis because monthday model is more precise
 
 model_TDR5.3 <- lmer(log(Conductivity+off) ~ Treatment*Point*springflush*Humidity
-                     + (1|Fosse) + (1|ID)+(1|Year), 
+                     + (1|Fosse) + (1|ID)+(1|Year),
                      data = TDRb_allyrs, REML = TRUE)
 
 plot(model_TDR5.3)
@@ -463,7 +450,7 @@ ggsave(file.path(out, "TDR2_conductivity-per-point.png"), g3.5, width = 11, heig
 library(openxlsx)
 setwd("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Analysis/Soil and TDR")
 
-# Tools and formatting 
+# Tools and formatting
 bold <- createStyle(textDecoration = "bold")
 
 # Writes an ANOVA table to one sheet. Row 1 = model formula (if a model is
@@ -471,7 +458,7 @@ bold <- createStyle(textDecoration = "bold")
 write_anova_sheet <- function(wb, sheet_name, anova_obj, model = NULL) {
   addWorksheet(wb, sheet_name)
   tab <- cbind(Term = rownames(anova_obj), as.data.frame(anova_obj))
-  
+
   start <- 1
   if (!is.null(model)) {
     writeData(wb, sheet_name,
@@ -490,16 +477,16 @@ write_anova_sheet <- function(wb, sheet_name, anova_obj, model = NULL) {
 write_emm_sheet <- function(wb, sheet_name, emm_obj) {
   means_df     <- as.data.frame(emm_obj$emmeans)
   contrasts_df <- as.data.frame(emm_obj$contrasts)
-  
+
   addWorksheet(wb, sheet_name)
-  
+
   writeData(wb, sheet_name, "Means", startRow = 1, startCol = 1)
   writeData(wb, sheet_name, means_df, startRow = 2, startCol = 1)
-  
+
   contrasts_start <- 2 + nrow(means_df) + 2   # 1 header row + gap of 2
   writeData(wb, sheet_name, "Contrasts", startRow = contrasts_start, startCol = 1)
   writeData(wb, sheet_name, contrasts_df, startRow = contrasts_start + 1, startCol = 1)
-  
+
   addStyle(wb, sheet_name, bold, rows = c(1, contrasts_start), cols = 1)
   addStyle(wb, sheet_name, bold, rows = c(2, contrasts_start + 1),
            cols = 1:50, gridExpand = TRUE)
