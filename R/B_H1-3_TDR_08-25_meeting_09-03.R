@@ -5,6 +5,7 @@
 #conductivity is used as a proxy for soil salinity here
 #the code sh
 
+# 1. Set up---------------------------------------
 ##prep data and libraries####
 library(dplyr)
 library(emmeans)
@@ -18,6 +19,7 @@ library(dplyr)
 library(ggplot2)
 library(patchwork)
 library(here)
+library(glmmTMB)
 
 
 project_root <- here::here()
@@ -26,8 +28,13 @@ figure_dir <- file.path(project_root, "outputs", "figures")
 table_dir <- file.path(project_root, "outputs", "tables")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
-TDRb_allyrs <- read.csv(file.path(data_dir,"TDR-Belanger-2023-2026.csv"), fileEncoding = "latin1")
+TDRb_allyrs <- read.csv(file.path(data_dir,"TDR-Belanger-2023-2026-deleted-duplicate.csv"), fileEncoding = "latin1")
 summary(TDRb_allyrs)
+TDRb_allyrs <- TDRb_allyrs |>
+  mutate(Date_Vis=(ifelse(Date_Vis=="2025-10-03", "2025-10-06",Date_Vis)))
+TDRb_allyrs <- TDRb_allyrs |>   #one sampling effort, had to be split into two days.
+  mutate(Humidity= ifelse(Humidity==330.8, 33.8, Humidity)) #typo in humidity
+
 
 TDRb_allyrs <- TDRb_allyrs |>
   mutate(
@@ -35,6 +42,7 @@ TDRb_allyrs <- TDRb_allyrs |>
     Humidity = as.numeric(Humidity),
     Conductivity = as.numeric(Conductivity),
     Temperature = as.numeric(Temperature),
+    Point = as.factor(Point),
     Air_Temp = as.numeric(Air_Temp),
     Barrier = as.factor(case_match(Barrier,
                                    "SO" ~ "Open",
@@ -52,9 +60,11 @@ TDRb_allyrs$ID<-paste(TDRb_allyrs$Fosse, "-", TDRb_allyrs$Point)
 TDRb_allyrs<-TDRb_allyrs |>
   filter(!is.na(Point)) |>
   filter(!is.na(Conductivity))|>
-  filter(Year != 2023) #data too variable in 2023, possibly TDR device inproperly calibrated, and thus data is not analyzed
+
+
+#data too variable in 2023, possibly TDR device inproperly calibrated, and thus data is not analyzed
 TDRb_allyrs$Point<-as.factor(TDRb_allyrs$Point)
-####Set up: defining seasons, years and soil points of interest####
+##defining seasons, years and soil points of interest####
 #define spring flush
 TDRb_allyrs$springflush<-ifelse(
   TDRb_allyrs$Date_Vis %in% as.Date(c("2024-04-26", "2025-05-05", "2026-04-30")), "spring", "summer")
@@ -68,65 +78,54 @@ plot(Humidity~Date_Vis, data= TDRb_allyrs)
 
 
 
-##models####
-###for conductivity####
-####model for linear date####
+#2. models----------------------------------------------------
+#many models were tried, but only one can be used. Humidity was determined to be an important co-variable and Date was transformed seperating time of year from year to account for seasonal variation as well as year to year variation.
 
-#needed to make log valid
+#model formatting, for log transformations
 off <- min(TDRb_allyrs$Conductivity[TDRb_allyrs$Conductivity > 0], na.rm = TRUE) / 2
-TDRb_allyrs$Date_vis<-as.numeric(TDRb_allyrs$Date_Vis)
 
-####model with seasonal date####
-#could replace Date_Vis with MonthDay2000 for seasonal comparison
-model_TDR5.2<-lmer(log(Conductivity+off)~Treatment*Point*MonthDay_c*Humidity+(1|Fosse)+(1|ID)+(1|Year), data=TDRb_allyrs, REML = TRUE)
-plot(model_TDR5.2)
-plot(residuals(model_TDR5.2))
-qqnorm(ranef(model_TDR5.2)$Fosse[,1]); qqline(ranef(model_TDR5.2)$Fosse[,1])
-qqnorm(ranef(model_TDR5.2)$ID[,1]); qqline(ranef(model_TDR5.2)$Fosse[,1])
-
-AnovaSeasonalTDR <- anova(model_TDR5.2, type = 3)
-#significant different MonthDay_c, and Treatment:Monthday
-
-#new pairwise comparisons of new significant diff: Point, Date, Treatment:Point, Treatment:Date and Point:Date
-treatment<-emmeans(model_TDR5.2, pairwise~Treatment, adjust="tukey",type= "response")
-  #since date is now continuous, we removed it as a factor
-  #date_diff<-emmeans(model_TDR5.2, pairwise~MonthDay_c, adjust="tukey", type= "response")
-treatment_per_point<-emmeans(model_TDR5.2, pairwise~Treatment|Point, adjust="tukey", type= "response")
-  #point_per_date<-emmeans(model_TDR5.2, pairwise~Point|MonthDay_c, adjust="tukey", type= "response")
-
-treatment
-treatment_per_point
-
-sampled_dates <- sort(unique(TDRb_allyrs$MonthDay_c))
-treatment_per_date_real <- emmeans(model_TDR5.2, pairwise ~ Treatment | MonthDay_c,
-                                   at = list(MonthDay_c = sampled_dates),
-                                   adjust = "tukey", type = "response")
-
-library(glmmTMB)
 TDRb_allyrs$Date_Vis<-as.factor(TDRb_allyrs$Date_Vis)
-model_TDR5.3 <- glmer(
-  Conductivity ~ Humidity +
-    Treatment * Point * springflush +
-    (1 | Fosse) +
-    (1 | ID),
-  data = TDRb_allyrs,
-  family = poisson
-)
+
+##model with date-vis as a interaction in model####
+model_TDR5.3<-lmer(log(Conductivity+off)~Humidity+Treatment*Point + Treatment*Date_Vis + Point*Date_Vis +(1|Fosse)+(1|ID), data=TDRb_allyrs, REML = TRUE)
+#model_glm_TDR5.3<-glmer(Conductivity~Humidity+Treatment*Point*Date_Vis+(1|Fosse)+(1|ID), data=TDRb_allyrs, family = poisson)
+  #does not work because it wants integers
 
 plot(model_TDR5.3)
 anova(model_TDR5.3)
+summary(model_TDR5.3)
 
-	#significant different MonthDay_c, and Treatment:Monthday
+#emmeans for Tukey HSD tests
+#sig anova: humidity, Point, Date_vis, Point x Date_vis. Treatment x Point and Treatment x Date_vis are nearly sig 0.07
 
-	#new pairwise comparisons of new significant diff: Point, Date, Treatment:Point, Treatment:Date and Point:Date
-point_by_date<-emmeans(model_TDR5.3, pairwise~Treatment==, adjust="tukey",type= "response")
-	  #since date is now continuous, we removed it as a factor
+point_mtdr5.3<-emmeans(model_TDR5.3, pairwise~Point, adjust="tukey",type= "response")
+#since date is now continuous, we removed it as a factor
 
-point_by_date
+point_mtdr5.3
+
+point_by_treatment_mtdr5.3<-emmeans(model_TDR5.3, pairwise~Treatment|Point, adjust="tukey",type= "response")
+point_by_treatment_mtdr5.3
 
 
+treatment_by_date_mtdr5.3<-emmeans(model_TDR5.3, pairwise~Treatment|Date_Vis, adjust="tukey",type= "response")
+treatment_by_date_mtdr5.3
+
+##model with monthday2000 as an interaction in model ####
+TDRb_allyrs$MonthDay_c<-as.factor(TDRb_allyrs$MonthDay_c)
+model_TDR5.2<-lmer(log(Conductivity+off)~Humidity+Treatment*Point + Treatment*MonthDay_c + Point*MonthDay_c+(1|Fosse)+(1|ID)+(1|Year), data=TDRb_allyrs, REML = TRUE)
+
+plot(model_TDR5.2)
+anova(model_TDR5.2)
+summary(model_TDR5.2)
 
 
+model_TDR5.2b <- lmer(log(Conductivity + off) ~ Humidity + Treatment * Point+ Point* MonthDay2000 + Treatment+MonthDay2000
+                        (1|Year) + (1|Fosse) + (1|ID),
+                      data = TDRb_allyrs, REML = TRUE)
+isSingular(model_TDR5.2)
+anova(model_TDR5.2)
+
+VarCorr(model_TDR5.2)
 
 
 
