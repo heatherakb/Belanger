@@ -18,8 +18,8 @@ library(emmeans)
 library(tidyr)
 
 condb_allyears<- condb_allyears |>
-  mutate(across(mVpH:Height_mm, as.numeric))
-condb_allyears$Fosse<-as.factor(condb_allyears$Fosse)
+  mutate(across(mVpH:Height_mm, as.numeric),
+         across(Bloc:Code, as.factor))
 condb_allyears$Treatment <- factor(condb_allyears$Treatment, levels = c("Open", "Partial", "Closed"))
 condb_allyears$Date<-as.Date(condb_allyears$Date)
 condb_allyears$Year <- format(as.Date(condb_allyears$Date), "%Y")
