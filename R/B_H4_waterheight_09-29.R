@@ -9,6 +9,10 @@ library(dplyr)
 library(multcomp)
 library(lubridate)
 
+project_root <- here::here()
+data_dir <- file.path(project_root, "data", "raw")
+figure_dir <- file.path(project_root, "outputs", "figures")
+table_dir <- file.path(project_root, "outputs", "tables")
 
 heightb_allyears<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/Belanger/Rue Belanger Data/Complete data/B-waterheight-2024-2026.csv", encoding = "latin1")
 rain_allyears<-read.csv("C:/Users/heath/OneDrive - Universite de Montreal/Master's/weather data/historique-meteo-montreal-2024-2026.csv", encoding = "latin1")
@@ -141,7 +145,7 @@ precip_lookup$precip_5days <- vapply(precip_lookup$Date, function(d) {
 }, numeric(1))
 
 
-#for each date of interest, 
+#for each date of interest,
 heightb_allyears$precip_5days<-sapply(heightb_allyears$Date, function(d) {
   rain_allyears |>
     filter(DATE > (d - 5) & DATE <= d) |>
@@ -253,11 +257,11 @@ x_window <- as.Date(c("2000-03-01", "2000-10-01"))
   precip_day <- heightb_allyears |>
     distinct(Year, Date, precip_5days) |>
     mutate(MonthDay2000 = as.Date(format(Date, "2000-%m-%d")))
-  
+
   # maps precipitation onto the height axis; adjust so the ribbon takes up ~1/4 of the panel
   scale_factor <- max(heightb_allyears$Height_mm, na.rm = TRUE) /
     max(precip_day$precip_5days, na.rm = TRUE) / 4
-  
+
   pw_timeline <- ggplot(heightb_allyears,
                         aes(x = MonthDay2000, y = Height_mm, colour = Treatment)) +
     # precipitation behind everything, mapped so it gets a legend entry

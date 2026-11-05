@@ -3,7 +3,6 @@
 
 #data spanning 2024-2026, roughly in monthly intervals during growth season
 #conductivity is used as a proxy for soil salinity here
-#the code sh
 
 # 1. Set up---------------------------------------
 ##prep data and libraries####

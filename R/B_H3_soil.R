@@ -1,4 +1,5 @@
-B_H4_soil
+#B_H4_soil
+#
 
 ####load and format data####
 library(dplyr)
@@ -198,12 +199,10 @@ saveWorkbook(wb, file.path(table_dir, "soil_anova_results.xlsx"), overwrite = TR
 ####Plotting data - significant columns only, saved individually ####
 library(ggplot2)
 
-plot_columns <- function(df, cols, x_var, group_var, out_dir = "significant_plots") {
+plot_columns <- function(df, cols, x_var, group_var,
+                         out_dir = file.path("outputs", "figures", "significant_plots")) {
 
-  # Create the output folder if it doesn't already exist
-  if (!dir.exists(out_dir)) {
-    dir.create(out_dir)
-  }
+  dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
   for (col in cols) {
     p <- ggplot(df, aes(x = .data[[x_var]],
@@ -214,9 +213,9 @@ plot_columns <- function(df, cols, x_var, group_var, out_dir = "significant_plot
                  alpha = 0.6, size = 2) +
       labs(
         title = paste("Distribution of", col),
-        x = "Treatment",
+        x = x_var,
         y = col,
-        color = "Location in pit"
+        color = group_var
       )
 
     # Clean the column name so it's safe as a filename (no / % spaces etc.)
