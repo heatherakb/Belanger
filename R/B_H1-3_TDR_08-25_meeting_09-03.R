@@ -444,17 +444,12 @@ ggsave(file.path(figure_dir, "TDR2_springflush.png"), g5, width = 9,  height = 5
 ggsave(file.path(figure_dir, "TDR2_humidity.png"),    g6, width = 12, height = 6, dpi = 300)
 ggsave(file.path(figure_dir, "TDR2_conductivity.png"),    g6.5, width = 12, height = 6, dpi = 300)
 
-####Export Results to Excel try 2#####
+####TDR results -> Excel#####
 
-# TDR results -> Excel
-# Run AFTER the models, anova objects and emmeans objects exist in the session.
-#   Conductivity: model_TDR5.3  (log(Conductivity + off), two-way interactions)
-#   Humidity:     model_TDR5H   (raw humidity, two-way interactions)
-#
+# This portion of the code is largely edited by Claude.ai
 # p-value colours (whole row is coloured, in every table that has a p-value):
 #   green  p < 0.05
 #   amber  0.05 <= p < 0.10  (marginal)
-# =============================================================================
 
 library(openxlsx)
 library(dplyr)
