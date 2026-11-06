@@ -45,6 +45,12 @@ licorgd<-licor%>%
 licorum<-licor%>%
   filter(Species == "UA")
 
+#save cleaned data for possible future analyses
+licor_cleaned<-licor
+write.csv(licor_cleaned, file.path("data", "cleaned", "licor_cleaned.csv"))
+save(licor_cleaned,
+     file = file.path("data", "cleaned", "licor_cleaned.RData"))
+
 # due to different data structures, each response var will be modeled individually
 #2. By species analysis---------------------------
 ##GD analysis####

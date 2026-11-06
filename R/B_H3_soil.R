@@ -42,6 +42,11 @@ soil_Belanger <- soil_Belanger |>
          across(Species:Unique_code, as.factor),
          Treatment = factor(Treatment, levels = c("Open", "Partial", "Closed")))
 
+#save cleaned data for possible re-use in other analyses.
+soil_Belanger_cleaned<-soil_Belanger
+write.csv(soil_Belanger_cleaned, file.path("data","cleaned", "soil_Belanger_cleaned.csv"))
+save(soil_Belanger_cleaned,
+     file = file.path("data", "cleaned", "soil_Belanger_cleaned.RData"))
 ####Model the interaction of treatment and pit location, Fosse as a random variable. An anova, and emmeans for tukey are conducted####
 library(emmeans)
 library(multcomp)

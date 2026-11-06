@@ -34,6 +34,12 @@ heightb_allyears$season<-ifelse (
 
 plot(Height_mm~Date, data= heightb_allyears)
 
+#save cleaned data for possible re-use in future analyses
+heightb_allyears_cleaned<-heightb_allyears
+write.csv(heightb_allyears_cleaned, file.path("data", "cleaned", "heightb_allyears_cleaned.csv"))
+save(heightb_allyears_cleaned,
+     file = file.path("data", "cleaned", "heightb_allyears_cleaned.RData"))
+
 ##Modelling data####
 ###lmer####
 ####combined####

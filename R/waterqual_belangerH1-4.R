@@ -54,6 +54,11 @@ condb_allyears <- condb_allyears %>%
   filter(!Date %in% as.Date(c("2025-06-03", "2025-06-17", "2025-06-30", "2025-07-16")))
 #correct conductivity typo
 
+#Save cleaned data for possible future analysis
+condb_allyears_cleaned<-condb_allyears
+write.csv(condb_allyears_cleaned, file.path("data", "cleaned", "condb_allyears_cleaned.csv"))
+save(condb_allyears_cleaned,
+     file = file.path("data", "cleaned", "condb_allyears_cleaned.RData"))
 ##modelling Conductivity##########
 
 # Sample data frame

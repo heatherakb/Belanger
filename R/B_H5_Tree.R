@@ -36,7 +36,7 @@ treeb <- treeb |>
     )
     #combined stem Total diameter estimation for trees. (only effects F13),
       #*consider removing year 2025-2026 since it burned down.
-    treeb$TD_cm1<-sqrt(exp(treeb$TD_cm)+exp(treeb$TD_2_cm))
+    treeb$TD_cm1<-sqrt((treeb$TD_cm)^2+exp(treeb$TD_2_cm)^2)
     #NA will not be analysed, as data was not above level of detection
 
 ## Cleaning year to year differences
@@ -47,7 +47,13 @@ treeb |>
                    ~ sum(!is.na(.x)))) |>
   print()
 
-# 2.Growth measures####
+## Saving cleaned dataset for possible future analysis
+treeb_cleaned<-treeb
+write.csv(treeb_cleaned, file.path("data", "cleaned", "treeb_cleaned.csv"))
+save(treeb_cleaned,
+     file = file.path("data", "cleaned", "treeb_cleaned.RData"))
+
+# 2.Growth meastreeb# 2.Growth measures####
   ##2a.Growth over time (each year 2023-2026) -------------------------
   ###Modelling LMER####
  #remove the F13 burnt tree for 2026
@@ -72,21 +78,21 @@ treeb |>
         m <- lmer(f, data = d, REML = TRUE)
         growth_models[[v]] <- m
 
-        print(anova(m))                                   # Type III (lmerTest)
-        cat("Singular fit:", isSingular(m), "\n")
+        tr_t  <- emtrends(m, ~ Treatment,           var = "Year_num")
+        tr_ts <- emtrends(m, ~ Treatment | Species, var = "Year_num")
 
-      # growth rate per treatment: slope on log scale, exp(slope)-1 = % per year? no sig
-        tr <- emtrends(m, ~ Treatment, var = "Year_num")
-        emtrends(m, ~ Treatment | Species, var = "Year_num")
-        print(summary(tr, infer = TRUE))
+        print(summary(tr_t,  infer = TRUE))
+        print(summary(tr_ts, infer = TRUE))
+        print(pairs(tr_ts, adjust = "tukey"))
+        print(test(pairs(tr_ts), joint = TRUE))
       }
-      # difference in growth rate curves between species or treatment? no sig
-      tr <- emtrends(m, ~ Treatment | Species, var = "Year_num")
 
-      summary(tr, infer = TRUE)                      # growth rate per treatment, per species
-      pairs(tr, adjust = "tukey")                    # Open - Partial, Open - Closed, Partial - Closed
-      test(pairs(tr), joint = TRUE)                  # overall test of equal slopes, one per species
-
+      #PRINT ANOVAS
+        #Trunk diameter is significative for treatment effect.
+      for (v in names(growth_models)) {
+        cat("\n=== ANOVA (Type III, Satterthwaite):", v, "===\n")
+        print(anova(growth_models[[v]]))
+      }
   ###Plotting LMER: growth by treatment####
   #set plot growth function
       plot_growth <- function(v) {
@@ -114,7 +120,7 @@ treeb |>
       }
 
       plots <- lapply(setdiff(names(growth_models), c("FD_percent", "vigor")), plot_growth)
-      plots[[1]] #closest to being significant
+      plots[[1]] #significant
   ###Validating Models ####
 
       for (v in names(growth_models)) {

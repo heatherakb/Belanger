@@ -77,7 +77,11 @@ TDRb_allyrs$Date_Vis<-as.factor(TDRb_allyrs$Date_Vis)
 plot(Conductivity~Date_Vis, data= TDRb_allyrs)
 plot(Humidity~Date_Vis, data= TDRb_allyrs)
 
-
+#Save cleaned data for possible re-use in other analyses.
+TDRb_allyrs_cleaned<-TDRb_allyrs
+write.csv(TDRb_allyrs_cleaned, file.path("data", "cleaned", "TDRb_allyrs_cleaned.csv"))
+save(TDRb_allyrs_cleaned,
+     file = file.path("data", "cleaned", "TDRb_allyrs_cleaned.RData"))
 #2. Models----------------------------------------------------
 ## 2.1.1 Humidity models ####
 #humidity is also important for tree health, apart from how it affects conductivity, lets investigate
