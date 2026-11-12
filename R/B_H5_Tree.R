@@ -34,6 +34,7 @@ treeb <- treeb |>
     CD_mean_cm = (CD__perp_cm + CD_para_cm) / 2,
     vigor=H_cm/TD_cm
     )
+
     #combined stem Total diameter estimation for trees. (only effects F13),
       #*consider removing year 2025-2026 since it burned down.
     treeb$TD_cm1<-sqrt((treeb$TD_cm)^2+exp(treeb$TD_2_cm)^2)
