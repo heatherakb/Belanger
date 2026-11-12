@@ -63,6 +63,7 @@ TDRb_allyrs <- TDRb_allyrs |>
   droplevels()
 
 TDRb_allyrs$Point<-as.factor(TDRb_allyrs$Point)
+TDRb_allyrs$Species<-as.factor(TDRb_allyrs$Species)
 ##defining seasons, years and soil points of interest####
 #define spring flush
 TDRb_allyrs$springflush<-ifelse(
@@ -85,9 +86,13 @@ save(TDRb_allyrs_cleaned,
 #2. Models----------------------------------------------------
 ## 2.1.1 Humidity models ####
 #humidity is also important for tree health, apart from how it affects conductivity, lets investigate
+#other models
+#model_TDR5.2H<-lmer(Humidity ~ Treatment*Point + Treatment*Date_Vis + Point*Date_Vis +(1|ID:Fosse)+(1|Year), data=TDRb_allyrs, REML = TRUE)
+AIC(model_TDR5.2H, model_TDR5H)
 
+#current chosed
 
-model_TDR5H<-lmer(Humidity ~ Treatment*Point + Treatment*Date_Vis + Point*Date_Vis + (1|Year)+(1|Fosse)+(1|Year)+(1|ID), data=TDRb_allyrs, REML = TRUE)
+model_TDR5H<-lmer(Humidity ~ Treatment*Point + Treatment*Date_Vis + Point*Date_Vis +(1|Fosse)+(1|ID)+(1|Species), data=TDRb_allyrs, REML = TRUE)
 plot(model_TDR5H) #no transformation needed
 
 Anova_Soil_Humidity<-anova(model_TDR5H, type = 3)
@@ -95,6 +100,7 @@ AnovaTimelineTDRH
 plot(residuals(model_TDR5H))
 qqnorm(ranef(model_TDR5H)$Fosse[,1]); qqline(ranef(model_TDR5H)$Fosse[,1])
 qqnorm(ranef(model_TDR5H)$ID[,1]); qqline(ranef(model_TDR5H)$ID[,1])
+qqnorm(ranef(model_TDR5H)$Species[,1]); qqline(ranef(model_TDR5H)$Species[,1])
 
 #pairwise comparisons for the timeline model
 point_mtdrh<-emmeans(model_TDR5H, pairwise~Point, adjust="tukey", type="response")
@@ -139,6 +145,7 @@ treatment_per_date_mtdrh
 off <- min(TDRb_allyrs$Conductivity[TDRb_allyrs$Conductivity > 0], na.rm = TRUE) / 2
 
 model_TDR5.3<-lmer(log(Conductivity+off)~Humidity+Treatment*Point + Treatment*Date_Vis + Point*Date_Vis +(1|Fosse)+(1|ID), data=TDRb_allyrs, REML = TRUE)
+
 
   #model_glm_TDR5.3<-glmer(Conductivity~Humidity+Treatment*Point*Date_Vis+(1|Fosse)+(1|ID), data=TDRb_allyrs, family = poisson)
   #does not work because it wants integers
@@ -230,37 +237,6 @@ legend("topright", legend = names(trt_cols), col = trt_cols,
        pch = 16, title = "Treatment", bty = "n")
 g_humidity
 
-# Pit-level summer means (same idea as model_TDR7), then a model with Treatment x Group
-summer_pit <- agg |>
-  filter(springflush == "summer") |>
-  group_by(Fosse, Treatment, Group) |>
-  summarise(mean_conductivity = mean(Conductivity, na.rm = TRUE), .groups = "drop")
-
-mod_grp <- lmer(log(mean_conductivity) ~ Treatment * Group + (1 | Fosse),
-                data = summer_pit, REML = TRUE)
-print(anova(mod_grp))
-
-cld_df <- cld(emmeans(mod_grp, ~ Treatment | Group), Letters = letters,
-              adjust = "tukey", type = "response") |>
-  as.data.frame() |>
-  mutate(.group = trimws(.group))
-
-ypos <- summer_pit |> group_by(Group) |>
-  summarise(y = max(mean_conductivity, na.rm = TRUE) * 1.06, .groups = "drop")
-cld_df <- left_join(cld_df, ypos, by = "Group")
-
-g3 <- ggplot(summer_pit, aes(Treatment, mean_conductivity, fill = Treatment)) +
-  geom_boxplot(alpha = 0.8, outlier.shape = NA) +
-  geom_jitter(width = 0.12, size = 1.4, alpha = 0.6) +
-  geom_text(data = cld_df, aes(Treatment, y, label = .group), inherit.aes = FALSE) +
-  facet_wrap(~ Group, scales = "free_y") +
-  scale_fill_manual(values = trt_cols) +
-  labs(x = NULL, y = "Mean summer conductivity (per pit)",
-       title = "Summer conductivity by treatment",
-       caption = "Dots = pit means; letters = Tukey within panel") +
-  theme_tdr + theme(legend.position = "none")
-g3
-
 ## 3.2 Humidity####
 
 ### Build groups: near and far from water inlet
@@ -326,6 +302,65 @@ g3.5h <- ggplot(summer_pit_location_h, aes(Point, mean_humidity, fill = Treatmen
 
 g3.5h
 
+## 3.3 Conductivity ####
+
+# Pit-level summer means (same idea as model_TDR7), then a model with Treatment x Group
+
+
+summer_pit_location <- TDRb_allyrs |>
+  filter(springflush == "summer") |>
+  group_by(Fosse, Treatment, Point) |>
+  summarise(mean_conductivity = mean(Conductivity, na.rm = TRUE), .groups = "drop") |>
+  mutate(Point = factor(Point))                      # <- factor BEFORE the model
+
+summer_pit_location <- summer_pit_location |>
+  mutate(Treatment = factor(Treatment, levels = trt_levels))
+
+summer_pit <- agg |>
+  filter(springflush == "summer") |>
+  group_by(Fosse, Treatment, Group) |>
+  summarise(mean_conductivity = mean(Conductivity, na.rm = TRUE), .groups = "drop")
+
+mod_grp <- lmer(log(mean_conductivity) ~ Treatment * Group + (1 | Fosse),
+                data = summer_pit, REML = TRUE)
+print(anova(mod_grp))
+
+cld_df <- cld(emmeans(mod_grp, ~ Treatment | Group), Letters = letters,
+              adjust = "tukey", type = "response") |>
+  as.data.frame() |>
+  mutate(.group = trimws(.group))
+
+ypos <- summer_pit |> group_by(Group) |>
+  summarise(y = max(mean_conductivity, na.rm = TRUE) * 1.06, .groups = "drop")
+cld_df <- left_join(cld_df, ypos, by = "Group")
+
+g3 <- ggplot(summer_pit, aes(Treatment, mean_conductivity, fill = Treatment)) +
+  geom_boxplot(alpha = 0.8, outlier.shape = NA) +
+  geom_jitter(width = 0.12, size = 1.4, alpha = 0.6) +
+  geom_text(data = cld_df, aes(Treatment, y, label = .group), inherit.aes = FALSE) +
+  facet_wrap(~ Group, scales = "free_y") +
+  scale_fill_manual(values = trt_cols) +
+  labs(x = NULL, y = "Mean summer conductivity (per pit)",
+       title = "Summer conductivity by treatment",
+       caption = "Dots = pit means; letters = Tukey within panel") +
+  theme_tdr + theme(legend.position = "none")
+g3
+
+
+g3.5 <- ggplot(summer_pit_location, aes(Point, mean_conductivity, fill = Treatment)) +
+  geom_boxplot(alpha = 0.8, outlier.shape = NA, width = 0.7, position = dodge) +
+  geom_point(position = position_jitterdodge(jitter.width = 0.12, dodge.width = 0.75),
+             size = 1.4, alpha = 0.6, show.legend = FALSE) +
+  geom_text(data = cld_df_Point,
+            aes(x = Point, y = y, label = .group),
+            position = dodge, inherit.aes = FALSE, vjust = 0) +
+  scale_fill_manual(values = trt_cols, breaks = trt_levels, drop = FALSE) +
+  labs(x = "Sampling Point", y = "Mean summer conductivity (mS/cm)",
+       title = "Summer conductivity by pit location",
+       caption = "Dots = pit means; letters = Tukey between each sampling point (across all treatments)")+
+  theme_tdr + theme(legend.position = "right")
+
+g3.5
 
 ### Other data representations:
 #### 1. All Points through years
@@ -378,7 +413,6 @@ g3 <- ggplot(summer_pit, aes(Treatment, mean_conductivity, fill = Treatment)) +
        caption = "Dots = pit means; letters = Tukey within panel") +
   theme_tdr + theme(legend.position = "none")
 g3
-
 
 #### 4. Model estimates (back-transformed, 95% CI)
 em <- as.data.frame(emmeans(mod_grp, ~ Treatment | Group, type = "response"))
@@ -481,16 +515,16 @@ anova_specs <- list(
 
 # sheet name = list(emmeans object, title)
 emm_specs <- list(
-  # Conductivity (model_TDR5.3)
-#  C_Date             = list(obj = "date_mtdr5.3",              title = "Conductivity: Date_Vis"),
+  #Conductivity (model_TDR5.3)
+  C_Date             = list(obj = "date_mtdr5.3",              title = "Conductivity: Date_Vis"),
   C_Point            = list(obj = "point_mtdr5.3",             title = "Conductivity: Point"),
   C_Treat_per_Point  = list(obj = "point_by_treatment_mtdr5.3", title = "Conductivity: Treatment within Point"),
 #  C_Point_per_Date   = list(obj = "point_by_date_mtdr5.3",     title = "Conductivity: Point within Date_Vis"),
 #  C_Date_per_Point   = list(obj = "date_by_point_mtdr5.3",     title = "Conductivity: Date_Vis within Point"),
-  # Humidity (model_TDR5H)
+  #Humidity (model_TDR5H)
   H_Date             = list(obj = "date_mtdrh",                title = "Humidity: Date_Vis"),
   H_Point            = list(obj = "point_mtdrh",               title = "Humidity: Point"),
-  H_Treat_per_Point  = list(obj = "treatment_per_point_mtdrh", title = "Humidity: Treatment within Point"),
+  H_Treat_per_Point  = list(obj = "treatment_per_point_mtdrh", title = "Humidity: Treatment within Point")
 #  H_Point_per_Treat  = list(obj = "point_per_treatment_mtdrh", title = "Humidity: Point within Treatment"),
 #  H_Treat_per_Date   = list(obj = "treatment_per_date_mtdrh",  title = "Humidity: Treatment within Date_Vis")
 )
