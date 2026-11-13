@@ -44,9 +44,21 @@ treeb <- treeb |>
   # Growth traits exist in most years, chemistry only in some.
 treeb |>
   group_by(Year) |>
-  summarise(across(c(TD_cm, CD_mean_cm, H_cm, CLperc, NITROGEN_ASIS, P, K, MG, CA),
+  summarise(across(c(TD_cm1, CD_mean_cm, H_cm, CLperc, NITROGEN_ASIS, P, K, MG, CA),
                    ~ sum(!is.na(.x)))) |>
   print()
+treeb <- treeb |>
+  mutate(
+    CLperc = ifelse(CLperc == "<0.03", "0.015", CLperc)
+  )
+
+treeb<-treeb|>
+  mutate(
+    across(TD_cm:FD_percent, as.numeric),
+    across(CLperc:CA, as.numeric)
+)
+
+
 
 ## Saving cleaned dataset for possible future analysis
 treeb_cleaned<-treeb
@@ -62,6 +74,9 @@ save(treeb_cleaned,
         mutate(across(c("TD_cm1", "H_cm", "CD_mean_cm", "FD_percent", "vigor"),     # your measurement columns
                     ~ replace(.x, Fosse == "F13" & Year_num == 2026, NA))) |>
         droplevels()
+treeb_growth<-treeb_growth|>
+  mutate(across(TD_cm:FD_percent, as.numeric),
+                TD_cm1 = as.numeric(TD_cm1))
     #select growth vars and terms for model
       growth_vars <- c("TD_cm1", "CD_mean_cm", "H_cm")   # H_cm starts in 2024
       rhs <- "Treatment * Species * Year_num"
@@ -201,13 +216,7 @@ for (v in chem_vars) {
   cat("==================================\n")
 
   d <- treeb |> filter(!is.na(.data[[v]]))
-  n_years <- n_distinct(d$Year)
-
-  if (n_years == 1) {
-    m <- lm(as.formula(paste(v, "~ Treatment * Species")), data = d)
-  } else {
-    m <- lmer(as.formula(paste(v, "~ Treatment * Species + Year + (1|Fosse)")), data = d)
-  }
+  m <- lmer(as.formula(paste(v, "~ Treatment * Species + Year + (1|Fosse)")), data = d)
   chem_models[[v]] <- m
   print(anova(m))
 }
@@ -242,14 +251,14 @@ ggplot(filter(treeb, !is.na(NITROGEN_ASIS)),
   scale_x_continuous(breaks = c(2024, 2025)) +
   labs(x = "Year", y = "Nitrogen in leaf (%)") +
   theme_bw()
-ggplot(filter(treeb, !is.na(P)),
+ggplot(filter(treeb, !is.na(K)),
        aes(x = Year_num, y = P, colour = Treatment)) +
   geom_point(aes(group = Fosse), alpha = 0.3) +
   stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
   stat_summary(fun = mean, geom = "point", size = 3) +
   facet_wrap(~ Species, scales = "free_y") +
   scale_x_continuous(breaks = c(2024, 2025)) +
-  labs(x = "Year", y = "Phosphorus in leaf (%)") +
+  labs(x = "Year", y = "K in leaf (%)") +
   theme_bw()
 chem_long <- treeb |>
   filter(Year_num %in% c(2024, 2025)) |>
@@ -287,7 +296,7 @@ ggplot(treeb, aes(x = Year_num, y = CLperc, colour = Treatment)) +
   theme_bw()
 
 ## 5.2 Total % growth by treatment and species ----
-ggplot(tree_growth, aes(x = Treatment, y = TD_pct_total, fill = Treatment)) +
+ggplot(treeb_growth, aes(x = Treatment, y = TD_pct_total, fill = Treatment)) +
   geom_boxplot(alpha = 0.7) +
   geom_jitter(width = 0.1, alpha = 0.5) +
   facet_wrap(~ Species) +
