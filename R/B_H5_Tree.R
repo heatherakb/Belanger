@@ -17,7 +17,8 @@ library(here)
 
 project_root <- here::here()
 data_dir <- file.path(project_root, "data", "raw")
-output_dir <- file.path(project_root, "outputs", "figures")
+figure_dir <- file.path(project_root, "outputs", "figures")
+table_dir<-file.path(project_root, "outputs", "tables")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 treeb <- read.csv(file.path(data_dir, "Trees_Belanger_2023-2026.csv"), encoding = "latin1")
@@ -225,43 +226,103 @@ for (v in chem_vars) {
 m_Cl <- chem_models[["CLperc"]]
 m_N<-chem_models[["NITROGEN_ASIS"]]
 m_P<-chem_models[["P"]]
+m_K<-chem_models[["K"]]
 # treatment differences within species (averaged over 2024 and 2025)
-tukey_cl <- emmeans(m_Cl, pairwise ~ Treatment | Species, adjust = "tukey")
-tukey_cl
+tukey_cl <- emmeans(m_Cl, pairwise ~ Treatment |Species, adjust = "tukey")
+tukey_N <- emmeans(m_N, pairwise ~ Treatment | Species, adjust = "tukey")
+tukey_P <- emmeans(m_P, pairwise ~ Treatment | Species, adjust = "tukey")
+tukey_K <- emmeans(m_K, pairwise ~ Treatment | Species, adjust = "tukey")
 
-ggplot(filter(treeb, !is.na(CLperc)),
+
+tukey_cl
+tukey_N
+tukey_P
+tukey_K
+
+treeb <- treeb |>
+  mutate(Treatment = factor(Treatment, levels = trt_levels))
+
+trt_levels <- c("Open", "Partial", "Closed")
+trt_cols   <- c(Open = "#00BA38", Partial = "#619CFF", Closed = "#F8766D")
+
+
+#Cl_year
+plotCL<-ggplot(filter(treeb, !is.na(CLperc)),
        aes(x = Year_num, y = CLperc, colour = Treatment)) +
   geom_line(aes(group = Fosse), alpha = 0.3) +
   stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
   stat_summary(fun = mean, geom = "point", size = 3) +
   facet_wrap(~ Species, scales = "free_y") +
-  scale_x_continuous(breaks = c(2024, 2025)) +
+  scale_x_continuous(breaks = c(2024, 2025, 2026)) +
   labs(x = "Year", y = "Chlorine in leaf (%)") +
+  geom_hline(yintercept = 0.03,
+             linetype = "dashed", colour = "red3", linewidth = 0.8) +
+  annotate("text", x = Inf, y = 0.03, label = "Minimum accurate detection",
+           angle = 0, vjust = -0.4, hjust = 1.1, size = 3, color="red3") +
+  scale_color_manual(values = trt_cols) +
   theme_bw()
 
 tukey_N <-emmeans(m_N, pairwise~ Treatment | Species, adjust= "tukey")
 tukey_N
 
-ggplot(filter(treeb, !is.na(NITROGEN_ASIS)),
+plotN<-ggplot(filter(treeb, !is.na(NITROGEN_ASIS)),
        aes(x = Year_num, y = NITROGEN_ASIS, colour = Treatment)) +
   geom_line(aes(group = Fosse), alpha = 0.3) +
   stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
   stat_summary(fun = mean, geom = "point", size = 3) +
-  facet_wrap(~ Species, scales = "free_y") +
-  scale_x_continuous(breaks = c(2024, 2025)) +
+  facet_wrap(~ Species) +
+  scale_x_continuous(breaks = c(2024, 2025, 2026)) +
+  coord_cartesian(ylim =c(2.0,3.75))+
   labs(x = "Year", y = "Nitrogen in leaf (%)") +
+  scale_color_manual(values = trt_cols) +
   theme_bw()
-ggplot(filter(treeb, !is.na(K)),
-       aes(x = Year_num, y = P, colour = Treatment)) +
+plotK<-ggplot(filter(treeb, !is.na(K)),
+       aes(x = Year_num, y = K, colour = Treatment)) +
   geom_point(aes(group = Fosse), alpha = 0.3) +
   stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
   stat_summary(fun = mean, geom = "point", size = 3) +
-  facet_wrap(~ Species, scales = "free_y") +
-  scale_x_continuous(breaks = c(2024, 2025)) +
+  facet_wrap(~ Species) +
+  scale_x_continuous(breaks = c(2025, 2026)) +
+  coord_cartesian(ylim = c(0.4,1.8))+
   labs(x = "Year", y = "K in leaf (%)") +
   theme_bw()
+
+plotP<-ggplot(filter(treeb, !is.na(P)),
+              aes(x = Year_num, y = P, colour = Treatment)) +
+  geom_point(aes(group = Fosse), alpha = 0.3) +
+  stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
+  stat_summary(fun = mean, geom = "point", size = 3) +
+  facet_wrap(~ Species) +
+  scale_x_continuous(breaks = c(2025, 2026)) +
+  coord_cartesian(ylim = c(0.21,0.65))+
+  labs(x = "Year", y = "P in leaf (%)") +
+  theme_bw()
+plotP
+plotMG<-ggplot(filter(treeb, !is.na(MG)),
+              aes(x = Year_num, y = MG, colour = Treatment)) +
+  geom_point(aes(group = Fosse), alpha = 0.3) +
+  stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
+  stat_summary(fun = mean, geom = "point", size = 3) +
+  facet_wrap(~ Species) +
+  scale_x_continuous(breaks = c(2025, 2026)) +
+  coord_cartesian(ylim = c(0.12,0.65))+
+  labs(x = "Year", y = "Mg in leaf (%)") +
+  theme_bw()
+plotMG
+plotCA<-ggplot(filter(treeb, !is.na(CA)),
+               aes(x = Year_num, y = CA, colour = Treatment)) +
+  geom_point(aes(group = Fosse), alpha = 0.3) +
+  stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
+  stat_summary(fun = mean, geom = "point", size = 3) +
+  facet_wrap(~ Species) +
+  scale_x_continuous(breaks = c(2025, 2026)) +
+  coord_cartesian(ylim = c(0.5,4))+
+  labs(x = "Year", y = "Ca in leaf (%)") +
+  theme_bw()
+plotCA
+
 chem_long <- treeb |>
-  filter(Year_num %in% c(2024, 2025)) |>
+  filter(Year_num %in% c(2024, 2025, 2026)) |>
   pivot_longer(cols = c(CLperc, NITROGEN_ASIS),
                names_to = "variable", values_to = "value") |>
   filter(!is.na(value)) |>
@@ -274,7 +335,7 @@ p_cl_n <- ggplot(chem_long, aes(x = Year_num, y = value, colour = Treatment)) +
   stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
   stat_summary(fun = mean, geom = "point", size = 3) +
   facet_grid(variable ~ Species, scales = "free_y", switch = "y") +
-  scale_x_continuous(breaks = c(2024, 2025)) +
+  scale_x_continuous(breaks = c(2024, 2025, 2026)) +
   labs(x = "Year", y = NULL) +
   theme_bw() +
   theme(strip.placement = "outside",
@@ -282,27 +343,26 @@ p_cl_n <- ggplot(chem_long, aes(x = Year_num, y = value, colour = Treatment)) +
         strip.text.y.left = element_text(angle = 90))
 p_cl_n
 
-ggsave("chem_CL_N_by_treatment.png", p_cl_n, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "Bel_leafchem_CL_N.png"), p_cl_n, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "Bel_leafchem_K.png"), plotK, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "Bel_leafchem_CL.png"), plotCL, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "Bel_leafchem_P.png"), plotP, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "Bel_leafchem_MG.png"), plotMG, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "Bel_leafchem_CA.png"), plotCA, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figure_dir, "Bel_leafchem_N.png"), plotN, width = 8, height = 6, dpi = 300)
+
 # 5. Graphs ---------------------------------------------------------------
 
+####visualising data: not selected for paper
 ## 5.1 Trunk diameter over the years, by treatment ----
-ggplot(treeb, aes(x = Year_num, y = CLperc, colour = Treatment)) +
+ggplot(treeb, aes(x = Year_num, y = TD_cm1, colour = Treatment)) +
   geom_line(aes(group = Fosse), alpha = 0.3) +
   stat_summary(aes(group = Treatment), fun = mean, geom = "line", linewidth = 1.3) +
   stat_summary(fun = mean, geom = "point", size = 2.5) +
   facet_wrap(~ Species) +
-  scale_x_discrete(breaks = 2023:2026) +
-  labs(x = "Year", y = "Chlorine in leaf % ") +
+  scale_x_discrete(breaks = 2024:2026) +
+  labs(x = "Year", y = "Tree diamter ") +
   theme_bw()
-
-## 5.2 Total % growth by treatment and species ----
-ggplot(treeb_growth, aes(x = Treatment, y = TD_pct_total, fill = Treatment)) +
-  geom_boxplot(alpha = 0.7) +
-  geom_jitter(width = 0.1, alpha = 0.5) +
-  facet_wrap(~ Species) +
-  labs(x = "Treatment", y = "Trunk diameter growth 2023-2026 (%)") +
-  theme_bw() +
-  theme(legend.position = "none")
 
 # 6. Summary: where Treatment or its interactions were significant ----------
 # Collects the ANOVA table of every model above (growth, % growth, chemistry)
@@ -321,7 +381,6 @@ collect_terms <- function(model_list, group) {
 
 all_terms <- bind_rows(
   collect_terms(growth_models, "Growth over time"),
-  collect_terms(pct_models,    "Total % growth"),
   collect_terms(chem_models,   "Chemistry")
 ) |>
   rename(p_value = `Pr(>F)`) |>
@@ -345,28 +404,6 @@ treatment_terms <- all_terms |>
          p_value  = signif(p_value, 3)) |>
   arrange(p_value)
 print(as.data.frame(treatment_terms), row.names = FALSE)
-
-##Tukey contrasts and models for significant vars Cl and N
-
-
-leafcl_model<-cl~Treatment*Species+
-
-model_TDR5<-lmer(log(Conductivity+1) ~Treatment*Point*Date_Vis+(1|Fosse/Treatment)+(1|ID), data=TDRb_allyrs, REML = TRUE)
-plot(model_TDR5)
-AnovaTimelineTDR<-anova(model_TDR5, type = 3)
-
-plot(residuals(model_TDR5))
-qqnorm(ranef(model_TDR5)$Fosse[,1]); qqline(ranef(model_TDR5)$Fosse[,1])
-qqnorm(ranef(model_TDR5)$ID[,1]); qqline(ranef(model_TDR5)$Fosse/Treatment[,1])
-
-#pairwise comparisons for the timeline model
-
-point_diff_TDR5<-emmeans(model_TDR5, pairwise~Point, adjust="tukey", type="response")
-treatment_per_point_TDR5<-emmeans(model_TDR5, pairwise~Treatment|Point, adjust="tukey", type="response")
-
-point_diff_TDR5
-treatment_per_point_TDR5
-
 
 # 7. Export ANOVA tables to Excel -------------------------------------------
 # install.packages("openxlsx")   # once
@@ -413,13 +450,12 @@ add_model_sheets <- function(wb, model_list, prefix) {
 }
 
 add_model_sheets(wb, growth_models, "Growth_")
-add_model_sheets(wb, pct_models,    "Pct_")
 add_model_sheets(wb, chem_models,   "Chem_")
 
 setColWidths(wb, "Significant_Treatment", cols = 1:4, widths = "auto")
 setColWidths(wb, "All_Treatment_terms",   cols = 1:5, widths = "auto")
 
-saveWorkbook(wb, "ANOVA_tables_trees_Belanger.xlsx", overwrite = TRUE)
+saveWorkbook(wb, file.path(table_dir, "ANOVA_tables_trees_Belanger.xlsx"), overwrite = TRUE)
 # Saved in the working directory set at the top (setwd)
 
 # 8. Tukey contrasts for every significant Treatment term --------------------
