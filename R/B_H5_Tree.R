@@ -405,60 +405,7 @@ treatment_terms <- all_terms |>
   arrange(p_value)
 print(as.data.frame(treatment_terms), row.names = FALSE)
 
-# 7. Export ANOVA tables to Excel -------------------------------------------
-# install.packages("openxlsx")   # once
-library(openxlsx)
-
-# ANOVA table of one model as a data frame, with the term names as a column
-anova_df <- function(m) {
-  a <- as.data.frame(anova(m))
-  cbind(Term = rownames(a), a, row.names = NULL)
-}
-
-wb <- createWorkbook()
-header_style <- createStyle(textDecoration = "bold", fgFill = "#D9E1F2",
-                            border = "bottom")
-sig_style    <- createStyle(textDecoration = "bold", fgFill = "#FFF2CC")
-
-# Sheets 1-2: the summaries from section 6
-addWorksheet(wb, "Significant_Treatment")
-writeData(wb, "Significant_Treatment", as.data.frame(sig_treatment),
-          headerStyle = header_style)
-
-addWorksheet(wb, "All_Treatment_terms")
-writeData(wb, "All_Treatment_terms", as.data.frame(treatment_terms),
-          headerStyle = header_style)
-
-# One sheet per model; p < 0.05 highlighted in yellow
-add_model_sheets <- function(wb, model_list, prefix) {
-  for (v in names(model_list)) {
-    sheet <- substr(paste0(prefix, v), 1, 31)     # Excel limit: 31 characters
-    tab   <- anova_df(model_list[[v]])
-    addWorksheet(wb, sheet)
-    writeData(wb, sheet, tab, headerStyle = header_style)
-
-    p_col <- which(names(tab) == "Pr(>F)")
-    sig_rows <- which(!is.na(tab[[p_col]]) & tab[[p_col]] < 0.05)
-    if (length(sig_rows) > 0) {
-      addStyle(wb, sheet, sig_style, rows = sig_rows + 1,
-               cols = seq_along(tab), gridExpand = TRUE)
-    }
-    setColWidths(wb, sheet, cols = seq_along(tab), widths = "auto")
-    freezePane(wb, sheet, firstRow = TRUE)
-  }
-  invisible(wb)
-}
-
-add_model_sheets(wb, growth_models, "Growth_")
-add_model_sheets(wb, chem_models,   "Chem_")
-
-setColWidths(wb, "Significant_Treatment", cols = 1:4, widths = "auto")
-setColWidths(wb, "All_Treatment_terms",   cols = 1:5, widths = "auto")
-
-saveWorkbook(wb, file.path(table_dir, "ANOVA_tables_trees_Belanger.xlsx"), overwrite = TRUE)
-# Saved in the working directory set at the top (setwd)
-
-# 8. Tukey contrasts for every significant Treatment term --------------------
+# 7. Tukey contrasts for every significant Treatment term --------------------
 # For each model, finds the terms containing Treatment with p < alpha and runs
 # Tukey-adjusted pairwise contrasts at the level of that term:
 #   Treatment                       -> Treatment vs Treatment
@@ -468,9 +415,9 @@ saveWorkbook(wb, file.path(table_dir, "ANOVA_tables_trees_Belanger.xlsx"), overw
 #   Treatment:Year_num              -> difference in growth SLOPES between treatments
 #   Treatment:Species:Year_num      -> slope differences within each species
 # Contrasts on log-response models come back as ratios (response scale).
-# Note: the Treatment-only contrasts average over the other factors; when a
-# higher-order Treatment interaction is also significant, interpret the
-# interaction contrasts first.
+# The output always has a Species column: GD / UM when the term includes
+# Species, otherwise "All (averaged)" (or the species name if the model was
+# fitted on a single species).
 
 tukey_for_sig <- function(model_list, group, alpha = 0.05) {
   out <- list()
@@ -481,6 +428,11 @@ tukey_for_sig <- function(model_list, group, alpha = 0.05) {
     p <- a[["Pr(>F)"]]
     names(p) <- rownames(a)
     sig_terms <- names(p)[!is.na(p) & p < alpha & grepl("Treatment", names(p))]
+
+    # if the model was fitted on one species only, report that species
+    sp_levels <- tryCatch(unique(as.character(model.frame(m)$Species)),
+                          error = function(e) NULL)
+    sp_single <- if (length(sp_levels) == 1) sp_levels else NULL
 
     for (term in sig_terms) {
       parts   <- strsplit(term, ":")[[1]]
@@ -502,8 +454,20 @@ tukey_for_sig <- function(model_list, group, alpha = 0.05) {
         } else {
           pr$scale <- if (slope) "difference in slope (per year)" else "difference"
         }
+
         pr <- pr |>
-          mutate(across(any_of(c("Species", "Year", "season")), as.character)) |>
+          mutate(across(any_of(c("Species", "Year", "season")), as.character))
+
+        # Species column is always present
+        if (!"Species" %in% names(pr)) {
+          pr$Species <- if (!is.null(sp_single)) sp_single else "All (averaged)"
+        }
+        # Year / season columns exist (possibly empty) so tables stack cleanly
+        for (col in c("Year", "season")) {
+          if (!col %in% names(pr)) pr[[col]] <- NA_character_
+        }
+
+        pr <- pr |>
           mutate(group = group, variable = v, term = term, term_p = signif(p[term], 3),
                  .before = 1)
         pr
@@ -512,7 +476,7 @@ tukey_for_sig <- function(model_list, group, alpha = 0.05) {
         NULL
       })
 
-      out[[paste(v, term)]] <- res
+      out[[paste(group, v, term)]] <- res
     }
   }
   bind_rows(out)
@@ -520,7 +484,6 @@ tukey_for_sig <- function(model_list, group, alpha = 0.05) {
 
 tukey_all <- bind_rows(
   tukey_for_sig(growth_models, "Growth over time"),
-  tukey_for_sig(pct_models,    "Total % growth"),
   tukey_for_sig(chem_models,   "Chemistry")
 )
 
@@ -528,32 +491,112 @@ if (nrow(tukey_all) == 0) {
   cat("\nNo significant Treatment terms, so no Tukey contrasts were run.\n")
 } else {
   tukey_all <- tukey_all |>
+    dplyr::select(any_of(c("group", "variable", "term", "term_p", "Species", "Year",
+                    "season", "contrast", "estimate", "SE", "df", "t.ratio",
+                    "p.value", "scale")),
+           everything()) |>
     mutate(across(where(is.numeric), ~ signif(.x, 4)))
 
   cat("\n\n==================================\n")
   cat("Tukey contrasts for significant Treatment terms (p < 0.05 only)\n")
   cat("==================================\n")
   print(as.data.frame(filter(tukey_all, p.value < 0.05)), row.names = FALSE)
-
-
-
-  # Everything (significant and not), one sheet
-  library(openxlsx)
-  wb_tk <- createWorkbook()
-  hs <- createStyle(textDecoration = "bold", fgFill = "#D9E1F2", border = "bottom")
-
-  addWorksheet(wb_tk, "Tukey_all")
-  writeData(wb_tk, "Tukey_all", as.data.frame(tukey_all), headerStyle = hs)
-  sig_rows <- which(tukey_all$p.value < 0.05)
-  if (length(sig_rows) > 0) {
-    addStyle(wb_tk, "Tukey_all", createStyle(textDecoration = "bold", fgFill = "#FFF2CC"),
-             rows = sig_rows + 1, cols = seq_len(ncol(tukey_all)), gridExpand = TRUE)
-  }
-  setColWidths(wb_tk, "Tukey_all", cols = seq_len(ncol(tukey_all)), widths = "auto")
-  freezePane(wb_tk, "Tukey_all", firstRow = TRUE)
-
-  saveWorkbook(wb_tk, "Tukey_contrasts_trees_Belanger.xlsx", overwrite = TRUE)
 }
+
+
+# 8. Export everything to ONE Excel workbook ---------------------------------
+# install.packages("openxlsx")   # once
+library(openxlsx)
+
+# ANOVA table of one model as a data frame, with the term names as a column
+anova_df <- function(m) {
+  a <- as.data.frame(anova(m))
+  cbind(Term = rownames(a), a, row.names = NULL)
+}
+
+wb <- createWorkbook()
+header_style <- createStyle(textDecoration = "bold", fgFill = "#D9E1F2",
+                            border = "bottom")
+sig_style    <- createStyle(textDecoration = "bold", fgFill = "#FFF2CC")
+label_style  <- createStyle(textDecoration = "bold", fontSize = 12)
+
+# Sheets 1-2: the summaries from section 6
+addWorksheet(wb, "Significant_Treatment")
+writeData(wb, "Significant_Treatment", as.data.frame(sig_treatment),
+          headerStyle = header_style)
+setColWidths(wb, "Significant_Treatment", cols = 1:4, widths = "auto")
+
+addWorksheet(wb, "All_Treatment_terms")
+writeData(wb, "All_Treatment_terms", as.data.frame(treatment_terms),
+          headerStyle = header_style)
+setColWidths(wb, "All_Treatment_terms", cols = 1:5, widths = "auto")
+
+# One sheet per response variable:
+#   ANOVA table on top (p < 0.05 highlighted), then one Tukey block per
+#   significant Treatment term underneath (p < 0.05 highlighted)
+add_model_sheets <- function(wb, model_list, grp, prefix) {
+  for (v in names(model_list)) {
+    sheet <- substr(paste0(prefix, v), 1, 31)     # Excel limit: 31 characters
+    addWorksheet(wb, sheet)
+
+    # --- ANOVA table ---
+    tab <- anova_df(model_list[[v]])
+    writeData(wb, sheet, tab, startRow = 1, headerStyle = header_style)
+
+    p_col    <- which(names(tab) == "Pr(>F)")
+    sig_rows <- which(!is.na(tab[[p_col]]) & tab[[p_col]] < 0.05)
+    if (length(sig_rows) > 0) {
+      addStyle(wb, sheet, sig_style, rows = sig_rows + 1,
+               cols = seq_along(tab), gridExpand = TRUE)
+    }
+
+    # --- Tukey contrasts underneath ---
+    row <- nrow(tab) + 3                          # leave a blank row
+    if (nrow(tukey_all) > 0) {
+      tk <- tukey_all[tukey_all$group == grp & tukey_all$variable == v, ]
+
+      if (nrow(tk) > 0) {
+        writeData(wb, sheet, "Tukey-adjusted pairwise contrasts", startRow = row)
+        addStyle(wb, sheet, label_style, rows = row, cols = 1)
+        row <- row + 2
+
+        for (term in unique(tk$term)) {
+          blk <- as.data.frame(tk[tk$term == term, ])
+          lab <- paste0(term, "  (ANOVA p = ", blk$term_p[1], ")")
+          blk <- blk[, setdiff(names(blk), c("group", "variable", "term", "term_p"))]
+          blk <- blk[, colSums(!is.na(blk)) > 0, drop = FALSE]   # drop empty columns
+
+          writeData(wb, sheet, lab, startRow = row)
+          addStyle(wb, sheet, label_style, rows = row, cols = 1)
+          row <- row + 1
+
+          writeData(wb, sheet, blk, startRow = row, headerStyle = header_style)
+          sig <- which(!is.na(blk$p.value) & blk$p.value < 0.05)
+          if (length(sig) > 0) {
+            addStyle(wb, sheet, sig_style, rows = row + sig,
+                     cols = seq_len(ncol(blk)), gridExpand = TRUE)
+          }
+          row <- row + nrow(blk) + 2
+        }
+      } else {
+        writeData(wb, sheet, "No significant Treatment terms, so no Tukey contrasts.",
+                  startRow = row)
+      }
+    }
+
+    # fixed widths: auto would be stretched by the long label rows
+    setColWidths(wb, sheet, cols = 1:12, widths = c(32, 28, rep(14, 10)))
+  }
+  invisible(wb)
+}
+
+add_model_sheets(wb, growth_models, "Growth over time", "Growth_")
+add_model_sheets(wb, chem_models,   "Chemistry",        "Chem_")
+
+saveWorkbook(wb, file.path(table_dir, "ANOVA_Tukey_trees_Belanger.xlsx"), overwrite = TRUE)
+
+
+
 
 #cl  and P: % difference between 2024 and 2025 ----------------------------
 # These are the two variables measured in both 2024 and 2025.
