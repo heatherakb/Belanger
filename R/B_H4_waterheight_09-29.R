@@ -43,7 +43,10 @@ save(heightb_allyears_cleaned,
 ##Modelling data####
 ###lmer####
 ####combined####
-model_height0 <- lmer(Height_mm~ Treatment * season +Year + (1|Fosse),
+off <- min(TDRb_allyrs$Conductivity[TDRb_allyrs$Conductivity > 0], na.rm = TRUE) / 2
+
+c<-min(heightb_allyears$Height_mm[heightb_allyears$Height_mm>0], na.rm = TRUE)
+model_height0 <- lmer(log(Height_mm)~ Treatment * season +Year + (1|Fosse),
                      data = heightb_allyears, REML = TRUE)
 anova(model_height0)
 plot(model_height0)
@@ -57,42 +60,29 @@ waterh_season_per_treatment0<-emmeans(model_height0, pairwise~ season|Treatment,
 waterh_season_per_treatment0$emmeans
 waterh_season_per_treatment0$contrasts
 
-####divided####
-#models separated by presence and absence of water in pit
+####try with GLM to get rid of zero funnel affect
+library(glmmTMB)
+model_heightglmm<-glmmTMB(Height_mm ~ Treatment * season +Year + (1|Fosse),
+                          ziformula = ~Treatment * season + Year,
+                          family = ziGamma(link = "log"),
+                          data = heightb_allyears
+)
+install.packages("DHARMa")
+library(DHARMa)
+DHARMa::simulateResiduals(model_heightglmm)
 
-#to account for the "not true zeros" problem, we can divide our model into two. the first whether water is detected in the piezometer, and the second the water height of those where water is detected
-#1. binary model
-heightb_allyears$detected <- ifelse(heightb_allyears$Height_mm > 0, 1, 0)
+sim <- simulateResiduals(model_heightglmm)   # save the result
+plot(sim)
 
+testDispersion(sim)       # over/underdispersion
+testZeroInflation(sim)    # are there more zeros than the model expects?
+testOutliers(sim)
 
-model_hdetect <- glmer(detected ~ Treatment * season +(1|Year)+(1|Year:Treatment)+(1|Year:season)+ (1|Fosse),
-                       data = heightb_allyears, family = binomial)
+# residuals against each predictor, to check the spread within groups
+plotResiduals(sim, heightb_allyears$Treatment)
+plotResiduals(sim, heightb_allyears$season)
+plotResiduals(sim, heightb_allyears$Year)
 
-waterd_treatment_per_season<-emmeans(model_hdetect, pairwise~ Treatment|season, adjust="tukey")
-waterd_treatment_per_season$emmeans
-waterd_treatment_per_season$contrasts
-
-waterd_season_per_treatment<-emmeans(model_hdetect, pairwise~ season|Treatment, adjust="tukey")
-waterd_season_per_treatment$emmeans
-waterd_season_per_treatment$contrasts
-
-#no differences observed for water presence.
-#2. depth model
-
-height_pos <- subset(heightb_allyears, Height_mm > 0)
-model_height <- lmer(Height_mm ~ Treatment * season +(1|Year)+(Treatment|Year)+ (1|Fosse),
-                     data = height_pos, REML = TRUE)
-anova(model_height)
-plot(model_height)
-qqnorm(resid(model_height)); qqline(resid(model_height))
-
-waterh_treatment_per_season<-emmeans(model_height, pairwise~ Treatment|season, adjust="tukey")
-waterh_treatment_per_season$emmeans
-waterh_treatment_per_season$contrasts
-
-waterh_season_per_treatment<-emmeans(model_height, pairwise~ season|Treatment, adjust="tukey")
-waterh_season_per_treatment$emmeans
-waterh_season_per_treatment$contrasts
 
 ###gam####
 ####combined####
@@ -108,35 +98,8 @@ appraise(W_gam)                 # residual diagnostics
 draw(W_gam)                     # one curve per treatment
 difference_smooths(W_gam, select = "s(doy)") |> draw()   # where treatments differ
 
-####divided####
-#d$wet <- as.integer(d$Height_mm > 0)   # adjust to your floor definition
-#m_pres <- gam(wet ~ Treatment + s(doy, by = Treatment, k = 10) +
-                s(Fosse, bs = "re") + s(Year, bs = "re"),
-              family = binomial, data = d, method = "REML")
-#m_ht <- gam(Height_mm ~ Treatment + s(doy, by = Treatment, k = 10) +
-              s(Fosse, bs = "re") + s(Year, bs = "re"),
-            family = Gamma(link = "log"), data = subset(d, Height_mm > 0),
-            method = "REML")
-#gam.check(m_pres)
-
-#summary(m_pres)
-#appraise(m_pres)                 # residual diagnostics
-#draw(m_pres)                     # one curve per treatment
-#difference_smooths(m_gam, select = "s(doy)") |> draw()   # where treatments differ
-
-#gam.check(m_ht)
-
-#summary(m_ht)
-#appraise(m_ht)                 # residual diagnostics
-#draw(m_ht)                     # one curve per treatment
-#difference_smooths(m_gam, select = "s(doy)") |> draw()   # where treatments differ
-
 ##Plotting data####
 ###prepping weather data####
-
-
-
-
 
 # make sure both date columns are real Dates
 rain_allyears$DATE     <- as.Date(rain_allyears$DATE)

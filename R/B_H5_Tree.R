@@ -239,11 +239,11 @@ tukey_N
 tukey_P
 tukey_K
 
-treeb <- treeb |>
-  mutate(Treatment = factor(Treatment, levels = trt_levels))
 
 trt_levels <- c("Open", "Partial", "Closed")
 trt_cols   <- c(Open = "#00BA38", Partial = "#619CFF", Closed = "#F8766D")
+treeb <- treeb |>
+  mutate(Treatment = factor(Treatment, levels = trt_levels))
 
 
 #Cl_year

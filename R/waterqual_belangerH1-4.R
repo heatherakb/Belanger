@@ -1,5 +1,5 @@
 #B_H1----
-##Load conductivity data and setting up temporal and seasonal variables ####
+##1. Load conductivity data and setting up temporal and seasonal variables ####
 library(here)
 project_root <- here::here()
 data_dir <- file.path(project_root, "data", "raw")
@@ -49,143 +49,175 @@ print(sample)
 
 condb_allyears$season<-as.factor(condb_allyears$season)
 
+#correct conductivity typo
+condb_allyears<- condb_allyears %>%
+  mutate(Cond_uS = ifelse(Date == "2024-03-05" & Fosse=="F09", 8300, Cond_uS))
+
 #filter out dates which only have water-height data
 condb_allyears <- condb_allyears %>%
   filter(!Date %in% as.Date(c("2025-06-03", "2025-06-17", "2025-06-30", "2025-07-16")))
-#correct conductivity typo
 
 #Save cleaned data for possible future analysis
 condb_allyears_cleaned<-condb_allyears
 write.csv(condb_allyears_cleaned, file.path("data", "cleaned", "condb_allyears_cleaned.csv"))
 save(condb_allyears_cleaned,
      file = file.path("data", "cleaned", "condb_allyears_cleaned.RData"))
-##modelling Conductivity##########
+##2. modelling Conductivity##########
 
-# Sample data frame
+### Model 1: Season interaction ####
+  #####1a.cond####
+  #to make model valid, we took the log of our response variable, year and its effect on treatment and spring flush, as well as fosse were random variables
+  model_cond <- lmer(log(Cond_mS) ~ Treatment * season+(1+season|Fosse)+(1|Date), data = condb_allyears, REML=TRUE)
 
-condb_allyears<- condb_allyears %>%
-  mutate(Cond_uS = ifelse(Date == "2024-03-05" & Fosse=="F09", 8300, Cond_uS))
+  plot(model_cond)
+  anova(model_cond,type = 3)
+  model_cond
 
-# Change Charlie's Score to 95
-df <- df %>%
-  mutate(Score = ifelse(Name == "Charlie", 95, Score))
+  #tukey tests using emmeans
+  #1. estimates the marginal means for the season:Treatment grid, and the response type allows the grid to show unlog transformed values.
+  #emm_cond <- emmeans(model_cond, ~ Treatment * season, type = "response")
+  #2. treatment differences within season
+  treat_per_season<-emmeans(model_cond, pairwise~Treatment|season, adjust="tukey", type= "response")
+  treat_per_season$emmeans
+  treat_per_season$contrasts
 
-# Print updated data
-print("Updated Data:")
-print(df)
+  #3. seasonal differences within treatments
+  season_per_treat<-emmeans(model_cond, pairwise~season|Treatment, adjust="tukey", type = "response")
+  season_per_treat$emmeans
+  season_per_treat$contrasts
 
-###global model####
-#accounting for seasonal changes each year,
-#check for repeat dates on diff years
-#
+  #####1.b: cl ####
+  #we only have 2 years of data for the cl concentrations, therefore we put year in as a fixed effect to interact with other years
 
-#needed to make log valid
-off <- min(condb_allyears$Cond_mS[condb_allyears$Cond_mS > 0], na.rm = TRUE) / 2
+  model_cl <- lmer(log(Cl) ~ Treatment * season + (1 +season| Fosse)+(1|Date),
+                   data = condb_allyears, REML = TRUE)
+  plot(model_cl)
+  anova(model_cl,type = 3)
+  model_cl
 
-Model_cond_global<-lmer(log(Cond_mS+off)~Treatment*MonthDay2000+(1|Fosse)+(1|Year), data=condb_allyears, REML = TRUE)
+  #testing correlation
+  d <- condb_allyears
+  d$row <- seq_len(nrow(d))
+  dd <- subset(d, !is.na(Cond_mS) & !is.na(Cl) & Cl > 0)   # or add an offset to Cl too
+
+  m_cond <- lmer(log(Cond_mS) ~ Treatment*season + (1|Fosse) + (1|Date), data = dd)
+  m_cl   <- lmer(log(Cl)            ~ Treatment*season + (1|Fosse) + (1|Date), data = dd)
+
+  dd$r_cond <- resid(m_cond)
+  dd$r_cl   <- resid(m_cl)
+  cor.test(dd$r_cond, dd$r_cl)
+
+  cor.test(resid(model_cl), resid(model_cond))
+
+  library(lmerTest)
+  m_slope <- lmer(log(Cond_mS) ~ log(Cl) + Treatment*season +
+                    (1|Fosse) + (1|Date), data = dd)
+  summary(m_slope)
+
+  #tukey tests using emmeans
+  #1. estimates the marginal means for the season:Treatment grid, and the response type allows the grid to show unlog transformed values.
+  #emm_cond <- emmeans(model_cl, ~ Treatment * season, type = "response")
+  #2. treatment differences within season
+  treat_per_season<-emmeans(model_cl, pairwise~Treatment|season, adjust="tukey", type= "response")
+  treat_per_season$emmeans
+  treat_per_season$contrasts
+
+  #3. seasonal differences within treatments
+  season_per_treat<-emmeans(model_cl, pairwise~season|Treatment, adjust="tukey", type = "response")
+  season_per_treat$emmeans
+  season_per_treat$contrasts
+
+### Model 2: Uses Monthday as an interaction instead of spring-summer categories: not selected added complexity and less relevant to hypothesis ####
+
+Model_cond_global<-lmer(log(Cond_mS+off)~Treatment*MonthDay2000+(1+season|Fosse)+(1|Year), data=condb_allyears, REML = TRUE)
 
 plot(Model_cond_global)
 summary(Model_cond_global)
 Anova_global<-anova(Model_cond_global)
 Anova_global
 
+#2. treatment differences
+treat_diff2<-emmeans(Model_cond_global, pairwise~Treatment, adjust="tukey", type= "response")
+treat_diff2
 
-###model 1: all season, with year as a factor####
-#to make model valid, we took the log of our response variable, year and its effect on treatment and spring flush, as well as fosse were random variables
-model_cond <- lmer(log(Cond_mS) ~ Treatment * season+(1+season*Treatment|Year)+(1|Fosse), data = condb_allyears, REML=TRUE)
-
-plot(model_cond)
-anova(model_cond,type = 3)
-model_cond
-
-#tukey tests using emmeans
-#1. estimates the marginal means for the season:Treatment grid, and the response type allows the grid to show unlog transformed values.
-#emm_cond <- emmeans(model_cond, ~ Treatment * season, type = "response")
-#2. treatment differences within season
-treat_per_season<-emmeans(model_cond, pairwise~Treatment|season, adjust="tukey", type= "response")
-treat_per_season$emmeans
-treat_per_season$contrasts
-
-#3. seasonal differences within treatments
-season_per_treat<-emmeans(model_cond, pairwise~season|Treatment, adjust="tukey", type = "response")
-season_per_treat$emmeans
-season_per_treat$contrasts
-
-###model 3: MonthDay rather than summer -spring categories ####
-####GAM####
-#(uses General Additive Models instead of linear models, which allow for flexibility in date, rather than a forced linear relationship, and therefore fits the data better)
+### Model 3: GAM####
+#General Additive Models vs. linear models: GAM allow for flexibility in date, rather than a forced linear relationship, however GAM more complex than LMER (overcomplexified?))
 #install.packages(c("mgcv", "gratia", "emmeans", "ggplot2"))
 
 library(mgcv)
 library(gratia)
 library(emmeans)
 library(ggplot2)
+  #####3a. Cond####
+  m_gam <- gam(log(Cond_mS) ~ Treatment +
+                 s(doy, by = Treatment, k = 20) +
+                 s(Fosse, bs = "re") +
+                 s(Year,  bs = "re"),
+               data = condb_allyears, method = "REML")
 
-m_gam <- gam(log(Cond_mS) ~ Treatment +
-               s(doy, by = Treatment, k = 20) +
-               s(Fosse, bs = "re") +
-               s(Year,  bs = "re"),
-             data = condb_allyears, method = "REML")
+  gam.check(m_gam)
+  summary(m_gam)
+  appraise(m_gam)
+  draw(m_gam)
+  difference_smooths(m_gam, select = "s(doy)") |> draw()
+  gam.check(m_gam)
 
-gam.check(m_gam)
-summary(m_gam)
-appraise(m_gam)
-draw(m_gam)
-difference_smooths(m_gam, select = "s(doy)") |> draw()
-gam.check(m_gam)
+  m_null <- gam(log(Cond_mS) ~ Treatment +
+                  s(doy, k = 8) +
+                  s(Fosse, bs = "re") + s(Year, bs = "re"),
+                data = condb_allyears, method = "ML")
+  m_null_2<-gam(log(Cond_mS)~s(doy, k= 8)+
+                  s(Fosse, bs = "re")+
+                  s(Year, bs= "re"), data= condb_allyears, method = "ML")
 
-m_null <- gam(log(Cond_mS) ~ Treatment +
-                s(doy, k = 8) +
-                s(Fosse, bs = "re") + s(Year, bs = "re"),
-              data = condb_allyears, method = "ML")
-m_null_2<-gam(log(Cond_mS)~s(doy, k= 8)+
-                s(Fosse, bs = "re")+
-                s(Year, bs= "re"), data= condb_allyears, method = "ML")
+  anova(m_null_2, m_gam, test = "F")
+  AIC(m_null_2, m_gam)
 
-anova(m_null_2, m_gam, test = "F")
-AIC(m_null_2, m_gam)
+  m0 <- gam(log(Cond_mS) ~ s(doy, k = 8) + s(Fosse, bs = "re") + s(Year, bs = "re"),
+            data = condb_allyears, method = "ML")
+  m1 <- update(m0, . ~ . + Treatment)
+  m2 <- update(m1, . ~ . - s(doy, k = 8) + s(doy, by = Treatment, k = 8))
 
-m0 <- gam(log(Cond_mS) ~ s(doy, k = 8) + s(Fosse, bs = "re") + s(Year, bs = "re"),
-          data = condb_allyears, method = "ML")
-m1 <- update(m0, . ~ . + Treatment)
-m2 <- update(m1, . ~ . - s(doy, k = 8) + s(doy, by = Treatment, k = 8))
+  anova(m0, m1, m2, test = "F")
+  AIC(m1,m2,m0, m_gam)
 
-anova(m0, m1, m2, test = "F")
-AIC(m1,m2,m0, m_gam)
+  #can't do emmeans because its a numerical value
+  plot(log(Cond_mS)~MonthDay2000, data = condb_allyears)
 
-####LMER####
-#not as good as gam because it doesn't account for interdependence of dates near eachother
-condb_allyears$MonthDay2000<-as.numeric(condb_allyears$MonthDay2000)
-model_monthday<-lmer(log(Cond_mS) ~Treatment*MonthDay2000+(1|Fosse)+(1|Year)+(1|Year:Treatment), data=condb_allyears, REML = TRUE)
-plot(model_monthday)
-anova(model_monthday)
+  #####3b: CL####
+  m_gam <- gam(log(Cl) ~ Treatment +
+                 s(doy, by = Treatment, k = 6) +
+                 s(Fosse, bs = "re") +
+                 s(Year,  bs = "re"),
+               data = condb_allyears, method = "REML")
 
-#can't do emmeans because its a numerical value
-plot(log(Cond_mS)~MonthDay2000, data = condb_allyears)
-
-###Model 4: Modeling the possible effect of accumulation####
+  gam.check(m_gam)
+  summary(m_gam)
+  appraise(m_gam)
+  draw(m_gam)
+  difference_smooths(m_gam, select = "s(doy)") |> draw()
+  gam.check(m_gam)
+### Model 4: Modeling the possible effect of accumulation####
 #Test the year affect for possible accumulation, I want to test if the line modelling the data is significantly different each year.
-####accumulation total average
-model_Accum <- lmer(log(Cond_mS) ~ Treatment * season*Year+(1|Fosse), data = condb_allyears, REML=TRUE)
+##### 4.a: accumulation all season average ####
+model_Accum <- lmer(log(Cond_mS) ~ Treatment * season*Year+(1+season|Fosse)+(1|Date), data = condb_allyears, REML=TRUE)
 plot(model_Accum)
 anova(model_Accum, Type = 3)
 
 emm_cond_Accum<-emmeans(model_Accum, pairwise~Year|Treatment, type = "response")
-emm_cond_Accum$contrast
 emm_cond_Accum
 #Yearly differences within season.
 season_per_year<-emmeans(model_Accum, pairwise~Year|season, adjust="tukey", type = "response")
-season_per_year$emmeans
-season_per_year$contrasts
+season_per_year
 
 #yearly differences within season x treatment interactiom
 treatxseason_per_year<-emmeans(model_Accum, pairwise~Year|season:Treatment, adjust="tukey", type= "response")
 treatxseason_per_year
 
-####accumulation in growth season only, ie. summer conductivity comparisons between years####
+##### 4.b: accumulation in growth season only, ie. summer conductivity comparisons between years####
 condb_summer<-condb_allyears%>%
   filter(condb_allyears$season == "summer")
-model_Accum_summer <- lmer(log(Cond_mS) ~ Treatment * Year+(1|Fosse), data = condb_summer, REML=TRUE)
+model_Accum_summer <- lmer(log(Cond_mS) ~ Treatment * Year+(1|Fosse)+(1|Date), data = condb_summer, REML=TRUE)
 plot(model_Accum_summer)
 anova(model_Accum_summer, Type = 3)
 
@@ -193,27 +225,7 @@ emm_cond_Accum_summer<-emmeans(model_Accum_summer, pairwise~Year|Treatment, type
 emm_cond_Accum_summer
 summary(model_Accum_summer)
 
-##Modelling Cl data ####
-#we only have 2 years of data for the cl concentrations, therefore we put year in as a fixed effect to interact with other years
-###LMER####
-model_cl <- lmer(log(Cl) ~ Treatment * season+ Year + (1 | Fosse),
-                 data = condb_allyears, REML = TRUE)
-plot(model_cl)
-anova(model_cl,type = 3)
-model_cl
 
-#tukey tests using emmeans
-#1. estimates the marginal means for the season:Treatment grid, and the response type allows the grid to show unlog transformed values.
-#emm_cond <- emmeans(model_cl, ~ Treatment * season, type = "response")
-#2. treatment differences within season
-treat_per_season<-emmeans(model_cl, pairwise~Treatment|season, adjust="tukey", type= "response")
-treat_per_season$emmeans
-treat_per_season$contrasts
-
-#3. seasonal differences within treatments
-season_per_treat<-emmeans(model_cl, pairwise~season|Treatment, adjust="tukey", type = "response")
-season_per_treat$emmeans
-season_per_treat$contrasts
 
 ###for an model with *Year, rather than + Year
 #  Type III Analysis of Variance Table with Satterthwaite's method
@@ -226,30 +238,7 @@ season_per_treat$contrasts
 #season:Year            14.151  14.151     1 74.895  16.9533 9.761e-05 ***
 #Treatment:season:Year   2.401   1.201     2 74.894   1.4385  0.243764
 
-###GAM####
-m_gam <- gam(log(Cl) ~ Treatment +
-               s(doy, by = Treatment, k = 6) +
-               s(Fosse, bs = "re") +
-               s(Year,  bs = "re"),
-             data = condb_allyears, method = "REML")
-
-gam.check(m_gam)
-summary(m_gam)
-appraise(m_gam)
-draw(m_gam)
-difference_smooths(m_gam, select = "s(doy)") |> draw()
-gam.check(m_gam)
-
-####aug 2026 tests####
-
-null_mod_cond <-lm(log(Cl)~1, data=condb_allyears)
-model_cl <- lmer(log(Cl) ~ Treatment * season+(1|Year)+(1|Fosse), data = condb_allyears, REML=TRUE)
-
-AIC(null_mod_cond)
-AIC(model_cl)
-#model is better than the null model.
-
-#Test the year affect for possible accumulation, I want to test if the line modelling the data is significantly different each year.
+#####4.c cl accumulation####
 model_Accumcl <- lmer(log(Cl) ~ Treatment * season*Year+(1|Fosse), data = condb_allyears, REML=TRUE)
 plot(model_Accumcl)
 anova(model_Accumcl, Type = 3)
@@ -258,10 +247,9 @@ emm_cond_Accumcl<-emmeans(model_Accumcl, ~Treatment*season*Year, type = "respons
 emm_cond_Accumcl
 #Yearly differences within season.
 year_per_season<-emmeans(model_Accumcl, pairwise~Year|season, adjust="tukey", type = "response")
-year_per_season$emmeans
-year_per_season$contrasts
+year_per_season
 
-## Graphs: conductivity, Rue Belanger ----------------------------------------
+## 3. Graphs: conductivity, Rue Belanger ----------------------------------------
 # Run after your data-loading / cleaning section (needs condb_allyears with
 # Date, Year, Fosse, Treatment, season, Cond_mS) and model_noyear.
 
@@ -270,12 +258,16 @@ library(ggplot2)
 library(emmeans)
 library(multcomp)
 library(ggrepel)
-###graphs####
 
-###based on graphs made with assistance from claude####
-#prompt:
+
+trt_levels <- c("Open", "Partial", "Closed")
+trt_cols   <- c(Open = "#00BA38", Partial = "#619CFF", Closed = "#F8766D")
+condb_allyears <- condb_allyears |>
+  mutate(Treatment = factor(Treatment, levels = trt_levels))
+
+#graphs made with formatting assistance from Claude
 #1. timeline from first year until now (breaks each year to account for no data measured in winter months),
-#2. averages no year for spring and summer boxplot per treatment,
+#2. averages no year for spring and summer boxplot per treatment
 #3. treatments over season
 #4. modelling accumulation in some way?
 condb_allyears$date2000 <- as.Date(paste0("2000-", format(condb_allyears$Date, "%m-%d")))
@@ -320,6 +312,7 @@ p_timeline <- ggplot(condb_allyears, aes(x = MonthDay2000, y = Cond_mS, colour =
   coord_cartesian(xlim = x_window) +
   scale_y_log10() +
   labs(x = "Month", y = "Conductivity (Mean, mS/cm)", colour = "Treatment") +
+  scale_color_manual(values = trt_cols) +
   theme_bw() +
   theme(panel.spacing.x = unit(0.4, "lines"),
         axis.text.x = element_text(angle = 45, hjust = 1))
@@ -344,13 +337,14 @@ p_box <- ggplot(condb_allyears, aes(x = Treatment, y = Cond_mS, fill = Treatment
   facet_wrap(~ season) +
   scale_y_log10() +
   labs(x = "Treatment", y = "Conductivity (mS/cm)") +
+  scale_fill_manual(values = trt_cols) +
   theme_bw() +
   theme(legend.position = "none")
 p_box
 
 ggsave(file.path(output_dir, "boxplot_season_treatment.png"), p_box, width = 7, height = 4, dpi = 300)
 
-#### 3. basic plot of treatments over season ####
+####3. basic plot of treatments over season ----
 condb_allyears$date2000 <- as.Date(condb_allyears$MonthDay2000, origin = "1970-01-01")
 
 p_gam <- ggplot(condb_allyears, aes(x = date2000, y = log(Cond_mS),
@@ -367,6 +361,8 @@ p_gam <- ggplot(condb_allyears, aes(x = date2000, y = log(Cond_mS),
   scale_linetype_manual(name = "Study start",
                         values = c("2024" = "solid", "2025" = "dotted", "2026" = "twodash")) +
   scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  scale_color_manual(values = trt_cols) +
+  scale_fill_manual(values = trt_cols) +
   labs(x = "Month", y = "log(Conductivity, mS/cm)",
        colour = "Treatment", fill = "Treatment") +
   theme_bw()
@@ -384,6 +380,8 @@ ggplot(condb_allyears, aes(x = date2000, y = log(Cl),
   stat_summary(aes(group = Treatment), fun = gmean, geom = "point", linewidth = 0.8) +
   scale_x_date(date_breaks = "1 month", date_labels = "%b") +
   labs(x = "Month", y = "log(Cl- in water (geometric mean, mg/L)", colour = "Treatment", fill = "Treatment") +
+  scale_color_manual(values = trt_cols) +
+  scale_fill_manual(values = trt_cols) +
   theme_bw()
 ggsave(file.path(output_dir, "Cl_over_season.png"), p_box, width = 7, height = 4, dpi = 300)
 
@@ -445,18 +443,18 @@ pit_summer <- condb_allyears |>
 
 p_accum_pits <- ggplot(pit_summer, aes(x = Year, y = Cond, colour = Treatment)) +
   geom_line(aes(group = Fosse), alpha = 0.35) +
-  geom_jitter(aes(alpha = 0.35))
+  geom_point (aes(alpha = 0.35))+
   geom_text_repel(
     data = function(d) d |> group_by(Fosse) |> slice_tail(n = 1),
     aes(label = Fosse),
     size = 3, hjust = 0, direction = "y",
     nudge_x = 0.1, segment.size = 0.2, min.segment.length = 0,
-    show.legend = FALSE
-  )+
+    show.legend = FALSE)+
   stat_summary(aes(group = Treatment), geom = "line", linewidth = 1.3) +
   stat_summary(geom = "point", size = 3) +
   facet_wrap(~ Treatment) +
   labs(x = "Year", y = "Summer conductivity per pit (mean, mS/cm)") +
+  scale_color_manual(values = trt_cols) +
   theme_bw() +
   theme(legend.position = "none")
 p_accum_pits
@@ -485,13 +483,14 @@ pw_accum_pits <- ggplot(pit_summerw, aes(x = Year, y = Height_mean, colour = Tre
   scale_y_log10() +
   labs(x = "Year", y = "Summer water height per pit (mean, mm)") +
   theme_bw() +
+  scale_color_manual(values = trt_cols) +
   theme(legend.position = "none")
 pw_accum_pits
 
 ##### 4c. Optional test: is there a yearly trend per treatment? ----
 pit_summer$Year_num <- as.numeric(as.character(pit_summer$Year))
 
-m_trend <- lmer(Cond_geo ~ Treatment * Year_num + (1 | Fosse), data = pit_summer)
+m_trend <- lmer(mean_Cond~ Treatment * Year_num + (1 | Fosse), data = pit_summer)
 anova(m_trend)
 
 trend <- emtrends(m_trend, ~ Treatment, var = "Year_num")
